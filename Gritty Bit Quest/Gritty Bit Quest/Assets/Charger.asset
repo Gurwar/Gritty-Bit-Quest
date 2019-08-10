@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ddff223f92c66c4d8044ab748ffcec9, type: 3}
+  m_Name: Charger
+  m_EditorClassIdentifier: 
+  firstAction: 0
+  ActionsList:
+  - Action: 1
+    Switches:
+    - switchCondition: 3
+      MinDistanceToTarget: 7
+      MaxDistanceToTarget: 20
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 0, y: 0}
+      ActionTime: 0
+      PossibleNextActions: 020000000300000004000000
+  - Action: 2
+    Switches:
+    - switchCondition: 3
+      MinDistanceToTarget: 3
+      MaxDistanceToTarget: 7
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 0, y: 0}
+      ActionTime: 0
+      PossibleNextActions: 05000000
+  - Action: 3
+    Switches:
+    - switchCondition: 1
+      MinDistanceToTarget: 3
+      MaxDistanceToTarget: 7
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 4, y: 6}
+      ActionTime: 0
+      PossibleNextActions: 0200000004000000
+  - Action: 4
+    Switches:
+    - switchCondition: 1
+      MinDistanceToTarget: 0
+      MaxDistanceToTarget: 0
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 4, y: 6}
+      ActionTime: 0
+      PossibleNextActions: 0200000003000000

@@ -1,0 +1,17 @@
+Charger
+	- spawn out of the ground
+	- idle
+	- walk forward
+	- walk left
+	- walk right
+	- run forward
+	- attack
+	- roar
+	- if far from player run towards him
+	- if close enough to player rotate between walking forward, walking left, and walking right
+	- if close enough to player attack him or roar
+
+Assets to buy
+- VRIK
+- Crystals
+- Behavior Designer
