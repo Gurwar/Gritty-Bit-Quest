@@ -68,7 +68,39 @@ public class g_AIHealthScript : MonoBehaviour {
         }
 	}
 
-	public void Damage(float damage)
+    public void EnableColliders()
+    {
+        for (int i = 0; i < colliders.Count; i++)
+        {
+            colliders[i].enabled = true;
+        }
+    }
+
+    public void DisableColliders()
+    {
+        for (int i = 0; i < colliders.Count; i++)
+        {
+            colliders[i].enabled = false;
+        }
+    }
+
+    public void EnableRigidbodies()
+    {
+        for (int i = 0; i < rigidbodies.Count; i++)
+        {
+            rigidbodies[i].isKinematic = true;
+        }
+    }
+
+    public void DisableRigidbodies()
+    {
+        for (int i = 0; i < rigidbodies.Count; i++)
+        {
+            rigidbodies[i].isKinematic = false;
+        }
+    }
+
+    public void Damage(float damage)
 	{	
 		ReduceHealthAndShields(damage);
 

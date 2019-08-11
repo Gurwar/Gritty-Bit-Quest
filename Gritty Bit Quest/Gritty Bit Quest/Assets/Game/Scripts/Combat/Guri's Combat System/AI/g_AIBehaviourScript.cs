@@ -9,6 +9,8 @@ public class g_AIBehaviourScript : MonoBehaviour
     [SerializeField]
     NavMeshAgent agent;
     [SerializeField]
+    g_AIHealthScript healthScript;
+    [SerializeField]
     g_AIAnimationScript animationScript;
     [SerializeField]
     AIBehavior aIBehavior;
@@ -22,7 +24,17 @@ public class g_AIBehaviourScript : MonoBehaviour
     void Start()
     {
         target = GameManager.Player;
+
+        for (int j = 0; j < aIBehavior.GetAIActions().Count; j++)
+        {
+            aIBehavior.ActionsDict.Add(aIBehavior.GetAIActions()[j].Action, aIBehavior.GetAIActions()[j]);
+            aIBehavior.ActionsList[j].setActionTime();
+        }
+       
+
         currentAction = aIBehavior.ActionsDict[FirstAction];
+        DisableColliders();
+        DisableRigidbodies();
     }
 
     void Update()
@@ -32,22 +44,35 @@ public class g_AIBehaviourScript : MonoBehaviour
 
     void EnableColliders()
     {
-
+        healthScript.EnableColliders();
     }
 
     void DisableColliders()
     {
-
+        healthScript.DisableColliders();
     }
 
     void EnableRigidbodies()
     {
-
+        healthScript.EnableRigidbodies();
     }
 
     void DisableRigidbodies()
     {
+        healthScript.DisableRigidbodies();
+    }
 
+    IEnumerator AnimationChangeState(float secondsToWait)
+    {
+        yield return new WaitForSeconds(secondsToWait);
+        SwitchToNextAction(Switch.SwitchCondition.AnimationLength);
+    }
+
+    IEnumerator InitalSpawnOutOfGround(float secondsToWait)
+    {
+        yield return new WaitForSeconds(secondsToWait);
+        EnableColliders();
+        EnableRigidbodies();
     }
 
     void EvaluateSwitchConditions()
@@ -60,10 +85,7 @@ public class g_AIBehaviourScript : MonoBehaviour
             }
             if (currentAction.Switches[i].switchCondition == Switch.SwitchCondition.AnimationLength)
             {
-                if (currentActionTime >= currentAction.Switches[i].AnimationLength)
-                {
-                    SwitchToNextAction(Switch.SwitchCondition.AnimationLength);
-                }
+                StartCoroutine(AnimationChangeState(currentAction.Switches[i].AnimationLength));
             }
             if (currentAction.Switches[i].switchCondition == Switch.SwitchCondition.DistanceToTarget)
             {
@@ -92,6 +114,12 @@ public class g_AIBehaviourScript : MonoBehaviour
         currentAction = aIBehavior.ActionsDict[currentAction.getNextAction(condition)];
         currentActionName = currentAction.Action.ToString();
         currentAction.setActionTime();
+    }
+
+    public void Spawn()
+    {
+        EvaluateSwitchConditions();
+        StartCoroutine(InitalSpawnOutOfGround(currentAction.SwitchesDict[Switch.SwitchCondition.AnimationLength].AnimationLength));
     }
 
     public void RunAtTarget(GameObject target)
