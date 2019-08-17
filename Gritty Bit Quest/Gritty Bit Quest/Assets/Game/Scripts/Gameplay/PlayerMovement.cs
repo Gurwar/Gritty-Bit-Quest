@@ -27,6 +27,8 @@ public class PlayerMovement : MonoBehaviour {
         targetRotation = transform.eulerAngles;
         //distanceToGround = GetComponent<Collider>().bounds.extents.y;
         //StartCoroutine(StartCalibrateCenter()); for openvr
+
+        
     }
 
     IEnumerator StartCalibrateCenter()

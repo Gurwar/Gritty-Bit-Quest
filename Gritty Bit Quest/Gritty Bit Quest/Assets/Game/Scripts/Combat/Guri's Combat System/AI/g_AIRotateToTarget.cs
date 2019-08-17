@@ -3,8 +3,6 @@ using System.Collections;
 
 public class g_AIRotateToTarget : MonoBehaviour {
 
-
-
 	Transform targetTransform;
 	[SerializeField]
 	Transform FirePosition;

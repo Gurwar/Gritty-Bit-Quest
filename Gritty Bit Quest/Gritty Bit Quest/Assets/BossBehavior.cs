@@ -64,7 +64,7 @@ public class BossBehavior : MonoBehaviour
 
     void SwitchToNextAction(Switch.SwitchCondition condition)
     {
-        currentActionTime = 0;       
+        currentActionTime = 0;   
         currentAction = currentBossState.ActionsDict[currentAction.getNextAction(condition)];
         currentActionName = currentAction.Action.ToString();
         currentAction.setActionTime();

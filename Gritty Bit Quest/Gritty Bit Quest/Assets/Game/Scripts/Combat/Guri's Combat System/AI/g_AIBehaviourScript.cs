@@ -30,8 +30,6 @@ public class g_AIBehaviourScript : MonoBehaviour
             aIBehavior.ActionsDict.Add(aIBehavior.GetAIActions()[j].Action, aIBehavior.GetAIActions()[j]);
             aIBehavior.ActionsList[j].setActionTime();
         }
-       
-
         currentAction = aIBehavior.ActionsDict[FirstAction];
         DisableColliders();
         DisableRigidbodies();
@@ -122,6 +120,20 @@ public class g_AIBehaviourScript : MonoBehaviour
         StartCoroutine(InitalSpawnOutOfGround(currentAction.SwitchesDict[Switch.SwitchCondition.AnimationLength].AnimationLength));
     }
 
+    public void Roar()
+    {
+        agent.speed = 0;
+        animationScript.PlayRoarAnimation();
+        EvaluateSwitchConditions();
+    }
+
+    public void Idle()
+    {
+        agent.speed = 0;
+        animationScript.PlayRoarAnimation();
+        EvaluateSwitchConditions();
+    }
+
     public void RunAtTarget(GameObject target)
     {
         agent.SetDestination(target.transform.position);
@@ -154,13 +166,6 @@ public class g_AIBehaviourScript : MonoBehaviour
     {
         agent.speed = 0;
         GetComponent<G_AIMeleeScript>().DoMeleeAttack();
-        EvaluateSwitchConditions();
-    }
-
-    public void Roar()
-    {
-        agent.speed = 0;
-        animationScript.PlayRoarAnimation();
         EvaluateSwitchConditions();
     }
 }

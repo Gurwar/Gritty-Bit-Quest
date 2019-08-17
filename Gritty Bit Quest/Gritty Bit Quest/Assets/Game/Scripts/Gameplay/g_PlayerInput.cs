@@ -30,6 +30,8 @@ public class g_PlayerInput : MonoBehaviour {
     bool rightTriggerReleased;
     bool leftGripReleased;
     bool rightGripReleased;
+    bool grippedLeft;
+    bool grippedRight;
     Vector3 previousLeftPos;
     Vector3 previousRightPos;
     void Start()
@@ -61,7 +63,6 @@ public class g_PlayerInput : MonoBehaviour {
         InputRecenter();
         InputVRButtons();
         EmptyHandInput();
-        KillAllEnemies();
         if (pauseScript != null)
         {
             if (pauseScript.paused)
@@ -71,12 +72,11 @@ public class g_PlayerInput : MonoBehaviour {
 
         InputAttack();
         InputMovement();
-        //InputRadialUI();
         InputRotation();
-        CalculateMovement();
+        CalculateHandMovement();
     }
 
-    void CalculateMovement()
+    void CalculateHandMovement()
     {
         InputInfo.SetHandMovementVectors(leftHand.transform.localPosition - previousLeftPos, rightHand.transform.localPosition - previousRightPos);
         previousLeftPos = leftHand.transform.localPosition;
@@ -90,9 +90,9 @@ public class g_PlayerInput : MonoBehaviour {
 
             if (Input.GetAxisRaw("LeftHandGrip") > .2f || Input.GetKeyDown(KeyCode.L))
             {
-                if (leftGripReleased)
+                if (!grippedLeft)
                 {
-                    leftGripReleased = false;
+                    grippedLeft = false;
                     if (leftHand.GetComponent<handScript>().heldGameObject == null)
                     {
                         leftHand.GetComponent<handScript>().AttemptPickup();
@@ -105,14 +105,14 @@ public class g_PlayerInput : MonoBehaviour {
             }
             else
             {
-                leftGripReleased = true;
+                grippedLeft = false;
             }
 
             if (Input.GetAxisRaw("RightHandGrip") > .2f || Input.GetKeyDown(KeyCode.L))
             {
-                if (rightGripReleased)
+                if (!grippedRight)
                 {
-                    rightGripReleased = false;
+                    grippedRight = true;
                     if (rightHand.GetComponent<handScript>().heldGameObject == null)
                     {
                         rightHand.GetComponent<handScript>().AttemptPickup();
@@ -125,7 +125,7 @@ public class g_PlayerInput : MonoBehaviour {
             }
             else
             {
-                rightGripReleased = true;
+                grippedRight = false;
             }
         }
         else
@@ -176,7 +176,7 @@ public class g_PlayerInput : MonoBehaviour {
         if (gameState.playerState == gameState.GameStates.Wave || gameState.playerState == gameState.GameStates.Pregame)
         {
             if (GameObject.Find("RightHand") != null)
-            FireHand("RightHand", "RightHandTrigger", ref m_canshootRight);
+                FireHand("RightHand", "RightHandTrigger", ref m_canshootRight);
             if (GameObject.Find("LeftHand") != null)
                 FireHand("LeftHand", "LeftHandTrigger", ref m_canshootLeft);
         }
@@ -214,7 +214,6 @@ public class g_PlayerInput : MonoBehaviour {
         GetComponent<PlayerMovement>().CalculateSpeedAndDirection(new Vector2(
                                                             x,
                                                             y));
-
         //both controllers can open/close the gun menu
         if ((Input.GetAxisRaw("LeftJoystick_Horizontal") != 0) || (Input.GetAxisRaw("LeftJoystick_Vertical") != 0))
         {
@@ -250,12 +249,12 @@ public class g_PlayerInput : MonoBehaviour {
     {
         if (controlScript.device == ControlType.VRDevices.OculusRift)
         {
-            if (Input.GetButtonDown("X"))
+            if (InputInfo.CheckButtonPressed("X"))
             {
                 GetComponent<PlayerMovement>().RotatePlayer(true);
             }
 
-            if (Input.GetButtonDown("A"))
+            if (InputInfo.CheckButtonPressed("A"))
             {
                 GetComponent<PlayerMovement>().RotatePlayer(false);
             }
@@ -355,13 +354,5 @@ public class g_PlayerInput : MonoBehaviour {
                 }
             }
         }
-    }
-
-    void KillAllEnemies()
-    {
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    GameObject.Find("Enemy Manager").GetComponent<EnemySpawner>().KillAllEnemies();
-        //}
     }
 }

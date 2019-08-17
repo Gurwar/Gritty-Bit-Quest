@@ -17,8 +17,6 @@ public class Switch
     [HideInInspector]
     public float ActionTime;
     public List<AIAction.ActionState> PossibleNextActions;
-
-
 }
 
 

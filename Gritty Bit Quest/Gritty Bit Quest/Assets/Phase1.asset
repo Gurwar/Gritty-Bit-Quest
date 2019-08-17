@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Phase1
   m_EditorClassIdentifier: Assembly-CSharp::BossState
   state: 0
-  firstAction: 7
+  firstAction: 8
   ActionsList:
-  - Action: 7
+  - Action: 8
     Switches:
     - switchCondition: 1
       MinDistanceToTarget: 0
@@ -24,21 +24,21 @@ MonoBehaviour:
       EnemyTypeToSpawn: 0
       EnemyAmount: 0
       ActionTimeRange: {x: 4, y: 6}
-      ActionTime: 4.442316
-      PossibleNextActions: 08000000
-  - Action: 8
-    Switches:
-    - switchCondition: 0
-      MinDistanceToTarget: 0
-      MaxDistanceToTarget: 0
-      AnimationLength: 0
-      EnemyTypeToSpawn: 0
-      EnemyAmount: 0
-      ActionTimeRange: {x: 0, y: 0}
-      ActionTime: 0
+      ActionTime: 5.201461
       PossibleNextActions: 09000000
   - Action: 9
     Switches:
+    - switchCondition: 0
+      MinDistanceToTarget: 0
+      MaxDistanceToTarget: 0
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 0, y: 0}
+      ActionTime: 0
+      PossibleNextActions: 0a000000
+  - Action: 10
+    Switches:
     - switchCondition: 1
       MinDistanceToTarget: 0
       MaxDistanceToTarget: 0
@@ -46,9 +46,9 @@ MonoBehaviour:
       EnemyTypeToSpawn: 0
       EnemyAmount: 0
       ActionTimeRange: {x: 4, y: 6}
-      ActionTime: 4.425463
-      PossibleNextActions: 0a000000
-  - Action: 10
+      ActionTime: 4.4992423
+      PossibleNextActions: 0b000000
+  - Action: 11
     Switches:
     - switchCondition: 0
       MinDistanceToTarget: 0
@@ -58,4 +58,4 @@ MonoBehaviour:
       EnemyAmount: 0
       ActionTimeRange: {x: 0, y: 0}
       ActionTime: 0
-      PossibleNextActions: 0700000008000000
+      PossibleNextActions: 0800000009000000

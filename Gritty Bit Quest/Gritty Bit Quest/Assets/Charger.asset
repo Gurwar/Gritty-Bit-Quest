@@ -45,7 +45,7 @@ MonoBehaviour:
       EnemyTypeToSpawn: 0
       EnemyAmount: 0
       ActionTimeRange: {x: 4, y: 6}
-      ActionTime: 5.018242
+      ActionTime: 5.070224
       PossibleNextActions: 0200000004000000
   - Action: 4
     Switches:
@@ -56,7 +56,7 @@ MonoBehaviour:
       EnemyTypeToSpawn: 0
       EnemyAmount: 0
       ActionTimeRange: {x: 4, y: 6}
-      ActionTime: 5.4228764
+      ActionTime: 4.5639515
       PossibleNextActions: 0500000003000000
   - Action: 5
     Switches:
@@ -67,16 +67,27 @@ MonoBehaviour:
       EnemyTypeToSpawn: 0
       EnemyAmount: 0
       ActionTimeRange: {x: 4, y: 6}
-      ActionTime: 5.8634768
+      ActionTime: 4.330002
       PossibleNextActions: 0400000003000000
   - Action: 0
     Switches:
     - switchCondition: 4
       MinDistanceToTarget: 0
       MaxDistanceToTarget: 0
-      AnimationLength: 0
+      AnimationLength: 1.12
       EnemyTypeToSpawn: 0
       EnemyAmount: 0
       ActionTimeRange: {x: 0, y: 0}
       ActionTime: 0
       PossibleNextActions: 07000000
+  - Action: 7
+    Switches:
+    - switchCondition: 4
+      MinDistanceToTarget: 0
+      MaxDistanceToTarget: 0
+      AnimationLength: 1.16
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 0, y: 0}
+      ActionTime: 0
+      PossibleNextActions: 01000000060000000400000005000000

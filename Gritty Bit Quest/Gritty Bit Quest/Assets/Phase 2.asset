@@ -15,17 +15,14 @@ MonoBehaviour:
   state: 1
   firstAction: 7
   ActionsList:
-  - Action: 11
-    switchCondtion: 1
-    EnemyTypeToSpawn: 0
-    EnemyAmount: 5
-    ActionTimeRange: {x: 0, y: 0}
-    ActionTime: 0
-    PossibleNextActions: 0a000000
-  - Action: 10
-    switchCondtion: 0
-    EnemyTypeToSpawn: 0
-    EnemyAmount: 0
-    ActionTimeRange: {x: 5, y: 6}
-    ActionTime: 5.936917
-    PossibleNextActions: 0b000000
+  - Action: 8
+    Switches:
+    - switchCondition: 1
+      MinDistanceToTarget: 0
+      MaxDistanceToTarget: 0
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 9999, y: 9999}
+      ActionTime: 9999
+      PossibleNextActions: 08000000

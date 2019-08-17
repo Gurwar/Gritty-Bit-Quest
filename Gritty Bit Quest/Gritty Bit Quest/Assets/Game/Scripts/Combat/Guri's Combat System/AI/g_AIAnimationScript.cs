@@ -4,10 +4,10 @@ using System.Collections;
 public class g_AIAnimationScript : MonoBehaviour 
 {
 	Animator animator;
-    
-	int attack1Hash;
+    int runHash;
+    int attack1Hash;
 	int crouchingHash;
-	int runHash;
+    int idleHash;
 	int shotHash;
 	int dieHash;
     int roarHash;
@@ -16,6 +16,16 @@ public class g_AIAnimationScript : MonoBehaviour
     int walkRightHash;
     int spawnHash;
 	bool isRunning;
+    bool isAttack1;
+    bool isCrouch;
+    bool isIdle;
+    bool isShot;
+    bool isDie;
+    bool isRoar;
+    bool isWalk;
+    bool isWalkLeft;
+    bool isWalkRight;
+    bool isSpawn;
 	bool doShotAnimation;
 	float shotAnimationTime = 0.5f;
 	float currentShotAnimationTime;
@@ -23,6 +33,7 @@ public class g_AIAnimationScript : MonoBehaviour
 	{
 		attack1Hash = Animator.StringToHash("Attack");
 		crouchingHash = Animator.StringToHash("Crouching");
+        idleHash = Animator.StringToHash("Idle");
 		runHash = Animator.StringToHash("Run");
 		shotHash = Animator.StringToHash("GotShot");
 		dieHash = Animator.StringToHash("Die");
@@ -30,52 +41,65 @@ public class g_AIAnimationScript : MonoBehaviour
         walkHash = Animator.StringToHash("Walk");
         walkLeftHash = Animator.StringToHash("WalkLeft");
         walkRightHash = Animator.StringToHash("WalkRight");
-
     }
+
     // Use this for initialization
     void Start () 
 	{
 		animator = GetComponent<Animator> ();
 		SetHashes ();
 	}
+    public void PlayRoarAnimation()
+    {
+        if (!isRunning)
+        {
+            animator.SetBool(roarHash, true);
 
-
-	public void PlayRunAnimation()
+            isRunning = true;
+            isAttack1 = false;
+            isCrouch = false;
+            isIdle = false;
+            isShot = false;
+            isDie = false;
+            isRoar = false;
+            isWalk = false;
+            isWalkLeft = false;
+            isWalkRight = false;
+            isSpawn = false;
+        }
+    }
+    public void PlayIdleAnimation()
+    {
+        animator.SetBool(idleHash, true);
+    }
+    public void PlayRunAnimation()
 	{
-		animator.SetTrigger (runHash);
+		animator.SetBool (runHash, true);
 	}
     public void PlayWalkAnimation()
     {
-        animator.SetTrigger(walkHash);
+        animator.SetBool(walkHash, true);
     }
     public void PlayWalkLeftAnimation()
     {
-        animator.SetTrigger(walkLeftHash);
+        animator.SetBool(walkLeftHash, true);
     }
     public void PlayWalkRightAnimation()
     {
-        animator.SetTrigger(walkRightHash);
+        animator.SetBool(walkRightHash, true);
     }
-
     public void PlayAttackAnimation()
 	{
-		animator.SetTrigger (crouchingHash);
-		animator.SetTrigger (attack1Hash);
+		animator.SetBool (crouchingHash, true);
+		animator.SetBool (attack1Hash, true);
 	}
-
 	public void PlayCrouchAnimation()
 	{
-		animator.SetTrigger (crouchingHash);
+		animator.SetBool (crouchingHash, true);
 	}
-
 	public void PlayGotShotAnimation()
 	{
 		doShotAnimation = true;
-		animator.SetTrigger(shotHash);
+		animator.SetBool(shotHash, true);
 	}
-
-    public void PlayRoarAnimation()
-    {
-        animator.SetTrigger(roarHash);
-    }
 }
