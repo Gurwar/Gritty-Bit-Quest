@@ -169,7 +169,10 @@ public class handScript : MonoBehaviour
             currentObject.ObjectName = "";
             //throw the object based on our body and hand's current velocity
             Vector3 throwVector;
-            throwVector = Quaternion.Euler(0, transform.eulerAngles.y, 0) * (GetComponent<TouchController>().GetAverageVelocity() + (transform.root.GetComponent<PlayerMovement>().GetDirection() * transform.root.GetComponent<PlayerMovement>().GetSpeedMultiplier()));
+            if (GetComponent<TouchController>().hand == TouchController.Hands.LeftHand)
+                throwVector = Quaternion.Euler(0, transform.eulerAngles.y, 0) * (InputInfo.GetVelocityLeft() + (transform.root.GetComponent<PlayerMovement>().GetDirection() * transform.root.GetComponent<PlayerMovement>().GetSpeedMultiplier()));
+            else
+                throwVector = Quaternion.Euler(0, transform.eulerAngles.y, 0) * (InputInfo.GetVelocityRight() + (transform.root.GetComponent<PlayerMovement>().GetDirection() * transform.root.GetComponent<PlayerMovement>().GetSpeedMultiplier()));
             heldGameObject.GetComponent<G_ThrowObject>().Throw(throwVector);
             heldGameObject.GetComponent<ObjectState>().currentState = ObjectState.ObjectStates.Free;
             heldGameObject = null;

@@ -36,15 +36,15 @@ public class g_SwordAttack : MonoBehaviour
         if (objectStateScript.currentState == ObjectState.ObjectStates.Held)
         {
             //raycast and transmit damage based on touch controller velocity
-            if (GetComponentInParent<TouchController>().GetAverageVelocity().magnitude > 1)
-            {
-                RaycastHit hit;
-                if (Physics.Linecast(transform.position, other.transform.position, out hit, layerMask)) // ignoring layermask, did we hit something
-                {
-                    m_swordHit = other.gameObject;
-                    StartCoroutine(ApplyDamage());
-                }
-            }
+            //if (GetComponentInParent<TouchController>().GetAverageVelocity().magnitude > 1)
+            //{
+            //    RaycastHit hit;
+            //    if (Physics.Linecast(transform.position, other.transform.position, out hit, layerMask)) // ignoring layermask, did we hit something
+            //    {
+            //        m_swordHit = other.gameObject;
+            //        StartCoroutine(ApplyDamage());
+            //    }
+            //}
         }
         else if (objectStateScript.currentState == ObjectState.ObjectStates.Free)
         {

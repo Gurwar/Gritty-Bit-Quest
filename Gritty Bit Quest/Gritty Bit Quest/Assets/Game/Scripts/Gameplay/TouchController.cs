@@ -55,6 +55,7 @@ public class TouchController : MonoBehaviour
     {
         AddVelocityFrames();
         CalculateAverageVelocity();
+        UpdateVelocity();
         SetPosition();
         SetRotation();
         if (vibrate)
@@ -90,9 +91,12 @@ public class TouchController : MonoBehaviour
         //}
     }
 
-    public Vector3 GetAverageVelocity()
+    public void UpdateVelocity()
     {
-        return averageVelocity;
+        if (hand == Hands.LeftHand)
+            InputInfo.SetVelocityLeft(averageVelocity);
+        else
+            InputInfo.SetVelocityRight(averageVelocity);
     }
 
     public void AddVelocityFrames()

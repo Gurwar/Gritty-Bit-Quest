@@ -85,7 +85,6 @@ public class AIBehaviorEditorScript : Editor
         {
             property.floatValue = EditorGUILayout.FloatField(property.name, property.floatValue);
         }
-
         else if (property.propertyType == SerializedPropertyType.Enum)
         {
             EditorGUILayout.PropertyField(property, false);
@@ -146,23 +145,22 @@ public class AIBehaviorEditorScript : Editor
     public override void OnInspectorGUI()
     {
         //base.DrawDefaultInspector();
-        AIBehavior.firstAction = (AIAction.ActionState)EditorGUILayout.EnumPopup("First Action", AIBehavior.firstAction);
-        for (int i = 0; i < AIBehavior.ActionsList.Count; i++)
+        //AIBehavior.firstAction = (AIAction.ActionState)EditorGUILayout.EnumPopup("First Action", AIBehavior.firstAction);
+        for (int i = 0; i < AIBehavior.StatesList.Count; i++)
         {
             DrawList(serializedObject.FindProperty("ActionsList").GetArrayElementAtIndex(i));
         }
 
         if (GUILayout.Button("Add AI Action"))
         {
-            AIAction tempAction = new AIAction();
-            tempAction.Switches.Add(new Switch());
-            AIBehavior.ActionsList.Add(tempAction);
-
+            AIState tempState = new AIState();
+            tempState.Switches.Add(new Switch());
+            AIBehavior.StatesList.Add(tempState);
         }
 
         if (GUILayout.Button("Remove AI Action"))
         {
-            AIBehavior.ActionsList.Remove(AIBehavior.ActionsList[AIBehavior.ActionsList.Count - 1]);
+            AIBehavior.StatesList.Remove(AIBehavior.StatesList[AIBehavior.StatesList.Count - 1]);
         }
 
         serializedObject.ApplyModifiedProperties();

@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class Switch
 {
-    public enum SwitchCondition { Trigger,Time, MinionsKilled, DistanceToTarget, AnimationLength }
+    public enum SwitchCondition { DoOnce,Time, MinionsKilled, DistanceToAttackTarget, DistanceToMoveTarget, DistanceToPlayer, AnimationLength, OnTriggerEnter,}
     public SwitchCondition switchCondition;
     public float MinDistanceToTarget;
     public float MaxDistanceToTarget;
@@ -16,22 +16,37 @@ public class Switch
     public Vector2 ActionTimeRange;
     [HideInInspector]
     public float ActionTime;
-    public List<AIAction.ActionState> PossibleNextActions;
+    public List<string> PossibleNextStates = new List<string>();
 }
 
-
 [System.Serializable]
-public class AIAction
+public class AIState
 {
-    public enum ActionState { spawn, idle, runforward, walkForward, walkLeft, walkRight, attack, roar, bossRest, bossResetCubes, bossAbsorb, bossCubeAttack, bossLightningAttack, bossSpawnEnemies };
-    public ActionState Action;
+    public string Name;
+    public List<AIAction> Actions = new List<AIAction>();
     public List<Switch> Switches = new List<Switch>();
+    public Dictionary<AIAction.ActionState, AIAction> ActionsDict = new Dictionary<AIAction.ActionState, AIAction>();
     public Dictionary<Switch.SwitchCondition, Switch> SwitchesDict = new Dictionary<Switch.SwitchCondition, Switch>();
 
-    public void setActionTime()
+    public void Initialize()
     {
-        for (int i = 0; i < Switches.Count; i++)
-            Switches[i].ActionTime = Random.Range(Switches[i].ActionTimeRange.x, Switches[i].ActionTimeRange.y);
+        RefreshSwitchDictionary();
+        RefreshActionDictionary();
+    }
+    public void SetActionTime()
+    {
+        if (SwitchesDict.ContainsKey(Switch.SwitchCondition.Time))
+            SwitchesDict[Switch.SwitchCondition.Time].ActionTime = Random.Range(SwitchesDict[Switch.SwitchCondition.Time].ActionTimeRange.x, SwitchesDict[Switch.SwitchCondition.Time].ActionTimeRange.y);
+    }
+
+    public void RefreshActionDictionary()
+    {
+        ActionsDict.Clear();
+        for (int i = 0; i < Actions.Count; i++)
+        {
+            if (!ActionsDict.ContainsKey(Actions[i].Action))
+                ActionsDict.Add(Actions[i].Action, Actions[i]);
+        }
     }
 
     public void RefreshSwitchDictionary()
@@ -40,14 +55,35 @@ public class AIAction
         for (int i = 0; i < Switches.Count; i++)
         {
             if (!SwitchesDict.ContainsKey(Switches[i].switchCondition))
-            SwitchesDict.Add(Switches[i].switchCondition, Switches[i]);
+                SwitchesDict.Add(Switches[i].switchCondition, Switches[i]);
         }
     }
 
-    public ActionState getNextAction(Switch.SwitchCondition condition)
+    public string GetNextState(Switch.SwitchCondition condition)
     {
         Switch temp = SwitchesDict[condition];
-        int Rand = Random.Range(0, temp.PossibleNextActions.Count);
-        return temp.PossibleNextActions[Rand];
+        int Rand = Random.Range(0, temp.PossibleNextStates.Count);
+        return temp.PossibleNextStates[Rand];
     }
+}
+
+[System.Serializable]
+public class AIActionSettings
+{
+    public float StartTime;
+    public float EndTime;
+}
+
+[System.Serializable]
+public class AIAction
+{
+    public enum ActionState { Spawn, Idle, Runforward, WalkForward, WalkLeft, WalkRight, Attack, Roar, ResetCubes, Absorb, CubeAttack, LightningAttack, SpawnEnemies, Animation, MoveToTransform, MoveToVector, RotateTo, RotateBy, NextState };
+    public ActionState Action;
+    public AIActionSettings ActionSettings;
+    public AnimationClip AnimationClip;
+    public float MoveSpeed;
+    public Vector3 VectorToMoveTo;
+    public string MoveTransformName;
+    public float RotateSpeed;
+    public Vector3 TargetRotation;
 }
