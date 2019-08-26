@@ -8,28 +8,6 @@ public class InputInfo
     static Vector3 rightMovementVector;
     static bool grippedLeft;
     static bool grippedRight;
-    static Vector3 leftVelocity;
-    static Vector3 rightVelocity;
-
-    public static void SetVelocityLeft(Vector3 v)
-    {
-        leftVelocity = v;
-    }
-
-    public static void SetVelocityRight(Vector3 v)
-    {
-        rightVelocity = v;
-    }
-
-    public static Vector3 GetVelocityLeft()
-    {
-        return leftVelocity;
-    }
-
-    public static Vector3 GetVelocityRight()
-    {
-        return rightVelocity;
-    }
 
     public static void SetHandMovementVectors(Vector3 left, Vector3 right)
     {

@@ -48,9 +48,9 @@ public class CubeBehaviour : MonoBehaviour
         pushTowardsPlayerSpeed = speed;
     }
 
-    public void SetDirectionToMove(float inaccuracy, Vector3 targetPosition)
+    public void SetDirectionToMove(float inaccuracy, GameObject target)
     {
-        directionToMove = (targetPosition - transform.position);
+        directionToMove = (target.transform.position - transform.position);
         directionToMove += new Vector3(Random.Range(-inaccuracy, inaccuracy), Random.Range(-inaccuracy, inaccuracy), Random.Range(-inaccuracy, inaccuracy));
         directionToMove.Normalize();
     }

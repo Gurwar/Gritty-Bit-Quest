@@ -22,14 +22,6 @@ public class GhostScript : MonoBehaviour
     GripScript LeftGrip;
     [SerializeField]
     GripScript RightGrip;
-    [SerializeField]
-    Transform carSeat;
-    [SerializeField]
-    Transform carExitSpot;
-    [SerializeField]
-    float seatYOffset;
-    bool inRangeToGetInCar;
-    bool inCar;
 
     public float GetSteeringWheelTurnMagnitude()
     {
@@ -43,8 +35,6 @@ public class GhostScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!inCar)
-            return;
         if (InputInfo.CheckButtonHeld("B"))
         {
             IncrementSpeed(500);
@@ -71,6 +61,8 @@ public class GhostScript : MonoBehaviour
             steeringWheel.transform.localEulerAngles -= new Vector3(0, 0, .5f);
         }
 
+        
+
         steerAngle *= -1;
         for (int i = 0; i < frontWheels.Count; i++)
         {
@@ -84,54 +76,5 @@ public class GhostScript : MonoBehaviour
     public void IncrementSpeed(float t)
     {
         torque += t;
-    }
-
-    public void AttemptToGetInVehicle()
-    {
-        if (inRangeToGetInCar && !inCar)
-        {
-            inCar = true;
-            GameManager.Player.transform.parent = carSeat;
-            GameManager.Player.transform.localPosition = new Vector3(0, seatYOffset);
-            GameManager.Player.transform.rotation = Quaternion.Euler(transform.eulerAngles);
-            GameManager.Player.GetComponent<Rigidbody>().isKinematic = true;
-            GameManager.Player.GetComponent<PlayerMovement>().SetInCar(true);
-            OVRManager.display.RecenterPose();
-        }
-    }
-
-    public void AttemptToGetOutOfCar()
-    {
-        if (inCar)
-        {
-            GameManager.Player.transform.parent = null;
-            GameManager.Player.transform.position = carExitSpot.transform.position;
-
-            GameManager.Player.GetComponent<Rigidbody>().isKinematic = false;
-            GameManager.Player.GetComponent<PlayerMovement>().SetInCar(false);
-
-            OVRManager.display.RecenterPose();
-        }
-    }
-
-    public bool GetInRangeToGetInCar()
-    {
-        return inRangeToGetInCar;
-    }
-
-    void OnTriggerEnter(Collider collision)
-    {
-        if (collision.gameObject.transform.root.tag == "Player")
-        {
-            inRangeToGetInCar = true;
-        }
-    }
-
-    void OnTriggerExit(Collider collision)
-    {
-        if (collision.gameObject.transform.root.tag == "Player")
-        {
-            inRangeToGetInCar = false;
-        }
     }
 }
