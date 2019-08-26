@@ -87,15 +87,15 @@ public class g_PlayerInput : MonoBehaviour {
     {
         if (GameObject.Find("Level Scripts").GetComponent<ControlType>().controller == ControlType.Controllers.Touch)
         {
-            if (Input.GetAxisRaw("LeftHandGrip") > .2f || Input.GetKey(KeyCode.L))
+
+            if (Input.GetAxisRaw("LeftHandGrip") > .2f || Input.GetKeyDown(KeyCode.L))
             {
                 if (!grippedLeft)
                 {
-                    grippedLeft = true;
+                    grippedLeft = false;
                     if (leftHand.GetComponent<handScript>().heldGameObject == null)
                     {
                         leftHand.GetComponent<handScript>().AttemptPickup();
-                        GameManager.Car.GetComponent<GhostScript>().AttemptToGetInVehicle();
                     }
                     else
                     {
@@ -108,7 +108,7 @@ public class g_PlayerInput : MonoBehaviour {
                 grippedLeft = false;
             }
 
-            if (Input.GetAxisRaw("RightHandGrip") > .2f || Input.GetKey(KeyCode.R))
+            if (Input.GetAxisRaw("RightHandGrip") > .2f || Input.GetKeyDown(KeyCode.L))
             {
                 if (!grippedRight)
                 {
@@ -116,7 +116,6 @@ public class g_PlayerInput : MonoBehaviour {
                     if (rightHand.GetComponent<handScript>().heldGameObject == null)
                     {
                         rightHand.GetComponent<handScript>().AttemptPickup();
-                        GameManager.Car.GetComponent<GhostScript>().AttemptToGetInVehicle();
                     }
                     else
                     {
@@ -134,18 +133,14 @@ public class g_PlayerInput : MonoBehaviour {
             if (Input.GetAxisRaw("LeftHandTrigger") > .2f)
             {
                 leftHand.GetComponent<handScript>().AttemptPickup();
-                GameManager.Car.GetComponent<GhostScript>().AttemptToGetInVehicle();
             }
 
             if (Input.GetAxisRaw("RightHandTrigger") > .2f)
             {
                 rightHand.GetComponent<handScript>().AttemptPickup();
-                GameManager.Car.GetComponent<GhostScript>().AttemptToGetInVehicle();
             }
         }
 
-        InputInfo.SetGrippedLeft(grippedLeft);
-        InputInfo.SetGrippedRight(grippedRight);
     }
 
     void FireHand(string currentHand, string axis, ref bool canShoot)
@@ -195,10 +190,6 @@ public class g_PlayerInput : MonoBehaviour {
         }
     }
 
-    void InputInteract()
-    {
-
-    }
     void InputMovement()
     {
         float x = 0;
@@ -289,6 +280,13 @@ public class g_PlayerInput : MonoBehaviour {
             if (Input.GetButtonDown("Y"))
             {
                 OVRManager.display.RecenterPose();
+            }
+        }
+        else if (controlScript.device == ControlType.VRDevices.Vive)
+        {
+            if (Input.GetButtonDown("Y"))
+            {
+                GetComponent<PlayerMovement>().ChangeCameraInitialPos();
             }
         }
     }

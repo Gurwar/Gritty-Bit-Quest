@@ -6,11 +6,9 @@ using UnityEngine;
 
 public class BossBehavior : MonoBehaviour
 {
-    public List<BossPhase> bossPhases;
+    public List<BossState> bossStates;
     [SerializeField]
-    BossPhase currentBossPhase;
-    [SerializeField]
-    AIState currentState;
+    BossState currentBossState;
     [SerializeField]
     float attackForce;
     [SerializeField]
@@ -21,11 +19,14 @@ public class BossBehavior : MonoBehaviour
     EnemyPrefabHolder enemies;
     [SerializeField]
     float inaccuracy;
-    GameObject attackTarget;
-    [SerializeField]
-    Transform moveTarget;
+    GameObject target;
     [HideInInspector]
     public float currentActionTime;
+    [HideInInspector]
+    public string currentActionName;
+    [HideInInspector]
+    public string currentBossStateName;
+    AIAction currentAction;
     bool AbsorbColliderActive;
     [SerializeField]
     GameObject absorbSphere;
@@ -40,82 +41,75 @@ public class BossBehavior : MonoBehaviour
     [SerializeField]
     BossAnimationScript animationScript;
     [SerializeField]
-    Animation animation;
-    [SerializeField]
     float LightingFollowSpeed;
     bool canSpawnEnemies = true;
-    
-    delegate void ActionFunc();
-    ActionFunc currentStateFunc;
-    Dictionary<AIAction.ActionState, ActionFunc> ActionFunctionsDict = new Dictionary<AIAction.ActionState, ActionFunc>();
-
     void Start()
     {
-        attackTarget = GameManager.Player;
-        ActionFunctionsDict.Add(AIAction.ActionState.Idle, Idle);
-        ActionFunctionsDict.Add(AIAction.ActionState.MoveToTransform, MoveToTransform);
-        ActionFunctionsDict.Add(AIAction.ActionState.NextState, NextState);
-        ActionFunctionsDict.Add(AIAction.ActionState.ResetCubes, ResetCubes);
-        ActionFunctionsDict.Add(AIAction.ActionState.Absorb, Absorb);
-        ActionFunctionsDict.Add(AIAction.ActionState.CubeAttack, CubeAttack);
-        ActionFunctionsDict.Add(AIAction.ActionState.LightningAttack, LightningAttack);
-        ActionFunctionsDict.Add(AIAction.ActionState.Animation, Animation);
-
-        for (int i = 0; i < bossPhases.Count; i++)
+        target = GameManager.Player;
+        for (int i = 0; i < bossStates.Count; i++)
         {
-            for (int j = 0; j < bossPhases[i].GetAIStates().Count; j++)
+            for (int j = 0; j < bossStates[i].GetAIActions().Count; j++)
             {
-                bossPhases[i].StatesDict.Add(bossPhases[i].GetAIStates()[j].Name, bossPhases[i].GetAIStates()[j]);
-                bossPhases[i].StatesList[j].Initialize();
+                bossStates[i].ActionsDict.Add(bossStates[i].GetAIActions()[j].Action, bossStates[i].GetAIActions()[j]);
+                bossStates[i].ActionsList[j].setActionTime();
             }
         }
 
         if (attackNumber > projectile.GetProjectileLimit())
             attackNumber = projectile.GetProjectileLimit();
-        currentBossPhase = bossPhases[0];
-        currentState = currentBossPhase.StatesDict[currentBossPhase.firstState];
-        SetupCurrentActionFunc();
-        currentState.SetActionTime();
+        currentBossState = bossStates[0];
+        currentAction = currentBossState.ActionsDict[currentBossState.firstAction];
+        currentAction.setActionTime();
     }
 
-    void SetupCurrentActionFunc()
+    void SwitchToNextAction(Switch.SwitchCondition condition)
     {
-        for (int i = 0; i < currentState.Actions.Count; i++)
-        {
-            if (ActionFunctionsDict.ContainsKey(currentState.Actions[i].Action))
-            {
-                currentStateFunc += ActionFunctionsDict[currentState.Actions[i].Action];
-            }
-        }
-    }
-
-    void SwitchToNextState(Switch.SwitchCondition condition)
-    {
-        Debug.Log(condition.ToString());
         currentActionTime = 0;   
-        currentState = currentBossPhase.StatesDict[currentState.GetNextState(condition)];
-        currentState.SetActionTime();
-        currentStateFunc = null;
-        SetupCurrentActionFunc();
+        currentAction = currentBossState.ActionsDict[currentAction.getNextAction(condition)];
+        currentActionName = currentAction.Action.ToString();
+        currentAction.setActionTime();
+    }
+
+    void SwitchToNextAction(AIAction.ActionState aIAction)
+    {
+        currentActionTime = 0;
+        currentAction = currentBossState.ActionsDict[aIAction];
+        currentActionName = currentAction.Action.ToString();
+        currentAction.setActionTime();
     }
 
     // Update is called once per frame
     void Update()
     {
-        SetCurrentAttackTarget();
-        currentStateFunc();
+        SetCurrentState();
         absorbSphere.SetActive(AbsorbColliderActive);
     }
 
-    private void SetCurrentAttackTarget()
+    private void SetCurrentState()
     {
-        if (GameManager.Player.GetComponent<PlayerMovement>().GetInCar())
+        currentBossStateName = currentBossState.state.ToString();
+
+        if (currentBossState == bossStates[0])
         {
-            attackTarget = GameManager.Car;
+            if (GetComponent<BossHealth>().GetCurrentHealth() <= 0)
+            {
+                currentBossState = bossStates[1];
+                currentBossStateName = currentBossState.state.ToString();
+                currentAction = currentBossState.ActionsDict[bossStates[1].firstAction];
+                currentActionName = currentAction.Action.ToString();
+                currentActionTime = 0;
+            }
         }
-        else
+        else if (currentBossState == bossStates[1])
         {
-            attackTarget = GameManager.Player;
+            if (GameManager.Boundaries.GetComponent<BoundaryManager>().GetDestroyed())
+            {
+                currentBossState = bossStates[2];
+                currentBossStateName = currentBossState.state.ToString();
+                currentAction = currentBossState.ActionsDict[bossStates[2].firstAction];
+                currentActionName = currentAction.Action.ToString();
+                currentActionTime = 0;
+            }
         }
     }
 
@@ -124,65 +118,7 @@ public class BossBehavior : MonoBehaviour
         return inaccuracy;
     }
 
-    void EvaluateActionSettings()
-    {
-        
-    }
-    void EvaluateSwitchConditions()
-    {
-        for (int i = 0; i < currentState.Switches.Count; i++)
-        {
-            if (currentState.Switches[i].switchCondition == Switch.SwitchCondition.DoOnce)
-            {
-                SwitchToNextState(Switch.SwitchCondition.DoOnce);
-            }
-            else if (currentState.Switches[i].switchCondition == Switch.SwitchCondition.AnimationLength)
-            {
-                if (currentActionTime >= currentState.Switches[i].AnimationLength)
-                {
-                    SwitchToNextState(Switch.SwitchCondition.AnimationLength);
-                }
-            }
-            else if (currentState.Switches[i].switchCondition == Switch.SwitchCondition.DistanceToAttackTarget)
-            {
-                if (Vector3.Distance(transform.position, attackTarget.transform.position) < currentState.Switches[i].MinDistanceToTarget
-                    || Vector3.Distance(transform.position, attackTarget.transform.position) > currentState.Switches[i].MaxDistanceToTarget)
-                {
-                    SwitchToNextState(Switch.SwitchCondition.DistanceToAttackTarget);
-                }
-
-            }
-            else if (currentState.Switches[i].switchCondition == Switch.SwitchCondition.DistanceToMoveTarget)
-            {
-                if (Vector3.Distance(transform.position, moveTarget.position) < currentState.Switches[i].MinDistanceToTarget
-                    || Vector3.Distance(transform.position, moveTarget.position) > currentState.Switches[i].MaxDistanceToTarget)
-                {
-                    SwitchToNextState(Switch.SwitchCondition.DistanceToMoveTarget);
-                }
-            }
-            else if (currentState.Switches[i].switchCondition == Switch.SwitchCondition.DistanceToPlayer)
-            {
-                
-                if (Vector3.Distance(transform.position, GameManager.Player.transform.position) < currentState.Switches[i].MinDistanceToTarget
-                    || Vector3.Distance(transform.position, GameManager.Player.transform.position) > currentState.Switches[i].MaxDistanceToTarget)
-                {
-                    SwitchToNextState(Switch.SwitchCondition.DistanceToPlayer);
-                }
-            }
-            else if (currentState.Switches[i].switchCondition == Switch.SwitchCondition.MinionsKilled)
-            {
-                SwitchToNextState(Switch.SwitchCondition.MinionsKilled);
-            }
-            else if (currentState.Switches[i].switchCondition == Switch.SwitchCondition.Time)
-            {
-                if (currentActionTime >= currentState.Switches[i].ActionTime)
-                    SwitchToNextState(Switch.SwitchCondition.Time);
-            }
-
-        }
-    }
-
-    void Idle()
+    public void Rest()
     {
         animationScript.PlayIdle();
         AbsorbColliderActive = false;
@@ -192,17 +128,43 @@ public class BossBehavior : MonoBehaviour
         EvaluateSwitchConditions();
     }
 
-    void MoveToTransform()
+    void EvaluateSwitchConditions()
     {
-        //transform.position = Vector3.Lerp(transform.position, moveTarget.transform.position, moveSpeed* Time.deltaTime);
-        AbsorbColliderActive = false;
-        AbsorbEffect.SetActive(false);
-        LightningEffect.SetActive(false);
-        currentActionTime += Time.deltaTime;
-        EvaluateSwitchConditions();
+        for (int i = 0; i < currentAction.Switches.Count; i++)
+        {
+            if (currentAction.Switches[i].switchCondition == Switch.SwitchCondition.Trigger)
+            {
+                SwitchToNextAction(Switch.SwitchCondition.Trigger);
+            }
+            if (currentAction.Switches[i].switchCondition == Switch.SwitchCondition.AnimationLength)
+            {
+                if (currentActionTime >= currentAction.Switches[i].AnimationLength)
+                {
+                    SwitchToNextAction(Switch.SwitchCondition.AnimationLength);
+                }
+            }
+            if (currentAction.Switches[i].switchCondition == Switch.SwitchCondition.DistanceToTarget)
+            {
+                if (Vector3.Distance(transform.position, target.transform.position) < currentAction.Switches[i].MinDistanceToTarget
+                    && Vector3.Distance(transform.position, target.transform.position) > currentAction.Switches[i].MaxDistanceToTarget)
+                {
+                    SwitchToNextAction(Switch.SwitchCondition.DistanceToTarget);
+                }
+            }
+            if (currentAction.Switches[i].switchCondition == Switch.SwitchCondition.MinionsKilled)
+            {
+                SwitchToNextAction(Switch.SwitchCondition.MinionsKilled);
+            }
+            if (currentAction.Switches[i].switchCondition == Switch.SwitchCondition.Time)
+            {
+                if (currentActionTime >= currentAction.Switches[i].ActionTime)
+                    SwitchToNextAction(Switch.SwitchCondition.Time);
+            }
+
+        }
     }
 
-    void ResetCubes()
+    public void ResetCubes()
     {
         animationScript.PlayIdle();
         AbsorbColliderActive = false;
@@ -213,7 +175,7 @@ public class BossBehavior : MonoBehaviour
         EvaluateSwitchConditions();
     }
 
-    void Absorb()
+    public void CubeAbsorb()
     {
         animationScript.PlayIdle();
 
@@ -229,7 +191,7 @@ public class BossBehavior : MonoBehaviour
         EvaluateSwitchConditions();
     }
 
-    void CubeAttack()
+    public void CubeAttack()
     {
         animationScript.PlayIdle();
         AbsorbColliderActive = false;
@@ -254,14 +216,14 @@ public class BossBehavior : MonoBehaviour
                 proj.transform.parent = null;
                 proj.GetComponent<CubeBehaviour>().SetCubeState(ObjectState.ObjectStates.MovingTowardsPlayer);
                 proj.GetComponent<CubeBehaviour>().SetSpeedToPlayer(attackForce);
-                proj.GetComponent<CubeBehaviour>().SetDirectionToMove(inaccuracy, attackTarget.transform.position);
+                proj.GetComponent<CubeBehaviour>().SetDirectionToMove(inaccuracy, GameManager.Player);
                 proj.GetComponent<CubeBehaviour>().SetIsShot(true);
             }
         }
         EvaluateSwitchConditions();
     }
 
-    void LightningAttack()
+    public void LightningAttack()
     {
         AbsorbColliderActive = false;
         AbsorbEffect.SetActive(false);
@@ -271,6 +233,7 @@ public class BossBehavior : MonoBehaviour
         animationScript.PlayLightning();
         if (currentActionTime == 0)
         {
+            //snap to playerPosition
             Lightning(99999);
         }
         else
@@ -282,29 +245,7 @@ public class BossBehavior : MonoBehaviour
         EvaluateSwitchConditions();
     }
 
-    void Animation()
-    {
-        
-        animation.Play(currentState.ActionsDict[AIAction.ActionState.Animation].AnimationClip.name);
-    }
-
-    void NextState()
-    {
-        for (int i = 0; i < bossPhases.Count; i++)
-        {
-            if (currentBossPhase == bossPhases[i])
-            {
-                currentBossPhase = bossPhases[i + 1];
-                break;
-            }
-        }
-        currentState = currentBossPhase.StatesDict[currentBossPhase.firstState];
-        SetupCurrentActionFunc();
-        currentActionTime = 0;
-    }
-
-    
-    void SpawnEnemies()
+    public void SpawnEnemies()
     {
         //if (canSpawnEnemies)
         //{
@@ -340,7 +281,7 @@ public class BossBehavior : MonoBehaviour
             {
                 other.GetComponent<Rigidbody>().useGravity = false;
                 other.GetComponent<CubeBehaviour>().SetCubeState(ObjectState.ObjectStates.MovingTowardsBoss);
-                other.GetComponent<CubeBehaviour>().SetDirectionToMove(0, gameObject.transform.position);
+                other.GetComponent<CubeBehaviour>().SetDirectionToMove(0, gameObject);
             }
         }
     }

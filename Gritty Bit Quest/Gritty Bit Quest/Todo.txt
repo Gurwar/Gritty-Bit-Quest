@@ -11,21 +11,6 @@ Charger
 	- if close enough to player rotate between walking forward, walking left, and walking right
 	- if close enough to player attack him or roar
 
-- make each state have multiple actions that can play at once
-- make terrain leading up to car
-
-- boss idle
-	- player gets far from boss
-- boss animate flying
-- lighting at a certain time
-	- for 3 seconds
-- idle at position
-	- player nears his position
-- talk
-	-time
-- move to fight position
-- next state
-
 Assets to buy
 - VRIK
 - Crystals
