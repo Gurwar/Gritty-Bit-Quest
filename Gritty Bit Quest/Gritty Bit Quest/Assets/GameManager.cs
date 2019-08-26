@@ -31,6 +31,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private static GameObject car;
+    public static GameObject Car
+    {
+        set
+        {
+            car = value;
+        }
+        get
+        {
+            return car;
+        }
+    }
+
     private static GameObject boundaries;
     public static GameObject Boundaries
     {
@@ -58,10 +71,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Start()
+    void Awake()
     {
         Player = GameObject.Find("Player");
         Boss = GameObject.Find("Boss");
+        Car = GameObject.Find("Ghost");
     }
 
     public static List<T> OrderList<T>(List<T> ListToOrder) where T : Object
@@ -98,5 +112,10 @@ public class GameManager : MonoBehaviour
 
         list.Add(objectToAdd);
     }
+
+    //public static void SetDelegate<T>(, Dictionary functions, string func) where T : 
+    //{
+    //
+    //}
 
 }

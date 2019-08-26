@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
     [SerializeField]
-    Transform camera;
-    Vector3 cameraInitialPosition;
+    Transform PlayerForward;
     [SerializeField]
     float speedMultiplier;
     [SerializeField]
@@ -20,6 +19,7 @@ public class PlayerMovement : MonoBehaviour {
     float distanceToGround;
     bool spinning;
     bool turningLeft;
+    bool inCar;
     // Use this for initialization
     void Start()
     {
@@ -29,12 +29,6 @@ public class PlayerMovement : MonoBehaviour {
         //StartCoroutine(StartCalibrateCenter()); for openvr
 
         
-    }
-
-    IEnumerator StartCalibrateCenter()
-    {
-        yield return new WaitForSeconds(.5f);
-        ChangeCameraInitialPos();
     }
 
     public float GetSpeedMultiplier()
@@ -49,11 +43,13 @@ public class PlayerMovement : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if (inCar)
+            return;
         spinning = true;
-        direction = transform.TransformDirection(direction).normalized;
+        direction = PlayerForward.TransformDirection(direction).normalized;
         transform.position += speedMultiplier * Time.deltaTime * direction;
         direction = Vector3.zero;
-        transform.eulerAngles = Vector3.RotateTowards(transform.eulerAngles, targetRotation, Time.deltaTime * rotateSpeed, rotateSpeed * Time.deltaTime);
+        //transform.eulerAngles = Vector3.RotateTowards(transform.eulerAngles, targetRotation, Time.deltaTime * rotateSpeed, rotateSpeed * Time.deltaTime);
         if ((transform.eulerAngles - targetRotation).magnitude < 1)
         {
             transform.eulerAngles = targetRotation;
@@ -73,7 +69,6 @@ public class PlayerMovement : MonoBehaviour {
             }
             spinning = false;
         }
-        //GameManager.Player = gameObject;
     }
 
     public void CalculateSpeedAndDirection(Vector2 movementVector)
@@ -87,11 +82,16 @@ public class PlayerMovement : MonoBehaviour {
         return Physics.Raycast(transform.position, -Vector3.up, distanceToGround + 1f);
     }
 
- 
-    public void ChangeCameraInitialPos()
+    public void SetInCar(bool c)
     {
-        cameraInitialPosition = camera.localPosition;
+        inCar = c;
     }
+
+    public bool GetInCar()
+    {
+        return inCar;
+    }
+
     public void RotatePlayer(bool left)
     {
         if (!spinning)

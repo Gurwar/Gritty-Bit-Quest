@@ -18,6 +18,8 @@ public class GripScript : MonoBehaviour
     GameObject leftHand;
     [SerializeField]
     GameObject rightHand;
+    [SerializeField]
+    float minChangeInHandPositionToMove;
     bool grabbedLeft;
     bool grabbedRight;
     [SerializeField]
@@ -31,10 +33,11 @@ public class GripScript : MonoBehaviour
 
     void Steer(Vector3 movement)
     {
+        Debug.Log(movement);
         Vector2 validMovementVector = transform.up;
         float magnitude = Vector2.Dot(movement, validMovementVector);
         //do a dot product between the movement vector and the valid vector for movement on the grip
-        if (Mathf.Abs(magnitude) > 0.75)
+        if (Mathf.Abs(magnitude) > 0)
         {
             float targetZ = steeringWheel.transform.localEulerAngles.z + magnitude;
             targetZ = Mathf.Clamp(targetZ, 135, 225);
@@ -55,7 +58,7 @@ public class GripScript : MonoBehaviour
                 grabbedLeft = true;
             }
         }
-        else if (!InputInfo.GetGrippedLeft() && (leftHand))
+        else if (!InputInfo.GetGrippedLeft())
         {
             grabbedLeft = false;
         }
@@ -100,16 +103,19 @@ public class GripScript : MonoBehaviour
         {
             if (grabbedLeft)
             {
-                if (new Vector2(InputInfo.GetLeftMovement().x, InputInfo.GetLeftMovement().y).magnitude >= .0025)
+                Vector2 velocity = InputInfo.GetVelocityLeft();
+                if (velocity.magnitude >= minChangeInHandPositionToMove)
                 {
-                    Steer(new Vector2(InputInfo.GetLeftMovement().x, InputInfo.GetLeftMovement().y).normalized);
+                    Steer(velocity.normalized);
                 }
             }
             if (grabbedRight)
             {
-                if (new Vector2(InputInfo.GetRightMovement().x, InputInfo.GetRightMovement().y).magnitude >= .0025)
+                Vector2 velocity = InputInfo.GetVelocityRight();
+                Debug.Log(velocity);
+                if (velocity.magnitude >= minChangeInHandPositionToMove)
                 {
-                    Steer(new Vector2(InputInfo.GetRightMovement().x, InputInfo.GetRightMovement().y).normalized);
+                    Steer(velocity.normalized);
                 }
             }
         }
@@ -128,25 +134,11 @@ public class GripScript : MonoBehaviour
 
     void SetInRangeLeft()
     {
-        if (Vector3.Distance(leftHand.transform.position, transform.position) < inRangeDistance)
-        {
-            inRangeLeft = true;
-        }
-        else
-        {
-            inRangeLeft = false;
-        }
+         inRangeLeft = GameManager.GetInRange(transform.position, leftHand.transform.position, inRangeDistance);
     }
 
     void SetInRangeRight()
     {
-        if (Vector3.Distance(rightHand.transform.position, transform.position) < inRangeDistance)
-        {
-            inRangeRight = true;
-        }
-        else
-        {
-            inRangeRight = false;
-        }
+        inRangeRight = GameManager.GetInRange(transform.position, rightHand.transform.position, inRangeDistance);
     }
 }
