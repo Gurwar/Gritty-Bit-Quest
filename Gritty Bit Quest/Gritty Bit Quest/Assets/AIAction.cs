@@ -1,89 +1,37 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-[System.Serializable]
-public class Switch
-{
-    public enum SwitchCondition { DoOnce,Time, MinionsKilled, DistanceToAttackTarget, DistanceToMoveTarget, DistanceToPlayer, AnimationLength, OnTriggerEnter,}
-    public SwitchCondition switchCondition;
-    public float MinDistanceToTarget;
-    public float MaxDistanceToTarget;
-    public float AnimationLength;
-    public enum EnemyType { Soldier, Behemoth }
-    public EnemyType EnemyTypeToSpawn;
-    public int EnemyAmount;
-    public Vector2 ActionTimeRange;
-    [HideInInspector]
-    public float ActionTime;
-    public List<string> PossibleNextStates = new List<string>();
-}
-
-[System.Serializable]
-public class AIState
-{
-    public string Name;
-    public List<AIAction> Actions = new List<AIAction>();
-    public List<Switch> Switches = new List<Switch>();
-    public Dictionary<AIAction.ActionState, AIAction> ActionsDict = new Dictionary<AIAction.ActionState, AIAction>();
-    public Dictionary<Switch.SwitchCondition, Switch> SwitchesDict = new Dictionary<Switch.SwitchCondition, Switch>();
-
-    public void Initialize()
-    {
-        RefreshSwitchDictionary();
-        RefreshActionDictionary();
-    }
-    public void SetActionTime()
-    {
-        if (SwitchesDict.ContainsKey(Switch.SwitchCondition.Time))
-            SwitchesDict[Switch.SwitchCondition.Time].ActionTime = Random.Range(SwitchesDict[Switch.SwitchCondition.Time].ActionTimeRange.x, SwitchesDict[Switch.SwitchCondition.Time].ActionTimeRange.y);
-    }
-
-    public void RefreshActionDictionary()
-    {
-        ActionsDict.Clear();
-        for (int i = 0; i < Actions.Count; i++)
-        {
-            if (!ActionsDict.ContainsKey(Actions[i].Action))
-                ActionsDict.Add(Actions[i].Action, Actions[i]);
-        }
-    }
-
-    public void RefreshSwitchDictionary()
-    {
-        SwitchesDict.Clear();
-        for (int i = 0; i < Switches.Count; i++)
-        {
-            if (!SwitchesDict.ContainsKey(Switches[i].switchCondition))
-                SwitchesDict.Add(Switches[i].switchCondition, Switches[i]);
-        }
-    }
-
-    public string GetNextState(Switch.SwitchCondition condition)
-    {
-        Switch temp = SwitchesDict[condition];
-        int Rand = Random.Range(0, temp.PossibleNextStates.Count);
-        return temp.PossibleNextStates[Rand];
-    }
-}
-
-[System.Serializable]
-public class AIActionSettings
-{
-    public float StartTime;
-    public float EndTime;
-}
-
-[System.Serializable]
-public class AIAction
-{
-    public enum ActionState { Spawn, Idle, Runforward, WalkForward, WalkLeft, WalkRight, Attack, Roar, ResetCubes, Absorb, CubeAttack, LightningAttack, SpawnEnemies, Animation, MoveToTransform, MoveToVector, RotateTo, RotateBy, NextState };
-    public ActionState Action;
-    public AIActionSettings ActionSettings;
-    public AnimationClip AnimationClip;
-    public float MoveSpeed;
-    public Vector3 VectorToMoveTo;
-    public string MoveTransformName;
-    public float RotateSpeed;
-    public Vector3 TargetRotation;
-}
+/target:library
+/nowarn:0169
+/out:Temp/Unity.XR.Oculus.Editor.dll
+/debug:portable
+/optimize-
+/nostdlib+
+/preferreduilang:en-US
+/langversion:latest
+/reference:Library/ScriptAssemblies/UnityEditor.UI.dll
+/reference:Library/ScriptAssemblies/UnityEngine.UI.dll
+/reference:Library/ScriptAssemblies/UnityEditor.TestRunner.dll
+/reference:Library/ScriptAssemblies/UnityEngine.TestRunner.dll
+/reference:D:/Unity/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll
+/reference:D:/Unity/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll
+/reference:D:/Unity/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll
+/reference:D:/Unity/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll
+/reference:D:/Unity/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.AndroidJNIModule.dll
+/reference:D:/Unity/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll
+/reference:D:/Unity/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll
+/reference:D:/Unity/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll
+/reference:D:/Unity/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll
+/reference:D:/Unity/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll
+/reference:D:/Unity/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll
+/reference:D:/Unity/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll
+/reference:D:/Unity/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll
+/reference:D:/Unity/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.DSPGraphModule.dll
+/reference:D:/Unity/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll
+/reference:D:/Unity/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.FileSystemHttpModule.dll
+/reference:D:/Unity/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll
+/reference:D:/Unity/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll
+/reference:D:/Unity/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.HotReloadModule.dll
+/reference:D:/Unity/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll
+/reference:D:/Unity/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll
+/reference:D:/Unity/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll
+/reference:D:/Unity/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.InputLegacyModule.dll
+/reference:D:/Unity/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll
+/reference:D:/Unity/Unity/Hub/Editor/2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine

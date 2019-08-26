@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
-
 public class g_AIAnimationScript : MonoBehaviour 
 {
-	Animator animator;
+	 animator;
     int runHash;
     int attack1Hash;
 	int crouchingHash;
@@ -51,17 +50,17 @@ public class g_AIAnimationScript : MonoBehaviour
 	}
     public void PlayRoarAnimation()
     {
-        if (!isRunning)
+        if (!isRoar)
         {
             animator.SetBool(roarHash, true);
 
-            isRunning = true;
+            isRunning = false;
             isAttack1 = false;
             isCrouch = false;
             isIdle = false;
             isShot = false;
             isDie = false;
-            isRoar = false;
+            isRoar = true;
             isWalk = false;
             isWalkLeft = false;
             isWalkRight = false;

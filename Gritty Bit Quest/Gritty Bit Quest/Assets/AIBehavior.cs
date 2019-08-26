@@ -8,10 +8,10 @@ public class AIBehavior : ScriptableObject
 
     public string firstState;
     [HideInInspector]
-    public Dictionary<string, AIState> StateDict = new Dictionary<string, AIState>();
+    public Dictionary<string, AIState> StatesDict = new Dictionary<string, AIState>();
     public List<AIState> StatesList = new List<AIState>();
 
-    public List<AIState> GetAIActions()
+    public List<AIState> GetAIStates()
     {
         return StatesList;
     }
