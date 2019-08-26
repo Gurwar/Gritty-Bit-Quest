@@ -115,11 +115,8 @@ public class AIBehaviorEditorScript : Editor
             return;
         }
 <<<<<<< HEAD
-<<<<<<< HEAD
         else if (property.name == "ActionSettings")
 =======
-=======
->>>>>>> parent of d0d11103... Gritty Bit Vehicle
 
         else if (property.propertyType == SerializedPropertyType.Enum)
 >>>>>>> parent of d0d11103... Gritty Bit Vehicle
@@ -155,9 +152,6 @@ public class AIBehaviorEditorScript : Editor
         //base.DrawDefaultInspector();
         AIBehavior.firstAction = (AIAction.ActionState)EditorGUILayout.EnumPopup("First Action", AIBehavior.firstAction);
         for (int i = 0; i < AIBehavior.ActionsList.Count; i++)
-<<<<<<< HEAD
->>>>>>> parent of d0d11103... Gritty Bit Vehicle
-=======
 >>>>>>> parent of d0d11103... Gritty Bit Vehicle
         {
             GameManager.AddToListOnce(ref SkipPropertyList, "AnimationClip");
@@ -186,7 +180,6 @@ public class AIBehaviorEditorScript : Editor
         else if (enumValue == 3)//Walk Forward
         {
 <<<<<<< HEAD
-<<<<<<< HEAD
             GameManager.AddToListOnce(ref SkipPropertyList, "AnimationClip");
             GameManager.AddToListOnce(ref SkipPropertyList, "MoveSpeed");
             GameManager.AddToListOnce(ref SkipPropertyList, "VectorToMoveTo");
@@ -195,26 +188,16 @@ public class AIBehaviorEditorScript : Editor
             GameManager.AddToListOnce(ref SkipPropertyList, "TargetRotation");
 =======
             AIBehavior.ActionsList.Remove(AIBehavior.ActionsList[AIBehavior.ActionsList.Count - 1]);
->>>>>>> parent of d0d11103... Gritty Bit Vehicle
-=======
-            AIAction tempAction = new AIAction();
-            tempAction.Switches.Add(new Switch());
-            AIBehavior.ActionsList.Add(tempAction);
-
 >>>>>>> parent of d0d11103... Gritty Bit Vehicle
         }
         else if (enumValue == 4)//WalkLeft
         {
-<<<<<<< HEAD
             GameManager.AddToListOnce(ref SkipPropertyList, "AnimationClip");
             GameManager.AddToListOnce(ref SkipPropertyList, "MoveSpeed");
             GameManager.AddToListOnce(ref SkipPropertyList, "VectorToMoveTo");
             GameManager.AddToListOnce(ref SkipPropertyList, "MoveTransformName");
             GameManager.AddToListOnce(ref SkipPropertyList, "RotateSpeed");
             GameManager.AddToListOnce(ref SkipPropertyList, "TargetRotation");
-=======
-            AIBehavior.ActionsList.Remove(AIBehavior.ActionsList[AIBehavior.ActionsList.Count - 1]);
->>>>>>> parent of d0d11103... Gritty Bit Vehicle
         }
         else if (enumValue == 5)//WalkRight
         {

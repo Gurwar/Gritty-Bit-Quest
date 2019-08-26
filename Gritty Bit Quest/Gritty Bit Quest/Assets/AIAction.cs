@@ -89,9 +89,5 @@ public class AIAction
         int Rand = Random.Range(0, temp.PossibleNextActions.Count);
         return temp.PossibleNextActions[Rand];
     }
-<<<<<<< HEAD
-}
->>>>>>> parent of d0d11103... Gritty Bit Vehicle
-=======
 }
 >>>>>>> parent of d0d11103... Gritty Bit Vehicle
