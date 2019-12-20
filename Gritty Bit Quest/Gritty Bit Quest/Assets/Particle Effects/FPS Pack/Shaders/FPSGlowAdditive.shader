@@ -1,6 +1,6 @@
 // Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
 
-Shader "Effects/FPS_Pack/GlowAdditiveNoFade" {
+Shader "KriptoFX/FPS_Pack/GlowAdditiveNoFade" {
 	Properties {
 	_TintColor ("Tint Color", Color) = (0.5,0.5,0.5,0.5)
 	_ColorStrength ("Color strength", Float) = 1.0
@@ -11,7 +11,9 @@ Category {
 	Tags { "Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent" }
 	Blend SrcAlpha One
 
-	Cull Off Lighting Off ZWrite Off Fog { Color (0,0,0,0) }
+	Cull Off 
+	ZWrite Off 
+	
 	
 	SubShader {
 		Pass {

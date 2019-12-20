@@ -132,7 +132,7 @@ public class CubeBehaviour : MonoBehaviour
     {
         if (GetComponent<ObjectState>().GetHandScript() != null)
         {
-            GetComponent<ObjectState>().GetHandScript().DropObject();
+            //GetComponent<ObjectState>().GetHandScript().DropObject();
             Instantiate(HandExplosionPrefab, transform.position, Quaternion.identity);
             GameManager.Player.GetComponent<g_PlayerHealthScript>().Damage(maxDamage);
         }

@@ -147,7 +147,6 @@ public class OVRGrabber : MonoBehaviour
 		float prevFlex = m_prevFlex;
 		// Update values from inputs
 		m_prevFlex = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, m_controller);
-
 		CheckForGrabOrRelease(prevFlex);
     }
 
@@ -159,45 +158,14 @@ public class OVRGrabber : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider otherCollider)
-    {
-        // Get the grab trigger
-		OVRGrabbable grabbable = otherCollider.GetComponent<OVRGrabbable>() ?? otherCollider.GetComponentInParent<OVRGrabbable>();
-        if (grabbable == null) return;
-
-        // Add the grabbable
-        int refCount = 0;
-        m_grabCandidates.TryGetValue(grabbable, out refCount);
-        m_grabCandidates[grabbable] = refCount + 1;
-    }
-
-    void OnTriggerExit(Collider otherCollider)
-    {
-		OVRGrabbable grabbable = otherCollider.GetComponent<OVRGrabbable>() ?? otherCollider.GetComponentInParent<OVRGrabbable>();
-        if (grabbable == null) return;
-
-        // Remove the grabbable
-        int refCount = 0;
-        bool found = m_grabCandidates.TryGetValue(grabbable, out refCount);
-        if (!found)
-        {
-            return;
-        }
-
-        if (refCount > 1)
-        {
-            m_grabCandidates[grabbable] = refCount - 1;
-        }
-        else
-        {
-            m_grabCandidates.Remove(grabbable);
-        }
-    }
+    
 
     protected void CheckForGrabOrRelease(float prevFlex)
     {
+
         if ((m_prevFlex >= grabBegin) && (prevFlex < grabBegin))
         {
+            Debug.LogError(grabBegin);
             GrabBegin();
         }
         else if ((m_prevFlex <= grabEnd) && (prevFlex > grabEnd))
@@ -211,7 +179,6 @@ public class OVRGrabber : MonoBehaviour
         float closestMagSq = float.MaxValue;
 		OVRGrabbable closestGrabbable = null;
         Collider closestGrabbableCollider = null;
-
         // Iterate grab candidates and find the closest grabbable candidate
 		foreach (OVRGrabbable grabbable in m_grabCandidates.Keys)
         {
@@ -225,15 +192,21 @@ public class OVRGrabber : MonoBehaviour
             {
                 Collider grabbableCollider = grabbable.grabPoints[j];
                 // Store the closest grabbable
+
                 Vector3 closestPointOnBounds = grabbableCollider.ClosestPointOnBounds(m_gripTransform.position);
+
                 float grabbableMagSq = (m_gripTransform.position - closestPointOnBounds).sqrMagnitude;
+
                 if (grabbableMagSq < closestMagSq)
                 {
                     closestMagSq = grabbableMagSq;
+
                     closestGrabbable = grabbable;
+
                     closestGrabbableCollider = grabbableCollider;
                 }
             }
+
         }
 
         // Disable grab volumes to prevent overlaps
@@ -253,11 +226,13 @@ public class OVRGrabber : MonoBehaviour
             m_lastRot = transform.rotation;
 
             // Set up offsets for grabbed object desired position relative to hand.
-            if(m_grabbedObj.snapPosition)
+            if (m_grabbedObj.snapPosition)
             {
+
                 m_grabbedObjectPosOff = m_gripTransform.localPosition;
                 if(m_grabbedObj.snapOffset)
                 {
+
                     Vector3 snapOffset = m_grabbedObj.snapOffset.position;
                     if (m_controller == OVRInput.Controller.LTouch) snapOffset.x = -snapOffset.x;
                     m_grabbedObjectPosOff += snapOffset;
@@ -265,6 +240,7 @@ public class OVRGrabber : MonoBehaviour
             }
             else
             {
+
                 Vector3 relPos = m_grabbedObj.transform.position - transform.position;
                 relPos = Quaternion.Inverse(transform.rotation) * relPos;
                 m_grabbedObjectPosOff = relPos;
@@ -272,6 +248,7 @@ public class OVRGrabber : MonoBehaviour
 
             if (m_grabbedObj.snapOrientation)
             {
+
                 m_grabbedObjectRotOff = m_gripTransform.localRotation;
                 if(m_grabbedObj.snapOffset)
                 {
@@ -287,12 +264,15 @@ public class OVRGrabber : MonoBehaviour
             // Note: force teleport on grab, to avoid high-speed travel to dest which hits a lot of other objects at high
             // speed and sends them flying. The grabbed object may still teleport inside of other objects, but fixing that
             // is beyond the scope of this demo.
+
             MoveGrabbedObject(m_lastPos, m_lastRot, true);
             if(m_parentHeldObject)
             {
                 m_grabbedObj.transform.parent = transform;
             }
+
         }
+
     }
 
     protected virtual void MoveGrabbedObject(Vector3 pos, Quaternion rot, bool forceTeleport = false)
@@ -369,6 +349,42 @@ public class OVRGrabber : MonoBehaviour
         if (m_grabbedObj == grabbable)
         {
             GrabbableRelease(Vector3.zero, Vector3.zero);
+        }
+    }
+
+    void OnTriggerEnter(Collider otherCollider)
+    {
+        // Get the grab trigger
+        OVRGrabbable grabbable = otherCollider.GetComponent<OVRGrabbable>() ?? otherCollider.GetComponentInParent<OVRGrabbable>();
+        if (grabbable == null) return;
+
+        Debug.Log("Trigger");
+        // Add the grabbable
+        int refCount = 0;
+        m_grabCandidates.TryGetValue(grabbable, out refCount);
+        m_grabCandidates[grabbable] = refCount + 1;
+    }
+
+    void OnTriggerExit(Collider otherCollider)
+    {
+        OVRGrabbable grabbable = otherCollider.GetComponent<OVRGrabbable>() ?? otherCollider.GetComponentInParent<OVRGrabbable>();
+        if (grabbable == null) return;
+
+        // Remove the grabbable
+        int refCount = 0;
+        bool found = m_grabCandidates.TryGetValue(grabbable, out refCount);
+        if (!found)
+        {
+            return;
+        }
+
+        if (refCount > 1)
+        {
+            m_grabCandidates[grabbable] = refCount - 1;
+        }
+        else
+        {
+            m_grabCandidates.Remove(grabbable);
         }
     }
 }

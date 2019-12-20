@@ -27,7 +27,7 @@ Material:
     - _ColorStrength: 1
     - _DiffuseThreshold: -1.1
     - _Diffusion: 10
-    - _InvFade: 3
+    - _InvFade: 5
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _TintColor: {r: 0.41911763, g: 0.41911763, b: 0.41911763, a: 0.19607843}
+    - _TintColor: {r: 1, g: 1, b: 1, a: 0.25}

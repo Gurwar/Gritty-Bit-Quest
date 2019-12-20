@@ -1,0 +1,415 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ddff223f92c66c4d8044ab748ffcec9, type: 3}
+  m_Name: Charger 1
+  m_EditorClassIdentifier: 
+  firstState: Spawn
+  StatesList:
+  - Name: Patrol
+    Chance: 1
+    MovementThisState: 1
+    Actions:
+    - Action: 24
+      ActionSettings:
+        StartTime: 0
+        EndTime: Infinity
+      AnimationFunction: 
+      MoveSpeed: 0
+      VectorToMoveTo: {x: 0, y: 0, z: 0}
+      MoveTransformName: 
+      MoveMagnitude: 0
+      RotateSpeed: 0
+      TargetRotation: {x: 0, y: 0, z: 0}
+    Switches:
+    - SwitchCondition: 4
+      Name: Patrol Point Reached
+      MinDistanceToTarget: 2
+      MaxDistanceToTarget: Infinity
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 0, y: 0}
+      ActionTime: 0
+      PossibleNextStates:
+      - Patrol
+    - SwitchCondition: 9
+      Name: See Player
+      MinDistanceToTarget: 2
+      MaxDistanceToTarget: Infinity
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 0, y: 0}
+      ActionTime: 0
+      PossibleNextStates:
+      - Run Forward
+    behaviour: {fileID: 11400000}
+  - Name: Run Forward
+    Chance: 1
+    MovementThisState: 1
+    Actions:
+    - Action: 2
+      ActionSettings:
+        StartTime: 0
+        EndTime: Infinity
+      AnimationFunction: 
+      MoveSpeed: 7
+      VectorToMoveTo: {x: 0, y: 0, z: 0}
+      MoveTransformName: 
+      MoveMagnitude: 0
+      RotateSpeed: 0
+      TargetRotation: {x: 0, y: 0, z: 0}
+    Switches:
+    - SwitchCondition: 5
+      Name: Close To Player
+      MinDistanceToTarget: 1.5
+      MaxDistanceToTarget: Infinity
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 0, y: 0}
+      ActionTime: 0
+      PossibleNextStates:
+      - Walk Left
+      - Walk Right
+      - Walk Forward
+    - SwitchCondition: 5
+      Name: Close To Player
+      MinDistanceToTarget: 0
+      MaxDistanceToTarget: 3
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 0, y: 0}
+      ActionTime: 0
+      PossibleNextStates:
+      - Melee
+    behaviour: {fileID: 11400000}
+  - Name: Spawn
+    Chance: 1
+    MovementThisState: 0
+    Actions:
+    - Action: 0
+      ActionSettings:
+        StartTime: 0
+        EndTime: Infinity
+      AnimationFunction: 
+      MoveSpeed: 0
+      VectorToMoveTo: {x: 0, y: 0, z: 0}
+      MoveTransformName: 
+      MoveMagnitude: 0
+      RotateSpeed: 0
+      TargetRotation: {x: 0, y: 0, z: 0}
+    Switches:
+    - SwitchCondition: 1
+      Name: Spawn and Roar
+      MinDistanceToTarget: 0
+      MaxDistanceToTarget: 0
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 2.65, y: 2.65}
+      ActionTime: 2.65
+      PossibleNextStates:
+      - Patrol
+    behaviour: {fileID: 11400000}
+  - Name: Walk Left
+    Chance: 3
+    MovementThisState: 1
+    Actions:
+    - Action: 4
+      ActionSettings:
+        StartTime: 0
+        EndTime: Infinity
+      AnimationFunction: 
+      MoveSpeed: 1
+      VectorToMoveTo: {x: 0, y: 0, z: 0}
+      MoveTransformName: 
+      MoveMagnitude: 4
+      RotateSpeed: 0
+      TargetRotation: {x: 0, y: 0, z: 0}
+    Switches:
+    - SwitchCondition: 1
+      Name: Walk Left For Time
+      MinDistanceToTarget: 0
+      MaxDistanceToTarget: 0
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 0.5, y: 4}
+      ActionTime: 0.50316846
+      PossibleNextStates:
+      - Walk Right
+      - Walk Left
+      - Walk Forward
+      - Taunt
+    - SwitchCondition: 5
+      Name: Close Enough To Melee
+      MinDistanceToTarget: 3
+      MaxDistanceToTarget: Infinity
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 0.5, y: 4}
+      ActionTime: 3.1965659
+      PossibleNextStates:
+      - Melee
+    - SwitchCondition: 5
+      Name: Far From Player
+      MinDistanceToTarget: 0
+      MaxDistanceToTarget: 7.5
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 0.5, y: 4}
+      ActionTime: 1.4516075
+      PossibleNextStates:
+      - Run Forward
+      - Walk Forward
+      - Taunt
+    behaviour: {fileID: 11400000}
+  - Name: Walk Right
+    Chance: 3
+    MovementThisState: 1
+    Actions:
+    - Action: 5
+      ActionSettings:
+        StartTime: 0
+        EndTime: Infinity
+      AnimationFunction: 
+      MoveSpeed: 1
+      VectorToMoveTo: {x: 0, y: 0, z: 0}
+      MoveTransformName: 
+      MoveMagnitude: 4
+      RotateSpeed: 0
+      TargetRotation: {x: 0, y: 0, z: 0}
+    Switches:
+    - SwitchCondition: 1
+      Name: Walk Right For Time
+      MinDistanceToTarget: 0
+      MaxDistanceToTarget: 0
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 0.5, y: 4}
+      ActionTime: 3.2282763
+      PossibleNextStates:
+      - Walk Left
+      - Walk Right
+      - Walk Forward
+      - Taunt
+    - SwitchCondition: 5
+      Name: Close Enough To Melee
+      MinDistanceToTarget: 3
+      MaxDistanceToTarget: Infinity
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 0.5, y: 4}
+      ActionTime: 0.6188274
+      PossibleNextStates:
+      - Melee
+    - SwitchCondition: 5
+      Name: Far From Player
+      MinDistanceToTarget: 0
+      MaxDistanceToTarget: 7.5
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 0.5, y: 4}
+      ActionTime: 3.3390148
+      PossibleNextStates:
+      - Run Forward
+      - Walk Forward
+      - Taunt
+    behaviour: {fileID: 11400000}
+  - Name: Walk Forward
+    Chance: 10
+    MovementThisState: 1
+    Actions:
+    - Action: 3
+      ActionSettings:
+        StartTime: 0
+        EndTime: Infinity
+      AnimationFunction: 
+      MoveSpeed: 1
+      VectorToMoveTo: {x: 0, y: 0, z: 0}
+      MoveTransformName: 
+      MoveMagnitude: 0
+      RotateSpeed: 0
+      TargetRotation: {x: 0, y: 0, z: 0}
+    Switches:
+    - SwitchCondition: 1
+      Name: Walk Forward For Time
+      MinDistanceToTarget: 0
+      MaxDistanceToTarget: 0
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 1, y: 2}
+      ActionTime: 1.3125565
+      PossibleNextStates:
+      - Walk Left
+      - Walk Right
+      - Walk Forward
+      - Taunt
+    - SwitchCondition: 5
+      Name: Close Enough To Melee
+      MinDistanceToTarget: 3
+      MaxDistanceToTarget: Infinity
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 0.5, y: 4}
+      ActionTime: 1.7066066
+      PossibleNextStates:
+      - Melee
+    - SwitchCondition: 5
+      Name: Far From Player
+      MinDistanceToTarget: 0
+      MaxDistanceToTarget: 7.5
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 0.5, y: 4}
+      ActionTime: 1.1708694
+      PossibleNextStates:
+      - Run Forward
+      - Walk Forward
+      - Taunt
+    behaviour: {fileID: 11400000}
+  - Name: Melee
+    Chance: 1
+    MovementThisState: 0
+    Actions:
+    - Action: 20
+      ActionSettings:
+        StartTime: 0
+        EndTime: Infinity
+      AnimationFunction: 
+      MoveSpeed: 0
+      VectorToMoveTo: {x: 0, y: 0, z: 0}
+      MoveTransformName: 
+      MoveMagnitude: 0
+      RotateSpeed: 0
+      TargetRotation: {x: 0, y: 0, z: 0}
+    Switches:
+    - SwitchCondition: 1
+      Name: Melee
+      MinDistanceToTarget: 0
+      MaxDistanceToTarget: 0
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 1, y: 1}
+      ActionTime: 1
+      PossibleNextStates:
+      - Roar
+      - Melee
+    - SwitchCondition: 5
+      Name: Too Far To Melee
+      MinDistanceToTarget: 0
+      MaxDistanceToTarget: 2
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 2, y: 2}
+      ActionTime: 2
+      PossibleNextStates:
+      - Walk Left
+      - Walk Right
+      - Walk Forward
+    behaviour: {fileID: 11400000}
+  - Name: Taunt
+    Chance: 0.1
+    MovementThisState: 0
+    Actions:
+    - Action: 25
+      ActionSettings:
+        StartTime: 0
+        EndTime: Infinity
+      AnimationFunction: 
+      MoveSpeed: 0
+      VectorToMoveTo: {x: 0, y: 0, z: 0}
+      MoveTransformName: 
+      MoveMagnitude: 0
+      RotateSpeed: 0
+      TargetRotation: {x: 0, y: 0, z: 0}
+    Switches:
+    - SwitchCondition: 1
+      Name: TauntTime
+      MinDistanceToTarget: 0
+      MaxDistanceToTarget: 0
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 1, y: 1}
+      ActionTime: 1
+      PossibleNextStates:
+      - Idle After Taunt
+    behaviour: {fileID: 11400000}
+  - Name: Idle After Taunt
+    Chance: 1
+    MovementThisState: 0
+    Actions:
+    - Action: 1
+      ActionSettings:
+        StartTime: 0
+        EndTime: Infinity
+      AnimationFunction: 
+      MoveSpeed: 0
+      VectorToMoveTo: {x: 0, y: 0, z: 0}
+      MoveTransformName: 
+      MoveMagnitude: 0
+      RotateSpeed: 0
+      TargetRotation: {x: 0, y: 0, z: 0}
+    Switches:
+    - SwitchCondition: 1
+      Name: Idle Time
+      MinDistanceToTarget: 0
+      MaxDistanceToTarget: 0
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 0.5, y: 2}
+      ActionTime: 0.72638685
+      PossibleNextStates:
+      - Walk Forward
+    behaviour: {fileID: 11400000}
+  - Name: Roar
+    Chance: 1
+    MovementThisState: 0
+    Actions:
+    - Action: 7
+      ActionSettings:
+        StartTime: 0
+        EndTime: Infinity
+      AnimationFunction: 
+      MoveSpeed: 0
+      VectorToMoveTo: {x: 0, y: 0, z: 0}
+      MoveTransformName: 
+      MoveMagnitude: 0
+      RotateSpeed: 0
+      TargetRotation: {x: 0, y: 0, z: 0}
+    Switches:
+    - SwitchCondition: 1
+      Name: RoarTime
+      MinDistanceToTarget: 0
+      MaxDistanceToTarget: 0
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 1, y: 1}
+      ActionTime: 1
+      PossibleNextStates:
+      - Walk Forward
+    behaviour: {fileID: 11400000}

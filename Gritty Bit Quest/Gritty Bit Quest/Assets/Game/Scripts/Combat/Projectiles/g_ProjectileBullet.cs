@@ -8,13 +8,13 @@ using System.Collections;
 
     public class g_ProjectileBullet : MonoBehaviour
     {
-	public Transform bulletSpawnTransform;
     public float speed = 1;
-    public LayerMask layerMask;
 	public Vector2 maxLifeTime;
     //Bullet Stuff
+    [HideInInspector]
     public float damage = 16;
-
+    [HideInInspector]
+    public Transform bulletSpawnTransform;
     public float bulletForce = 100;
 
 	public float m_inaccuracy;
@@ -34,18 +34,11 @@ using System.Collections;
      
 	void Start()
      {
-		m_inaccuracyVector = new Vector3 (Random.Range(-m_inaccuracy, m_inaccuracy), Random.Range(-m_inaccuracy, m_inaccuracy), 0);		 
-        
-		if (bulletSpawnTransform == null)
-		{
-			bulletSpawnTransform = transform;
-		}
+		m_inaccuracyVector = new Vector3 (Random.Range(-m_inaccuracy, m_inaccuracy), Random.Range(-m_inaccuracy, m_inaccuracy), 0);
         transform.position = bulletSpawnTransform.position;
-        transform.rotation = bulletSpawnTransform.rotation;
         if (m_inaccuracy > 0)
         {
-            rotTarget = Quaternion.LookRotation(bulletSpawnTransform.forward + m_inaccuracyVector, Vector3.up);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotTarget, 10000000);
+            //transform.rotation = Quaternion.RotateTowards(transform.rotation, rotTarget, 10000000);
         }
 
         StartCoroutine(SetTimeToDestroy());
@@ -78,23 +71,25 @@ using System.Collections;
                 if (m_bulletHit.tag != "Weapon")
                 {
                     SpawnEffects();
-                    m_bulletHit.SendMessageUpwards("Damage", damage, SendMessageOptions.DontRequireReceiver);
-                    Destroy(gameObject);
+                    m_bulletHit.SendMessage("Damage", damage, SendMessageOptions.DontRequireReceiver);
+                    //Destroy(gameObject,10);
                 }
                 else
                 {
                     SpawnEffects();
-                    Destroy(gameObject);
+                    //Destroy(gameObject,10);
                 }
             }
             else
             {
-                m_bulletHit.SendMessageUpwards("Damage", damage, SendMessageOptions.DontRequireReceiver);
-                Destroy(gameObject);
+                //m_bulletHit.SendMessageUpwards("Damage", damage, SendMessageOptions.DontRequireReceiver);
+                //Destroy(gameObject);
             }
 
             if (hit.rigidbody)
                 hit.rigidbody.AddForceAtPosition(transform.forward * bulletForce, hit.point, ForceMode.Impulse);
+            speed = 0;
+            transform.SetParent(m_bulletHit.transform);
         }
 			Destroy(gameObject);
 
@@ -106,11 +101,11 @@ using System.Collections;
 			if (GetComponent<collisionDoubleCheck>().m_hitSomething)
 			{
 				m_bulletHit = GetComponent<collisionDoubleCheck>().m_hitObject;
-                hit = GetComponent<collisionDoubleCheck>().m_rayHit;
+                 hit = GetComponent<collisionDoubleCheck>().m_rayHit;
 				StartCoroutine(ApplyDamage());
 			}
-        Move();
-       // transform.parent = null;
+            Move();
+            // transform.parent = null;
     }
     void Move()
     {
@@ -138,4 +133,5 @@ using System.Collections;
 			if (m_DebrisPrefab != null)
 				Instantiate(m_DebrisPrefab, transform.position, transform.rotation);
 		}
+
     }

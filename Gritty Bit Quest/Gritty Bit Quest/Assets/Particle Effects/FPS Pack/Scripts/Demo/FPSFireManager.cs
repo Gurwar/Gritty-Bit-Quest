@@ -1,14 +1,16 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class FPSFireManager : MonoBehaviour
 {
     public ImpactInfo[] ImpactElemets = new ImpactInfo[0];
+    [Space]
     public float BulletDistance = 100;
     public GameObject ImpactEffect;
 
 	void Update () {
 	    if (Input.GetMouseButtonDown(0)) {
+            
 	        RaycastHit hit;
             var ray = new Ray(transform.position, transform.forward);
             if (Physics.Raycast(ray, out hit, BulletDistance)) {
@@ -16,14 +18,17 @@ public class FPSFireManager : MonoBehaviour
                 if (effect==null)
                     return;
                 var effectIstance = Instantiate(effect, hit.point, new Quaternion()) as GameObject;
-                ImpactEffect.SetActive(false);
-                ImpactEffect.SetActive(true);
                 effectIstance.transform.LookAt(hit.point + hit.normal);
-                Destroy(effectIstance, 4);
+                Destroy(effectIstance, 20);
+
+                var impactEffectIstance = Instantiate(ImpactEffect, transform.position, transform.rotation) as GameObject;
+
+                Destroy(impactEffectIstance, 4);
             }
            
 	    }
-	}
+	    
+    }
     
     [System.Serializable]
     public class ImpactInfo

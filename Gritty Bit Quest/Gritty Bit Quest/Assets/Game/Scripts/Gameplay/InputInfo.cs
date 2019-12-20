@@ -8,6 +8,8 @@ public class InputInfo
     static Vector3 rightMovementVector;
     static bool grippedLeft;
     static bool grippedRight;
+    static bool triggerLeft;
+    static bool triggerRight;
 
     public static void SetHandMovementVectors(Vector3 left, Vector3 right)
     {
@@ -34,12 +36,32 @@ public class InputInfo
         grippedRight = g;
     }
 
+    public static void SetGrippedTriggerLeft(bool g)
+    {
+        grippedLeft = g;
+    }
+
+    public static void SetGrippedTriggerRight(bool g)
+    {
+        grippedRight = g;
+    }
+
     public static bool GetGrippedLeft()
     {
         return grippedLeft;
     }
 
     public static bool GetGrippedRight()
+    {
+        return grippedRight;
+    }
+
+    public static bool GetTriggerLeft()
+    {
+        return grippedLeft;
+    }
+
+    public static bool GetTriggerRight()
     {
         return grippedRight;
     }

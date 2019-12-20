@@ -1,104 +1,334 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
+
 public class g_AIAnimationScript : MonoBehaviour 
 {
-	 animator;
-    int runHash;
-    int attack1Hash;
-	int crouchingHash;
-    int idleHash;
-	int shotHash;
-	int dieHash;
-    int roarHash;
+    [SerializeField]
+    Animator animator;
     int walkHash;
-    int walkLeftHash;
-    int walkRightHash;
-    int spawnHash;
-	bool isRunning;
-    bool isAttack1;
-    bool isCrouch;
-    bool isIdle;
-    bool isShot;
-    bool isDie;
-    bool isRoar;
+    int runHash;
+    int attackHash;
+    int attackTypeHash;
+    int walkXHash;
+    int walkYHash;
+    int roarHash;
+    int idleHash;
+    int hitHash;
+    int jumpLeftHash;
+    int jumpRightHash;
+    int fireArrowHash;
+    int dieHash;
+    int tauntHash;
+    bool isAttackAnimationPlaying;
     bool isWalk;
-    bool isWalkLeft;
-    bool isWalkRight;
-    bool isSpawn;
-	bool doShotAnimation;
-	float shotAnimationTime = 0.5f;
-	float currentShotAnimationTime;
-	void SetHashes()
-	{
-		attack1Hash = Animator.StringToHash("Attack");
-		crouchingHash = Animator.StringToHash("Crouching");
-        idleHash = Animator.StringToHash("Idle");
-		runHash = Animator.StringToHash("Run");
-		shotHash = Animator.StringToHash("GotShot");
-		dieHash = Animator.StringToHash("Die");
-        roarHash = Animator.StringToHash("Roar");
-        walkHash = Animator.StringToHash("Walk");
-        walkLeftHash = Animator.StringToHash("WalkLeft");
-        walkRightHash = Animator.StringToHash("WalkRight");
+    bool isRun;
+    bool isAttack;
+    float attackType;
+    Vector2 walkDirection;
+    bool isRoar;
+    bool isIdle;
+    bool isHit;
+    bool isJumpLeft;
+    bool isJumpRight;
+    bool isFireArrow;
+    bool isDie;
+    bool isTaunt;
+    [SerializeField]
+    int attackNum;
+
+    private void Start()
+    {
+        SetHashes();
     }
 
-    // Use this for initialization
-    void Start () 
-	{
-		animator = GetComponent<Animator> ();
-		SetHashes ();
-	}
-    public void PlayRoarAnimation()
-    {
-        if (!isRoar)
-        {
-            animator.SetBool(roarHash, true);
 
-            isRunning = false;
-            isAttack1 = false;
-            isCrouch = false;
-            isIdle = false;
-            isShot = false;
-            isDie = false;
-            isRoar = true;
+    void SetHashes()
+    {
+        walkHash = Animator.StringToHash("Walk");
+        runHash = Animator.StringToHash("Run");
+        attackHash = Animator.StringToHash("Attack");
+        attackTypeHash = Animator.StringToHash("AttackType");
+        walkXHash = Animator.StringToHash("WalkX");
+        walkYHash = Animator.StringToHash("WalkY");
+
+        idleHash = Animator.StringToHash("Idle");
+        hitHash = Animator.StringToHash("Get Hit");
+        jumpLeftHash = Animator.StringToHash("JumpLeft");
+        jumpRightHash = Animator.StringToHash("JumpRight");
+        fireArrowHash = Animator.StringToHash("FireArrow");
+        dieHash = Animator.StringToHash("Die");
+        roarHash = Animator.StringToHash("Roar");
+        tauntHash = Animator.StringToHash("Taunt");
+    }
+
+    private void Update()
+    {
+        if (animator != null)
+        {
+            if (GameManager.ContainsParam(animator, "Walk"))
+                animator.SetBool(walkHash, isWalk);
+            if (GameManager.ContainsParam(animator, "WalkX"))
+                animator.SetFloat(walkXHash, walkDirection.x);
+            if (GameManager.ContainsParam(animator, "WalkY"))
+                animator.SetFloat(walkYHash, walkDirection.y);
+            if (GameManager.ContainsParam(animator, "Walk"))
+                animator.SetBool(walkHash, isWalk);
+            if (GameManager.ContainsParam(animator, "Run"))
+                animator.SetBool(runHash, isRun);
+            if (GameManager.ContainsParam(animator, "Attack"))
+                animator.SetBool(attackHash, isAttack);
+            if (GameManager.ContainsParam(animator, "AttackType"))
+                animator.SetFloat(attackTypeHash, attackType);
+            if (GameManager.ContainsParam(animator, "Idle"))
+                animator.SetBool(idleHash, isIdle);
+            if (GameManager.ContainsParam(animator, "Get Hit"))
+                animator.SetBool(hitHash, isHit);
+            if (GameManager.ContainsParam(animator, "JumpLeft"))
+                animator.SetBool(jumpLeftHash, isJumpLeft);
+            if (GameManager.ContainsParam(animator, "JumpRight"))
+                animator.SetBool(jumpRightHash, isJumpRight);
+            if (GameManager.ContainsParam(animator, "FireArrow"))
+                animator.SetBool(fireArrowHash, isFireArrow);
+            if (GameManager.ContainsParam(animator, "Die"))
+                animator.SetBool(dieHash, isDie);
+            if (GameManager.ContainsParam(animator, "Roar"))
+                animator.SetBool(roarHash, isRoar);
+            if (GameManager.ContainsParam(animator, "Taunt"))
+                animator.SetBool(tauntHash, isTaunt);
+        }
+    }
+
+    public void PlayHitAnimation()
+    {
+        if (!isHit)
+        {
             isWalk = false;
-            isWalkLeft = false;
-            isWalkRight = false;
-            isSpawn = false;
+            isRun = false;
+            isAttack = false;
+            isIdle = false;
+            isHit = true;
+            isJumpLeft = false;
+            isJumpRight = false;
+            isFireArrow = false;
+            isDie = false;
+            isRoar = false;
+            isTaunt = false;
+
         }
     }
     public void PlayIdleAnimation()
     {
-        animator.SetBool(idleHash, true);
+        if (!isIdle)
+        {
+            isWalk = false;
+            isRun = false;
+            isAttack = false;
+            isIdle = true;
+            isHit = false;
+            isJumpLeft = false;
+            isJumpRight = false;
+            isFireArrow = false;
+            isDie = false;
+            isRoar = false;
+            isTaunt = false;
+
+        }
     }
-    public void PlayRunAnimation()
-	{
-		animator.SetBool (runHash, true);
-	}
+
     public void PlayWalkAnimation()
     {
-        animator.SetBool(walkHash, true);
+        if (!isWalk)
+        {
+            isWalk = true;
+            isRun = false;
+            isAttack = false;
+            isIdle = false;
+            isHit = false;
+            isJumpLeft = false;
+            isJumpRight = false;
+            isFireArrow = false;
+            isDie = false;
+            isRoar = false;
+            isTaunt = false;
+
+        }
     }
-    public void PlayWalkLeftAnimation()
+
+    public void PlayRunAnimation()
     {
-        animator.SetBool(walkLeftHash, true);
+        if (!isRun)
+        {
+            isWalk = false;
+            isRun = true;
+            isAttack = false;
+            isIdle = false;
+            isHit = false;
+            isJumpLeft = false;
+            isJumpRight = false;
+            isFireArrow = false;
+            isDie = false;
+            isRoar = false;
+            isTaunt = false;
+
+        }
     }
-    public void PlayWalkRightAnimation()
+
+    public void PlayJumpLeft()
     {
-        animator.SetBool(walkRightHash, true);
+        if (!isJumpLeft)
+        {
+            isWalk = false;
+            isRun = false;
+            isAttack = false;
+            isIdle = false;
+            isHit = false;
+            isJumpLeft = true;
+            isJumpRight = false;
+            isFireArrow = false;
+            isDie = false;
+            isRoar = false;
+            isTaunt = false;
+
+        }
     }
+
+    public void PlayJumpRight()
+    {
+        if (!isJumpRight)
+        {
+            isWalk = false;
+            isRun = false;
+            isAttack = false;
+            isIdle = false;
+            isHit = false;
+            isJumpLeft = false;
+            isJumpRight = true;
+            isFireArrow = false;
+            isDie = false;
+            isRoar = false;
+            isTaunt = false;
+
+        }
+    }
+
+    public void PlayFireArrow()
+    {
+        if (!isFireArrow)
+        {
+            isWalk = false;
+            isRun = false;
+            isAttack = false;
+            isIdle = false;
+            isHit = false;
+            isJumpLeft = false;
+            isJumpRight = false;
+            isFireArrow = true;
+            isDie = false;
+            isRoar = false;
+            isTaunt = false;
+
+        }
+    }
+
+    public void PlayRoar()
+    {
+        if (!isRoar)
+        {
+            isWalk = false;
+            isRun = false;
+            isAttack = false;
+            isIdle = false;
+            isHit = false;
+            isJumpLeft = false;
+            isJumpRight = false;
+            isFireArrow = false;
+            isDie = false;
+            isRoar = true;
+            isTaunt = false;
+
+        }
+    }
+
+    public void PlayTaunt()
+    {
+        if (!isTaunt)
+        {
+            isWalk = false;
+            isRun = false;
+            isAttack = false;
+            isIdle = false;
+            isHit = false;
+            isJumpLeft = false;
+            isJumpRight = false;
+            isFireArrow = false;
+            isDie = false;
+            isRoar = false;
+            isTaunt = true;
+        }
+    }
+
+    public void PlayDieAnimation()
+    {
+        if (!isDie)
+        {
+            isWalk = false;
+            isRun = false;
+            isAttack = false;
+            isIdle = false;
+            isHit = false;
+            isJumpLeft = false;
+            isJumpRight = false;
+            isFireArrow = false;
+            isDie = true;
+            isRoar = false;
+            isTaunt = false;
+
+        }
+    }
+
+    public void SetWalkDirection(float x, float y)
+    {
+        walkDirection.x = x;
+        walkDirection.y = y;
+    }
+
     public void PlayAttackAnimation()
-	{
-		animator.SetBool (crouchingHash, true);
-		animator.SetBool (attack1Hash, true);
-	}
-	public void PlayCrouchAnimation()
-	{
-		animator.SetBool (crouchingHash, true);
-	}
-	public void PlayGotShotAnimation()
-	{
-		doShotAnimation = true;
-		animator.SetBool(shotHash, true);
-	}
+    {
+
+        if (!isAttackAnimationPlaying)
+        {
+            int temp = UnityEngine.Random.Range(0, attackNum);
+            if (temp != attackType)
+            {
+
+                if (!isAttack)
+                {
+                    //Debug.Log(temp);
+                    attackType = temp;
+                    isWalk = false;
+                    isRun = false;
+                    isAttack = true;
+                    isIdle = false;
+                    isHit = false;
+                    isJumpLeft = false;
+                    isJumpRight = false;
+                    isFireArrow = false;
+                    isDie = false;
+                    isRoar = false;
+                    isTaunt = false;
+                    StartCoroutine(waitToSwitchIsActionPlaying());
+                }
+            }
+        }
+    }
+
+    IEnumerator waitToSwitchIsActionPlaying()
+    {
+        isAttackAnimationPlaying = true;
+        yield return new WaitForSecondsRealtime(animator.GetCurrentAnimatorStateInfo(0).length);
+        isAttackAnimationPlaying = false;
+        isAttack = false;
+    }
+
 }

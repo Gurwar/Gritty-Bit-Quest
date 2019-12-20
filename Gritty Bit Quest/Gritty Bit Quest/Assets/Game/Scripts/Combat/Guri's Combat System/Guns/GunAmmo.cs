@@ -18,4 +18,8 @@ public class GunAmmo : MonoBehaviour {
             currentAmmo = baseAmmo;
     }
 
+    public void RefillClip()
+    {
+        currentAmmo = clipAddition;
+    }
 }

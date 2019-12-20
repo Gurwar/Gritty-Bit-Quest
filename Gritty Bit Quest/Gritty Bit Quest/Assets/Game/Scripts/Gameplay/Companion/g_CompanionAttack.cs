@@ -25,7 +25,7 @@ public class g_CompanionAttack : MonoBehaviour
 		{
 			if (m_AllEnemies[i] != null)
 			{
-				if(m_AllEnemies[i].GetComponent<g_AIBehaviourScript>() == null)
+				if(m_AllEnemies[i].GetComponent<AIEnemyBehavior>() == null)
 				{
 					m_AllEnemies.Remove(m_AllEnemies[i]);
 				}
@@ -62,7 +62,6 @@ public class g_CompanionAttack : MonoBehaviour
 		{
 			
 			m_projectile = (GameObject)Instantiate(ProjectilePrefab, FirePositions[currentFirePositionIndex], FirePositions[currentFirePositionIndex]);
-			m_projectile.GetComponent<g_ProjectileBullet>().bulletSpawnTransform = FirePositions[currentFirePositionIndex];
 			currentFirePositionIndex ++;
 			if (currentFirePositionIndex > 3)
 				currentFirePositionIndex = 0;

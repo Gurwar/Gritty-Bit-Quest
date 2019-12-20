@@ -13,7 +13,7 @@ public class g_UILine : MonoBehaviour {
     {
         line = GetComponent<LineRenderer>();
         line.SetPosition(1, new Vector3(0, 0, 10));
-        gameStateScript = GameObject.Find("Level Scripts").GetComponent<gameState>();	
+        //gameStateScript = GameObject.Find("Level Scripts").GetComponent<gameState>();	
 	}
 	
 	// Update is called once per frame

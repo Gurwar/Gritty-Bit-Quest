@@ -4678,7 +4678,6 @@ ParticleSystemRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
-  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9342,7 +9341,6 @@ ParticleSystemRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
-  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9525,6 +9523,8 @@ GameObject:
   - component: {fileID: 82822490429753688}
   - component: {fileID: 114806060002758080}
   - component: {fileID: 114024266475032690}
+  - component: {fileID: 6741689401149886899}
+  - component: {fileID: -2204694844444150924}
   m_Layer: 0
   m_Name: P_AutoPistol Bullet
   m_TagString: Projectile
@@ -9656,13 +9656,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d9a715a549e4c24681f7921eb8a45de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpawnTransform: {fileID: 0}
-  speed: 150
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 2012214751
-  maxLifeTime: {x: 3, y: 3}
+  speed: 10
+  maxLifeTime: {x: 30, y: 30}
   damage: 25
+  bulletSpawnTransform: {fileID: 0}
   bulletForce: 10
   m_inaccuracy: 0.01
   m_SparkFactor: 1
@@ -9685,11 +9682,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerMask:
     serializedVersion: 2
-    m_Bits: 2012214751
+    m_Bits: 2049
   m_raycastPoints:
   - {fileID: 4619722366971440}
   m_hitSomething: 0
   m_hitObject: {fileID: 0}
+  rayRange: 0.05
+--- !u!114 &6741689401149886899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833099239488420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 857085f7d8d73c142b6a2fb9cb4a06b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LifeTime: 5
+--- !u!65 &-2204694844444150924
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833099239488420}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.25, y: 0.25, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1963167898631830
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ using System.Collections;
 	public class g_AIHitBox : MonoBehaviour
 	{
 
-		public float damageMultiplyer = 1;
+		public float damageMultiplyer;
 		private Vector3 addForceVector;
 
 		public g_AIHealthScript myScript;
@@ -32,15 +32,11 @@ using System.Collections;
 		{
 			if (myScript)
 			{
+            if (damageMultiplyer == 1)
+                Debug.LogError("hitback");
 				//Use the multiplier to take differing amounts of damage depending on where the AI is hit
 				damage = damage * damageMultiplyer;
-				if (GetComponent<headShotMultiplier> ()) 
-				{
-                    GetComponent<headShotMultiplier> ().HeadShot ();
-                    //GetComponent<headShotMultiplier> ().MultiplyScore ();
-                }
-            if (myScript)
-					myScript.Damage(damage);
+                 myScript.Damage(damage);
 			}
 		}
 

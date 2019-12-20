@@ -278,11 +278,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EnemiesToSpawn:
-  - {fileID: 1000010479978710, guid: 02af8f93a86f09f4e8928383ea2f71fb, type: 3}
+  - {fileID: 0}
   spawnObjectRanged: {fileID: 1273451370}
   spawnObjectMelee: {fileID: 542558173}
   m_currentlySpawnedEnemies: []
-  m_minSpawnRate: 0
+  m_minSpawnRate: 1
   waveText: {fileID: 1904775413}
   m_currentWaveNumber: 0
 --- !u!4 &12414015
@@ -426,8 +426,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &12644720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,8 +444,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 79d3da90c50f18149bba154bae15983f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -521,10 +517,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -621,8 +615,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -695,8 +687,6 @@ MonoBehaviour:
           m_StringArgument: C
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &22491467
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -874,10 +864,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 8
     m_FontStyle: 1
     m_BestFit: 0
@@ -999,10 +987,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
@@ -1462,8 +1448,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -1536,8 +1520,6 @@ MonoBehaviour:
           m_StringArgument: U
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &88794504
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1606,10 +1588,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -1830,8 +1810,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!224 &107018661
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2039,8 +2017,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!222 &114347935
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2108,8 +2084,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: c03f4cb96ba3a7143b598251535f16fb, type: 3}
     m_FontSize: 21
@@ -2215,8 +2189,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &135013050
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2507,8 +2479,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -2581,8 +2551,6 @@ MonoBehaviour:
           m_StringArgument: T
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &148597667
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2791,8 +2759,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: bbdd383c80c49474fa79e13b7c8bfd21, type: 3}
     m_FontSize: 25
@@ -3251,10 +3217,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -3477,8 +3441,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: c03f4cb96ba3a7143b598251535f16fb, type: 3}
     m_FontSize: 21
@@ -3584,8 +3546,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &210533688
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3675,8 +3635,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -3749,8 +3707,6 @@ MonoBehaviour:
           m_StringArgument: I
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &211321805
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3840,8 +3796,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -3914,8 +3868,6 @@ MonoBehaviour:
           m_StringArgument: G
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &217152694
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4253,8 +4205,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: bbdd383c80c49474fa79e13b7c8bfd21, type: 3}
     m_FontSize: 15
@@ -4412,10 +4362,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -4853,8 +4801,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: bbdd383c80c49474fa79e13b7c8bfd21, type: 3}
     m_FontSize: 21
@@ -5146,9 +5092,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 323436716}
-  - component: {fileID: 323436715}
-  - component: {fileID: 323436714}
   - component: {fileID: 323436713}
+  - component: {fileID: 323436714}
+  - component: {fileID: 323436715}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -5164,57 +5110,40 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323436712}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &323436714
-MeshRenderer:
+--- !u!114 &323436714
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323436712}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &323436715
-MeshFilter:
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de0920c6404686f4dab815dc2db31a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsInBox: 0
+--- !u!54 &323436715
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323436712}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!4 &323436716
 Transform:
   m_ObjectHideFlags: 0
@@ -5222,12 +5151,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323436712}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.39, y: 4.569377, z: 1.1190252}
-  m_LocalScale: {x: 1, y: 1, z: 0.268}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 143.9, y: 0.2, z: 74.6}
+  m_LocalScale: {x: 82.62761, y: 1.929, z: 53.861267}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_Father: {fileID: 691785868}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &334885730
 GameObject:
@@ -5305,8 +5234,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -5379,8 +5306,6 @@ MonoBehaviour:
           m_StringArgument: Q
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &334885737
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5558,10 +5483,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -5829,6 +5752,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 0, g: 0, b: 1, a: 1}
+--- !u!4 &376305242 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3122377621324167589, guid: 65e8b53ddfa19034e89adafaf0b1cf0d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6394872044400954307}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &380973569
 GameObject:
   m_ObjectHideFlags: 0
@@ -6321,10 +6250,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -6503,10 +6430,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -6603,8 +6528,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -6677,8 +6600,6 @@ MonoBehaviour:
           m_StringArgument: O
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &440122860
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6747,10 +6668,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -7153,10 +7072,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -7435,8 +7352,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!224 &508065950
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7970,8 +7885,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: bbdd383c80c49474fa79e13b7c8bfd21, type: 3}
     m_FontSize: 25
@@ -8067,9 +7980,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8155,10 +8066,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
@@ -8286,8 +8195,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -8360,8 +8267,6 @@ MonoBehaviour:
           m_StringArgument: L
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &594237966
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8750,10 +8655,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -9148,8 +9051,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -9222,8 +9123,6 @@ MonoBehaviour:
           m_StringArgument: F
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &650479060
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10995,8 +10894,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: bbdd383c80c49474fa79e13b7c8bfd21, type: 3}
     m_FontSize: 30
@@ -11202,6 +11099,100 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 0, g: 0, b: 1, a: 1}
+--- !u!1 &680115975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 680115979}
+  - component: {fileID: 680115978}
+  - component: {fileID: 680115977}
+  - component: {fileID: 680115976}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!136 &680115976
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680115975}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!23 &680115977
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680115975}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &680115978
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680115975}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &680115979
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680115975}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 119.9, y: 0.76, z: 76.8}
+  m_LocalScale: {x: 0.40985, y: 1.1973767, z: 0.40985}
+  m_Children:
+  - {fileID: 1080803898}
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &681549711
 GameObject:
   m_ObjectHideFlags: 0
@@ -11311,6 +11302,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 1, g: 0, b: 0, a: 1}
+--- !u!1 &691785867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 691785868}
+  m_Layer: 0
+  m_Name: Squad Areas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &691785868
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691785867}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 323436716}
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &696455617
 GameObject:
   m_ObjectHideFlags: 0
@@ -12054,9 +12076,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12334,8 +12354,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: bbdd383c80c49474fa79e13b7c8bfd21, type: 3}
     m_FontSize: 15
@@ -12495,6 +12513,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 1, g: 0, b: 0, a: 1}
+--- !u!1 &781023023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 781023025}
+  - component: {fileID: 781023024}
+  m_Layer: 0
+  m_Name: Enemies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &781023024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781023023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a504421aca8c94d812e25c9f78cc06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemiesToSpawn: []
+--- !u!4 &781023025
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781023023}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 128.8, y: 1.4935263, z: 76.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 376305242}
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &796650805
 GameObject:
   m_ObjectHideFlags: 0
@@ -12557,14 +12620,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 48386f0d8f5a1de48a9eb83a0dce54f2, type: 2}
+  m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0.6, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 966bc150a55c0cb41938a14dfca4fb43, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -13081,8 +13142,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: bbdd383c80c49474fa79e13b7c8bfd21, type: 3}
     m_FontSize: 15
@@ -13117,12 +13176,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821095741}
   m_CullTransparentMesh: 0
---- !u!4 &822292458 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1478715107248767086, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1915757139}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &825534350
 GameObject:
   m_ObjectHideFlags: 0
@@ -13178,10 +13231,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -13278,8 +13329,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -13352,8 +13401,6 @@ MonoBehaviour:
           m_StringArgument: R
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &832179320
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13436,10 +13483,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
@@ -13624,8 +13669,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 505a497b251d22e4cad6d9dac25890d3, type: 3}
     m_FontSize: 150
@@ -13822,8 +13865,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &853011030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13842,8 +13883,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 79d3da90c50f18149bba154bae15983f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -14210,10 +14249,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
@@ -14428,10 +14465,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
@@ -14608,8 +14643,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -14682,8 +14715,6 @@ MonoBehaviour:
           m_StringArgument: K
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &898774272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14954,9 +14985,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15466,8 +15495,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -15540,8 +15567,6 @@ MonoBehaviour:
           m_StringArgument: N
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &953373587
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15980,9 +16005,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16124,8 +16147,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!222 &999061253
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16296,10 +16317,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -16396,8 +16415,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -16470,8 +16487,6 @@ MonoBehaviour:
           m_StringArgument: D
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &1010294763
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16788,8 +16803,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!224 &1034870531
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16980,10 +16993,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -17285,6 +17296,181 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c60ba2fd6a907be41843c618e2ef2a61, type: 3}
+--- !u!1 &1080803892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1080803898}
+  - component: {fileID: 1080803897}
+  - component: {fileID: 1080803896}
+  - component: {fileID: 1080803895}
+  - component: {fileID: 1080803894}
+  - component: {fileID: 1080803893}
+  - component: {fileID: 1080803900}
+  - component: {fileID: 1080803899}
+  - component: {fileID: 1080803901}
+  m_Layer: 0
+  m_Name: Important Item
+  m_TagString: Damageable Object
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1080803893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080803892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints:
+  - {fileID: 1080803895}
+--- !u!54 &1080803894
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080803892}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2
+--- !u!65 &1080803895
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080803892}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1080803896
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080803892}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 53ddc14a486d2b94a82cdbe2af101824, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1080803897
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080803892}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1080803898
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080803892}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.355, z: 0}
+  m_LocalScale: {x: 0.3197126, y: 0.10943441, z: 0.3197126}
+  m_Children: []
+  m_Father: {fileID: 680115979}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1080803899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080803892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dc380608a93c394c99ec14c253bde93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1
+--- !u!114 &1080803900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080803892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf306ecee81b10842947d6a5deda2cc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerType: 0
+  target: {fileID: 781023023}
+  message: SpawnEnemies
+--- !u!114 &1080803901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080803892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdc5c19981c13f24fa9a5148595d4d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseHealth: 100
+  CurrentHealth: 0
+  MaxHealth: 0
+  die: 0
 --- !u!1 &1081177599
 GameObject:
   m_ObjectHideFlags: 0
@@ -17626,8 +17812,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -17700,8 +17884,6 @@ MonoBehaviour:
           m_StringArgument: V
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &1096228356
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17877,8 +18059,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: bbdd383c80c49474fa79e13b7c8bfd21, type: 3}
     m_FontSize: 15
@@ -18159,10 +18339,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -18479,10 +18657,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -18766,8 +18942,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -18840,8 +19014,6 @@ MonoBehaviour:
           m_StringArgument: S
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &1159980037
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19145,8 +19317,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: bbdd383c80c49474fa79e13b7c8bfd21, type: 3}
     m_FontSize: 15
@@ -19412,7 +19582,7 @@ Transform:
   - {fileID: 608830721}
   - {fileID: 166203241}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1201012799
 GameObject:
@@ -19469,10 +19639,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -19600,8 +19768,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -19674,8 +19840,6 @@ MonoBehaviour:
           m_StringArgument: E
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &1205450097
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19905,8 +20069,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -19979,8 +20141,6 @@ MonoBehaviour:
           m_StringArgument: X
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &1215691943
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20051,8 +20211,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: bbdd383c80c49474fa79e13b7c8bfd21, type: 3}
     m_FontSize: 15
@@ -20142,10 +20300,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 10
     m_FontStyle: 1
     m_BestFit: 0
@@ -20844,8 +21000,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: bbdd383c80c49474fa79e13b7c8bfd21, type: 3}
     m_FontSize: 15
@@ -21115,202 +21269,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 1, g: 0, b: 0, a: 1}
---- !u!1001 &1289810820
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1123805351413190, guid: 135ea2953a91d2d4887d3a14aa997a37, type: 3}
-      propertyPath: m_Name
-      value: Charger
-      objectReference: {fileID: 0}
-    - target: {fileID: 1123805351413190, guid: 135ea2953a91d2d4887d3a14aa997a37, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4424647172536250, guid: 135ea2953a91d2d4887d3a14aa997a37, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 8.304401
-      objectReference: {fileID: 0}
-    - target: {fileID: 4424647172536250, guid: 135ea2953a91d2d4887d3a14aa997a37, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.49
-      objectReference: {fileID: 0}
-    - target: {fileID: 4424647172536250, guid: 135ea2953a91d2d4887d3a14aa997a37, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 14.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 4424647172536250, guid: 135ea2953a91d2d4887d3a14aa997a37, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4424647172536250, guid: 135ea2953a91d2d4887d3a14aa997a37, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4424647172536250, guid: 135ea2953a91d2d4887d3a14aa997a37, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4424647172536250, guid: 135ea2953a91d2d4887d3a14aa997a37, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4424647172536250, guid: 135ea2953a91d2d4887d3a14aa997a37, type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 4424647172536250, guid: 135ea2953a91d2d4887d3a14aa997a37, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4424647172536250, guid: 135ea2953a91d2d4887d3a14aa997a37, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4424647172536250, guid: 135ea2953a91d2d4887d3a14aa997a37, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 144183276324852020, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: -0.000000022351742
-      objectReference: {fileID: 0}
-    - target: {fileID: 144183276324852020, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0.00000044703484
-      objectReference: {fileID: 0}
-    - target: {fileID: 144183276324852020, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.z
-      value: -0.29888567
-      objectReference: {fileID: 0}
-    - target: {fileID: 144710774676296972, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.20073888
-      objectReference: {fileID: 0}
-    - target: {fileID: 144710774676296972, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0.037015755
-      objectReference: {fileID: 0}
-    - target: {fileID: 144710774676296972, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.z
-      value: 0.011857972
-      objectReference: {fileID: 0}
-    - target: {fileID: 144281320588642446, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: -0.20073894
-      objectReference: {fileID: 0}
-    - target: {fileID: 144281320588642446, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0.037015755
-      objectReference: {fileID: 0}
-    - target: {fileID: 144281320588642446, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.z
-      value: 0.011857972
-      objectReference: {fileID: 0}
-    - target: {fileID: 144874517678631504, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: -0.0009113252
-      objectReference: {fileID: 0}
-    - target: {fileID: 144874517678631504, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0.036581863
-      objectReference: {fileID: 0}
-    - target: {fileID: 144874517678631504, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.z
-      value: -0.6156547
-      objectReference: {fileID: 0}
-    - target: {fileID: 144204750802726544, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.00072734803
-      objectReference: {fileID: 0}
-    - target: {fileID: 144204750802726544, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0.03658603
-      objectReference: {fileID: 0}
-    - target: {fileID: 144935329913258376, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: -0.00000008195639
-      objectReference: {fileID: 0}
-    - target: {fileID: 144935329913258376, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.0000004172325
-      objectReference: {fileID: 0}
-    - target: {fileID: 144696048395816374, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.007245887
-      objectReference: {fileID: 0}
-    - target: {fileID: 144696048395816374, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0.43286443
-      objectReference: {fileID: 0}
-    - target: {fileID: 144696048395816374, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.z
-      value: -0.87434644
-      objectReference: {fileID: 0}
-    - target: {fileID: 144089647958216650, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.004860537
-      objectReference: {fileID: 0}
-    - target: {fileID: 144089647958216650, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.z
-      value: -0.6103446
-      objectReference: {fileID: 0}
-    - target: {fileID: 144391413388294420, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: -0.47018936
-      objectReference: {fileID: 0}
-    - target: {fileID: 144391413388294420, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0.07423879
-      objectReference: {fileID: 0}
-    - target: {fileID: 144391413388294420, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.z
-      value: -0.58424157
-      objectReference: {fileID: 0}
-    - target: {fileID: 144976306784546768, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.000000067055225
-      objectReference: {fileID: 0}
-    - target: {fileID: 144976306784546768, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.00000008940697
-      objectReference: {fileID: 0}
-    - target: {fileID: 144976306784546768, guid: 135ea2953a91d2d4887d3a14aa997a37,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.z
-      value: -0.5197536
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 135ea2953a91d2d4887d3a14aa997a37, type: 3}
 --- !u!1 &1293810231
 GameObject:
   m_ObjectHideFlags: 0
@@ -21895,10 +21853,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -21995,8 +21951,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -22069,8 +22023,6 @@ MonoBehaviour:
           m_StringArgument: B
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &1331031392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22275,8 +22227,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -22349,8 +22299,6 @@ MonoBehaviour:
           m_StringArgument: Z
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &1342237576
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22547,7 +22495,7 @@ Transform:
   m_Children:
   - {fileID: 999085837}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1378051391
 PrefabInstance:
@@ -23240,8 +23188,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -23314,8 +23260,6 @@ MonoBehaviour:
           m_StringArgument: Y
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &1432105303
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23772,8 +23716,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1458386468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23792,8 +23734,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 79d3da90c50f18149bba154bae15983f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -24045,8 +23985,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -24132,8 +24070,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1483832410
 GameObject:
   m_ObjectHideFlags: 0
@@ -24413,10 +24349,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -24994,8 +24928,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -25068,8 +25000,6 @@ MonoBehaviour:
           m_StringArgument: A
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &1511072376
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25299,10 +25229,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -25496,8 +25424,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -25570,8 +25496,6 @@ MonoBehaviour:
           m_StringArgument: P
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &1543317632
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25702,9 +25626,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -25956,8 +25878,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: c03f4cb96ba3a7143b598251535f16fb, type: 3}
     m_FontSize: 25
@@ -26138,8 +26058,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: d9556e0f5484b574ab35f092ce715072, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -26216,7 +26134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1610112880
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26366,65 +26284,23 @@ MonoBehaviour:
   resetValuesOnRestart: 0
   externalBehavior: {fileID: 0}
   mBehaviorSource:
-    behaviorName: Boss Behavior
-    behaviorDescription: 'Behavior of the Crystal Lord
-
-'
+    behaviorName: Behavior
+    behaviorDescription: 
     mTaskData:
-      types:
-      - BehaviorDesigner.Runtime.Tasks.EntryTask
-      - BehaviorDesigner.Runtime.Tasks.Repeater
-      - BehaviorDesigner.Runtime.Tasks.Sequence
-      - BehaviorDesigner.Runtime.Tasks.GetFieldValue
-      - BehaviorDesigner.Runtime.Tasks.GetFieldValue
-      - BehaviorDesigner.Runtime.Tasks.GetFieldValue
-      - BehaviorDesigner.Runtime.Tasks.Selector
-      - BehaviorDesigner.Runtime.Tasks.Sequence
-      - BehaviorDesigner.Runtime.Tasks.Basic.SharedVariables.CompareSharedString
-      - BehaviorDesigner.Runtime.Tasks.Selector
-      - BehaviorDesigner.Runtime.Tasks.Sequence
-      - BehaviorDesigner.Runtime.Tasks.Basic.SharedVariables.CompareSharedString
-      - BehaviorDesigner.Runtime.Tasks.Basic.UnityGameObject.SendMessage
-      - BehaviorDesigner.Runtime.Tasks.Sequence
-      - BehaviorDesigner.Runtime.Tasks.Basic.SharedVariables.CompareSharedString
-      - BehaviorDesigner.Runtime.Tasks.Basic.UnityGameObject.SendMessage
-      - BehaviorDesigner.Runtime.Tasks.Sequence
-      - BehaviorDesigner.Runtime.Tasks.Basic.SharedVariables.CompareSharedString
-      - BehaviorDesigner.Runtime.Tasks.Basic.UnityGameObject.SendMessage
-      - BehaviorDesigner.Runtime.Tasks.Sequence
-      - BehaviorDesigner.Runtime.Tasks.Basic.SharedVariables.CompareSharedString
-      - BehaviorDesigner.Runtime.Tasks.Basic.UnityGameObject.SendMessage
-      - BehaviorDesigner.Runtime.Tasks.Sequence
-      - BehaviorDesigner.Runtime.Tasks.Basic.SharedVariables.CompareSharedString
-      - BehaviorDesigner.Runtime.Tasks.Selector
-      - BehaviorDesigner.Runtime.Tasks.Sequence
-      - BehaviorDesigner.Runtime.Tasks.Basic.SharedVariables.CompareSharedString
-      - BehaviorDesigner.Runtime.Tasks.Basic.UnityGameObject.SendMessage
-      - BehaviorDesigner.Runtime.Tasks.Sequence
-      - BehaviorDesigner.Runtime.Tasks.Basic.SharedVariables.CompareSharedString
-      - BehaviorDesigner.Runtime.Tasks.Basic.UnityGameObject.SendMessage
-      parentIndex: ffffffff000000000100000002000000020000000200000002000000060000000700000007000000090000000a0000000a000000090000000d0000000d000000090000001000000010000000090000001300000013000000060000001600000016000000180000001900000019000000180000001c0000001c000000
-      startIndex: 0b000000150000002b00000036000000500000006b00000086000000910000009c000000ae000000b9000000c4000000d7000000f1000000fc0000000f010000290100003401000047010000610100006c0100007f01000099010000a4010000b6010000c1010000cc010000df010000f90100000402000017020000
-      variableStartIndex: 000000000400000008000000
+      types: []
+      parentIndex: 
+      startIndex: 
+      variableStartIndex: 
       JSONSerialization: 
       fieldSerializationData:
         typeName: []
-        fieldNameHash: f9be55564aaa52567707a1041af3e5d3f9be55564aaa52567707a104e3ce82d4f9be55564aaa52567707a1042944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f9012944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f9014beeac3844ad028f9598ff8edd02bee3fb502af7f40f804d45fb7c4de78c12330db220d106717627575c7327f9ed080d2944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f9018690b4b22944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f901a6beff969f7d55edf06852edc9778c0bfea434eaf7638a40484f8740e173b7befbee9377f4ade9cd4599e6cddebd164ce6a17bf2df60d148304cce485da91cf72944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f901a6beff969f7d55edf06852edc9778c0bfea434eaf7638a40484f8740e173b7befbee9377f4ade9cd4599e6cddebd164ce6a17bf2df60d148304cce485da91cf7c970fec62944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f901a6beff969f7d55edf06852edc9778c0bfea434eaf7638a40484f8740e173b7befbee9377f4ade9cd4599e6cddebd164ce6a17bf2df60d148304cce485da91cf7009561c62944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f9018690b4b22944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f9018690b4b22944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f901200e3f4119cd94976ab891979715e045960ef9d78fcd4e2ee0b84b2e79dd7bac2944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f9018690b4b22944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f9018690b4b22944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f901200e3f4119cd94976ab891979715e04503ddc115960ef9d78fcd4e2ee0b84b2e79dd7bac2944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f901a6beff969f7d55edf06852edc9778c0b9d4abac79609101ee7f40c1e80193d9c31aa56f72a69ac4d7b54a94d68fa95d84145fa2e1a08977613c7eccc64b2e9cc2944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f9018690b4b22944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f901200e3f4119cd94976ab891979715e04503ddc115960ef9d78fcd4e2ee0b84b2e79dd7bac2944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f901a6beff969f7d55edf06852edc9778c0b9d4abac79609101ee7f40c1e80193d9c31aa56f72a69ac4d7b54a94d68fa95d84145fa2e1a08977613c7eccc64b2e9cc2944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f9018690b4b22944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f901200e3f4119cd94976ab891979715e04503ddc115960ef9d78fcd4e2ee0b84b2e79dd7bac2944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f901a6beff969f7d55edf06852edc9778c0b9d4abac79609101ee7f40c1e80193d9c31aa56f72a69ac4d7b54a94d68fa95d84145fa2e1a08977613c7eccc64b2e9cc2944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f9018690b4b22944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f901200e3f4119cd94976ab891979715e04503ddc115960ef9d78fcd4e2ee0b84b2e79dd7bac2944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f901a6beff969f7d55edf06852edc9778c0b9d4abac79609101ee7f40c1e80193d9c31aa56f72a69ac4d7b54a94d68fa95d84145fa2e1a08977613c7eccc64b2e9cc2944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f9018690b4b22944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f901200e3f4119cd94976ab891979715e045960ef9d78fcd4e2ee0b84b2e79dd7bac2944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f9018690b4b22944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f9018690b4b22944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f901200e3f4119cd94976ab891979715e04503ddc115960ef9d78fcd4e2ee0b84b2e79dd7bac2944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f901a6beff969f7d55edf06852edc9778c0b9d4abac79609101ee7f40c1e80193d9c31aa56f72a69ac4d7b54a94d68fa95d84145fa2e1a08977613c7eccc64b2e9cc2944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f9018690b4b22944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f901200e3f4119cd94976ab891979715e04503ddc115960ef9d78fcd4e2ee0b84b2e79dd7bac2944782b951203e811c37978c4a37522ae07a096e44d14616fd219c3a5f3b63149269a1caac4f901a6beff969f7d55edf06852edc9778c0b9d4abac79609101ee7f40c1e80193d9c31aa56f72a69ac4d7b54a94d68fa95d84145fa2e1a08977613c7eccc64b2e9cc
-        startIndex: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f0000001f0000002000000021000000220000002200000023000000240000002500000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003d0000003e0000003f000000400000004000000041000000420000004300000043000000440000004500000046000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f000000500000005100000052000000530000005300000054000000550000005600000056000000570000005800000059000000590000005a0000005b0000005c0000005c0000005d0000005e0000005f000000600000006100000062000000630000006400000065000000660000006700000068000000690000006a0000006a0000006b0000006c0000006d0000006d0000006e0000006f0000007000000070000000710000007200000073000000730000007400000075000000760000007700000078000000790000007a0000007b0000007c0000007d0000007e0000007f000000800000008100000082000000830000008400000085000000860000008700000088000000890000008a0000008b0000008c0000008d0000008e0000008f00000090000000910000009200000093000000940000009500000096000000970000009700000098000000990000009a0000009a0000009b0000009c0000009d0000009e0000009f000000a0000000a1000000a2000000a3000000a4000000a5000000a6000000a7000000a8000000a9000000aa000000ab000000ac000000ad000000ae000000af000000b0000000b1000000b2000000b3000000b4000000b5000000b6000000b7000000b8000000b9000000ba000000bb000000bc000000bd000000bd000000be000000bf000000c0000000c1000000c1000000c2000000c3000000c4000000c5000000c6000000c7000000c8000000c9000000ca000000cb000000cc000000cd000000ce000000ce000000cf000000d0000000d1000000d1000000d2000000d3000000d4000000d4000000d5000000d6000000d6000000d7000000d7000000d8000000d9000000da000000db000000dc000000dd000000de000000df000000e0000000e1000000e2000000e3000000e4000000e5000000e6000000e7000000e8000000e9000000ea000000eb000000ec000000ed000000ee000000ee000000ef000000f0000000f1000000f2000000f2000000f3000000f4000000f5000000f6000000f7000000f8000000f9000000fa000000fb000000fc000000fd000000fe000000ff000000ff00000000010000010100000201000002010000030100000401000005010000050100000601000007010000070100000801000008010000090100000a0100000b0100000c0100000d0100000e0100000f010000100100001101000012010000130100001401000015010000160100001701000018010000190100001a0100001b0100001c0100001d0100001e0100001f0100001f01000020010000210100002201000023010000230100002401000025010000260100002701000028010000290100002a0100002b0100002c0100002d0100002e0100002f0100003001000030010000310100003201000033010000330100003401000035010000360100003601000037010000380100003801000039010000390100003a0100003b0100003c0100003d0100003e0100003f010000400100004101000042010000430100004401000045010000460100004701000048010000490100004a0100004b0100004c0100004d0100004e0100004f0100005001000050010000510100005201000053010000540100005401000055010000560100005701000058010000590100005a0100005b0100005c0100005d0100005e0100005f01000060010000610100006101000062010000630100006401000064010000650100006601000067010000670100006801000069010000690100006a0100006a0100006b0100006c0100006d0100006e0100006f010000700100007101000072010000730100007401000075010000760100007701000078010000790100007a0100007b0100007c0100007d0100007e0100007f0100008001000081010000810100008201000083010000840100008401000085010000860100008701000088010000890100008a0100008b0100008c0100008d0100008e0100008f010000900100009101000092010000930100009401000095010000960100009701000098010000990100009a0100009b0100009c0100009d0100009e0100009f010000a0010000a1010000a2010000a3010000a4010000a5010000a6010000a7010000a7010000a8010000a9010000aa010000ab010000ab010000ac010000ad010000ae010000af010000b0010000b1010000b2010000b3010000b4010000b5010000b6010000b7010000b8010000b8010000b9010000ba010000bb010000bb010000bc010000bd010000be010000be010000bf010000c0010000c0010000c1010000c1010000c2010000c3010000c4010000c5010000c6010000c7010000c8010000c9010000ca010000cb010000cc010000cd010000ce010000cf010000d0010000d1010000d2010000d3010000d4010000d5010000d6010000d7010000d8010000d8010000d9010000da010000db010000dc010000dc010000dd010000de010000df010000e0010000e1010000e2010000e3010000e4010000e5010000e6010000e7010000e8010000e9010000e9010000ea010000eb010000ec010000ec010000ed010000ee010000ef010000ef010000f0010000f1010000f1010000f2010000f2010000f3010000
-        dataPosition: 00000000240000003100000032000000360000005b0000006c0000006d0000007100000096000000aa000000ab000000af000000b4000000b5000000b6000000be000000be000000bf000000c0000000c4000000c8000000cc000000d4000000d5000000d6000000de000000de000000df000000e0000000e4000000e80000000a0100000a0100000e0100003101000031010000320100005501000055010000560100005a0100006201000063010000640100006c0100006c0100006d0100006e01000072010000760100007a0100007e0100008f010000900100009101000099010000990100009a0100009b0100009f010000a3010000cc010000cc010000d0010000f5010000f50100000102000026020000260200003a0200005f0200007302000074020000780200008f020000900200009102000099020000990200009a0200009b0200009f020000a3020000cc020000cc020000d0020000f5020000f5020000010300002603000026030000370300005c0300006d0300006e03000072030000760300008503000086030000870300008f0300008f03000090030000910300009503000099030000c2030000c2030000c6030000eb030000eb030000f50300001a0400001a040000270400004b04000058040000590400005d04000061040000690400006a0400006b04000073040000730400007404000075040000790400007d04000081040000850400008d0400008e0400008f040000970400009704000098040000990400009d040000a1040000a5040000a9040000be040000bf040000c0040000c8040000c8040000c9040000ca040000ce040000d2040000f70400000b0500000c05000031050000310500003d05000041050000490500004a0500004b05000053050000530500005405000055050000590500005d0500006105000065050000690500006a0500006b05000073050000730500007405000075050000790500007d05000081050000850500009a0500009b0500009c050000a4050000a4050000a5050000a6050000aa050000ae050000d3050000e4050000e5050000e90500000e0600000e060000160600001a06000026060000270600002806000030060000300600003106000032060000360600003a0600006306000063060000670600008c0600008c06000090060000be060000be060000ca060000ef060000ef060000f3060000fe060000ff060000000700000807000008070000090700000a0700000e07000012070000160700001a0700002f070000300700003107000039070000390700003a0700003b0700003f0700004307000068070000790700007a0700007e070000a3070000a3070000b1070000b5070000c1070000c2070000c3070000cb070000cb070000cc070000cd070000d1070000d5070000fe070000fe070000020800002708000027080000310800005f0800005f0800006b080000900800009008000094080000a0080000a1080000a2080000aa080000aa080000ab080000ac080000b0080000b4080000b8080000bc080000d1080000d2080000d3080000db080000db080000dc080000dd080000e1080000e50800000a0900001b0900001c0900002009000045090000450900004f090000530900005f090000600900006109000069090000690900006a0900006b0900006f090000730900009c0900009c090000a0090000c5090000c5090000cf090000fd090000fd090000090a00002e0a00002e0a0000320a00003d0a00003e0a00003f0a0000470a0000470a0000480a0000490a00004d0a0000510a0000550a0000590a00006e0a00006f0a0000700a0000780a0000780a0000790a00007a0a00007e0a0000820a0000a70a0000b80a0000b90a0000bd0a0000e20a0000e20a0000f00a0000f40a0000000b0000010b0000020b00000a0b00000a0b00000b0b00000c0b0000100b0000140b00003d0b00003d0b0000410b0000660b0000660b0000700b00009e0b00009e0b0000aa0b0000cf0b0000cf0b0000d30b0000db0b0000dc0b0000dd0b0000e50b0000e50b0000e60b0000e70b0000eb0b0000ef0b0000f30b0000f70b00000c0c00000d0c00000e0c0000160c0000160c0000170c0000180c00001c0c0000200c0000450c0000590c00005a0c00007f0c00007f0c00008e0c0000920c00009a0c00009b0c00009c0c0000a40c0000a40c0000a50c0000a60c0000aa0c0000ae0c0000b20c0000b60c0000c10c0000c20c0000c30c0000cb0c0000cb0c0000cc0c0000cd0c0000d10c0000d50c0000d90c0000dd0c0000f20c0000f30c0000f40c0000fc0c0000fc0c0000fd0c0000fe0c0000020d0000060d00002b0d00003c0d00003d0d0000410d0000660d0000660d0000760d00007a0d0000860d0000870d0000880d0000900d0000900d0000910d0000920d0000960d00009a0d0000c30d0000c30d0000c70d0000ec0d0000ec0d0000f80d0000260e0000260e0000320e0000570e0000570e00005b0e0000670e0000680e0000690e0000710e0000710e0000720e0000730e0000770e00007b0e00007f0e0000830e0000980e0000990e00009a0e0000a20e0000a20e0000a30e0000a40e0000a80e0000ac0e0000d10e0000e20e0000e30e0000e70e00000c0f00000c0f0000190f00001d0f0000290f00002a0f00002b0f0000330f0000330f0000340f0000350f0000390f00003d0f0000660f0000660f00006a0f00008f0f00008f0f00009d0f0000cb0f0000cb0f0000d70f0000fc0f0000
-        unityObjects:
-        - {fileID: 1610112879}
-        - {fileID: 1610112879}
-        - {fileID: 1610112879}
-        - {fileID: 1610112879}
-        - {fileID: 1610112879}
-        - {fileID: 1610112879}
-        - {fileID: 1610112879}
-        - {fileID: 1610112879}
-        - {fileID: 1610112879}
-        byteData: 4265686176696f7244657369676e65722e52756e74696d652e536861726564466c6f617463757272656e744865616c746801000000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74416374696f6e4e616d6501526573744265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74426f737353746174654e616d650100000000456e747279010000007b430000f04100000000000000000000010000005265706561746572010000c042bf00000243000000000000000000004265686176696f7244657369676e65722e52756e74696d652e536861726564496e74010000004265686176696f7244657369676e65722e52756e74696d652e536861726564426f6f6c014265686176696f7244657369676e65722e52756e74696d652e536861726564426f6f6c000200000053657175656e63650100003ab43e6c5cf7420000000000000000000000000000030000004765742043757272656e742053746174650100009013c400001b43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e53686172656447616d654f626a656374000000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67426f73734265686176696f724265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74426f737353746174654e616d654265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74426f737353746174654e616d6501040000004765742043757272656e7420416374696f6e204e616d6501000000afc355550543000000000000000000004265686176696f7244657369676e65722e52756e74696d652e53686172656447616d654f626a656374010000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67426f73734265686176696f724265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74416374696f6e4e616d654265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74416374696f6e4e616d6501526573740500000047657420426f7373204865616c74680100a48b24c36cdbfc42000000000000000000004265686176696f7244657369676e65722e52756e74696d652e53686172656447616d654f626a656374020000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67426f73734865616c74684265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e744865616c74684265686176696f7244657369676e65722e52756e74696d652e536861726564466c6f617463757272656e744865616c746801000000000600000053656c6563746f7201000080954200c0994300000000000000000000000000000700000053657175656e6365010000701fc400801843000000000000000000000000000008000000436f6d706172652053686172656420537472696e670100000038c300000743000000000000000000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74426f737353746174654e616d65014265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e674372797374616c5468726f770900000053656c6563746f7201000000b4420000164300000000000000000000000000000a00000052657374010028a5f5c3c0f7344300000000000000000000000000000b000000436f6d706172652053686172656420537472696e6701003ef210c3afcb2c43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74416374696f6e4e616d6501526573744265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67626f7373526573740c00000053656e64204d6573736167650100a0aaba4154552d43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e53686172656447616d654f626a656374030000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67526573744265686176696f7244657369676e65722e52756e74696d652e53686172656447656e657269635661726961626c65536861726564537472696e674265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e670d0000005265736574204375626573010078ef5dc3f8de2d4300000000000000000000000000000e000000436f6d706172652053686172656420537472696e670100566b6dc200002a43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74416374696f6e4e616d6501526573744265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67626f7373526573657443756265730f00000053656e64204d6573736167650100668ce94200002a43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e53686172656447616d654f626a656374040000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67526573657443756265734265686176696f7244657369676e65722e52756e74696d652e53686172656447656e657269635661726961626c65536861726564537472696e674265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67100000004162736f7262204375626573010014b45f43447b2b43000000000000000000000000000011000000436f6d706172652053686172656420537472696e67010000000cc300002a43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74416374696f6e4e616d6501526573744265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67626f73734162736f72621200000053656e64204d65737361676501000000a04100002a43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e53686172656447616d654f626a656374050000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67437562654162736f72624265686176696f7244657369676e65722e52756e74696d652e53686172656447656e657269635661726961626c65536861726564537472696e674265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6713000000437562652041747461636b01000edaf643447b2143000000000000000000000000000014000000436f6d706172652053686172656420537472696e670100080070c200002a43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74416374696f6e4e616d6501526573744265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67626f73734375626541747461636b1500000053656e64204d65737361676501000000f04200002a43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e53686172656447616d654f626a656374060000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e674375626541747461636b4265686176696f7244657369676e65722e52756e74696d652e53686172656447656e657269635661726961626c65536861726564537472696e674265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e671600000053657175656e6365010000c0054400000c43000000000000000000000000000017000000436f6d706172652053686172656420537472696e670100000034c300000c43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74426f737353746174654e616d65014265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e674c696768746e696e6741747461636b1800000053656c6563746f7201000000b442000016430000000000000000000000000000190000005265736574204375626573010000005cc300002a4300000000000000000000000000001a000000436f6d706172652053686172656420537472696e670100000070c200002a43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74416374696f6e4e616d6501526573744265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67626f7373537061776e456e656d6965731b00000053656e64204d65737361676501000000f04200002a43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e53686172656447616d654f626a656374070000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67537061776e456e656d6965734265686176696f7244657369676e65722e52756e74696d652e53686172656447656e657269635661726961626c65536861726564537472696e674265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e671c0000004162736f7262204375626573010000005c4300002a4300000000000000000000000000001d000000436f6d706172652053686172656420537472696e67010000000cc300002a43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74416374696f6e4e616d6501526573744265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67626f73734c696768746e696e671e00000053656e64204d65737361676501000000a04100002a43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e53686172656447616d654f626a656374080000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e674c69676874696e6741747461636b4265686176696f7244657369676e65722e52756e74696d652e53686172656447656e657269635661726961626c65536861726564537472696e674265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67
-        byteDataArray: 4265686176696f7244657369676e65722e52756e74696d652e536861726564466c6f617463757272656e744865616c746801000000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74416374696f6e4e616d6501526573744265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74426f737353746174654e616d650100000000456e747279010000007b430000f04100000000000000000000010000005265706561746572010000c042bf00000243000000000000000000004265686176696f7244657369676e65722e52756e74696d652e536861726564496e74010000004265686176696f7244657369676e65722e52756e74696d652e536861726564426f6f6c014265686176696f7244657369676e65722e52756e74696d652e536861726564426f6f6c000200000053657175656e63650100003ab43e6c5cf7420000000000000000000000000000030000004765742043757272656e742053746174650100009013c400001b43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e53686172656447616d654f626a656374000000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67426f73734265686176696f724265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74426f737353746174654e616d654265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74426f737353746174654e616d6501040000004765742043757272656e7420416374696f6e204e616d6501000000afc355550543000000000000000000004265686176696f7244657369676e65722e52756e74696d652e53686172656447616d654f626a656374010000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67426f73734265686176696f724265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74416374696f6e4e616d654265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74416374696f6e4e616d6501526573740500000047657420426f7373204865616c74680100a48b24c36cdbfc42000000000000000000004265686176696f7244657369676e65722e52756e74696d652e53686172656447616d654f626a656374020000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67426f73734865616c74684265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e744865616c74684265686176696f7244657369676e65722e52756e74696d652e536861726564466c6f617463757272656e744865616c746801000000000600000053656c6563746f7201000080954200c0994300000000000000000000000000000700000053657175656e6365010000701fc400801843000000000000000000000000000008000000436f6d706172652053686172656420537472696e670100000038c300000743000000000000000000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74426f737353746174654e616d65014265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e674372797374616c5468726f770900000053656c6563746f7201000000b4420000164300000000000000000000000000000a00000052657374010028a5f5c3c0f7344300000000000000000000000000000b000000436f6d706172652053686172656420537472696e6701003ef210c3afcb2c43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74416374696f6e4e616d6501526573744265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67626f7373526573740c00000053656e64204d6573736167650100a0aaba4154552d43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e53686172656447616d654f626a656374030000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67526573744265686176696f7244657369676e65722e52756e74696d652e53686172656447656e657269635661726961626c65536861726564537472696e674265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e670d0000005265736574204375626573010078ef5dc3f8de2d4300000000000000000000000000000e000000436f6d706172652053686172656420537472696e670100566b6dc200002a43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74416374696f6e4e616d6501526573744265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67626f7373526573657443756265730f00000053656e64204d6573736167650100668ce94200002a43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e53686172656447616d654f626a656374040000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67526573657443756265734265686176696f7244657369676e65722e52756e74696d652e53686172656447656e657269635661726961626c65536861726564537472696e674265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67100000004162736f7262204375626573010014b45f43447b2b43000000000000000000000000000011000000436f6d706172652053686172656420537472696e67010000000cc300002a43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74416374696f6e4e616d6501526573744265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67626f73734162736f72621200000053656e64204d65737361676501000000a04100002a43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e53686172656447616d654f626a656374050000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67437562654162736f72624265686176696f7244657369676e65722e52756e74696d652e53686172656447656e657269635661726961626c65536861726564537472696e674265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6713000000437562652041747461636b01000edaf643447b2143000000000000000000000000000014000000436f6d706172652053686172656420537472696e670100080070c200002a43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74416374696f6e4e616d6501526573744265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67626f73734375626541747461636b1500000053656e64204d65737361676501000000f04200002a43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e53686172656447616d654f626a656374060000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e674375626541747461636b4265686176696f7244657369676e65722e52756e74696d652e53686172656447656e657269635661726961626c65536861726564537472696e674265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e671600000053657175656e6365010000c0054400000c43000000000000000000000000000017000000436f6d706172652053686172656420537472696e670100000034c300000c43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74426f737353746174654e616d65014265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e674c696768746e696e6741747461636b1800000053656c6563746f7201000000b442000016430000000000000000000000000000190000005265736574204375626573010000005cc300002a4300000000000000000000000000001a000000436f6d706172652053686172656420537472696e670100000070c200002a43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74416374696f6e4e616d6501526573744265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67626f7373537061776e456e656d6965731b00000053656e64204d65737361676501000000f04200002a43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e53686172656447616d654f626a656374070000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67537061776e456e656d6965734265686176696f7244657369676e65722e52756e74696d652e53686172656447656e657269635661726961626c65536861726564537472696e674265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e671c0000004162736f7262204375626573010000005c4300002a4300000000000000000000000000001d000000436f6d706172652053686172656420537472696e67010000000cc300002a43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e6763757272656e74416374696f6e4e616d6501526573744265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67626f73734c696768746e696e671e00000053656e64204d65737361676501000000a04100002a43000000000000000000004265686176696f7244657369676e65722e52756e74696d652e53686172656447616d654f626a656374080000004265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e674c69676874696e6741747461636b4265686176696f7244657369676e65722e52756e74696d652e53686172656447656e657269635661726961626c65536861726564537472696e674265686176696f7244657369676e65722e52756e74696d652e536861726564537472696e67
-      Version: 1.5.12
+        fieldNameHash: 
+        startIndex: 
+        dataPosition: 
+        unityObjects: []
+        byteData: 
+        byteDataArray: 
+      Version: 
 --- !u!1 &1619378510
 GameObject:
   m_ObjectHideFlags: 0
@@ -26480,10 +26356,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -26580,8 +26454,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -26654,8 +26526,6 @@ MonoBehaviour:
           m_StringArgument: W
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &1621549830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27120,10 +26990,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -27153,7 +27021,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1309568534706618, guid: 1a49af45e46dfd94599629c2b20465e6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114050250499331982, guid: 1a49af45e46dfd94599629c2b20465e6,
         type: 3}
@@ -27190,7 +27058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4020961606101106, guid: 1a49af45e46dfd94599629c2b20465e6, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114520464976423670, guid: 1a49af45e46dfd94599629c2b20465e6,
         type: 3}
@@ -27332,9 +27200,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -27407,10 +27273,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -27486,9 +27350,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -27582,8 +27444,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -27656,8 +27516,6 @@ MonoBehaviour:
           m_StringArgument: H
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &1669845455
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27751,8 +27609,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: bbdd383c80c49474fa79e13b7c8bfd21, type: 3}
     m_FontSize: 21
@@ -27842,10 +27698,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -27968,8 +27822,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!224 &1674950954
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28046,9 +27898,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -28315,8 +28165,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1707964109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28335,8 +28183,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 79d3da90c50f18149bba154bae15983f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -28609,8 +28455,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: bbdd383c80c49474fa79e13b7c8bfd21, type: 3}
     m_FontSize: 21
@@ -28854,10 +28698,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -29052,8 +28894,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -29126,8 +28966,6 @@ MonoBehaviour:
           m_StringArgument: J
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &1772088602
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29570,8 +29408,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: bbdd383c80c49474fa79e13b7c8bfd21, type: 3}
     m_FontSize: 21
@@ -30414,8 +30250,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -30501,8 +30335,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1899273340
 GameObject:
   m_ObjectHideFlags: 0
@@ -30579,8 +30411,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 4c9f68de2a4365847881240d0cf3ba90, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -30653,8 +30483,6 @@ MonoBehaviour:
           m_StringArgument: M
           m_BoolArgument: 0
         m_CallState: 1
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!65 &1899273347
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30709,7 +30537,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1904775413 stripped
 GameObject:
@@ -30763,15 +30591,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4247273713636040, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.345
+      value: 161
       objectReference: {fileID: 0}
     - target: {fileID: 4247273713636040, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.97
+      value: 1.52
       objectReference: {fileID: 0}
     - target: {fileID: 4247273713636040, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 92.6
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 4247273713636040, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
       propertyPath: m_LocalRotation.x
@@ -30810,81 +30638,16 @@ PrefabInstance:
       propertyPath: gameStateScript
       value: 
       objectReference: {fileID: 608564957}
-    - target: {fileID: 114699588035479634, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: Objects.Array.data[0].ObjectName
-      value: Weapon
-      objectReference: {fileID: 0}
-    - target: {fileID: 114699588035479634, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: Objects.Array.data[0].ObjectRotation.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 114699588035479634, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: Objects.Array.data[0].ObjectRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114699588035479634, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: Objects.Array.data[0].ObjectPosition.y
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114699588035479634, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: Objects.Array.data[0].ObjectPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114699588035479634, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: Objects.Array.data[0].ObjectRotation.x
-      value: 270
-      objectReference: {fileID: 0}
-    - target: {fileID: 114699588035479634, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: Objects.Array.data[0].ObjectPosition.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 114686614136568632, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
         type: 3}
       propertyPath: controller
       value: 
       objectReference: {fileID: 608564958}
-    - target: {fileID: 114686614136568632, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: handTransform
-      value: 
-      objectReference: {fileID: 1921985627}
     - target: {fileID: 114923459530826542, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
         type: 3}
       propertyPath: controlScript
       value: 
       objectReference: {fileID: 608564958}
-    - target: {fileID: 114386331843672914, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: pauseScript
-      value: 
-      objectReference: {fileID: 608564956}
-    - target: {fileID: 114386331843672914, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: gameState
-      value: 
-      objectReference: {fileID: 608564957}
-    - target: {fileID: 114386331843672914, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: controlScript
-      value: 
-      objectReference: {fileID: 608564958}
-    - target: {fileID: 114340108858719534, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: gameStateScript
-      value: 
-      objectReference: {fileID: 608564957}
-    - target: {fileID: 114340108858719534, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: upgrades
-      value: 
-      objectReference: {fileID: 288595783}
     - target: {fileID: 114353594762772346, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
         type: 3}
       propertyPath: ObjectManager
@@ -30900,56 +30663,22 @@ PrefabInstance:
       propertyPath: clipSlider
       value: 
       objectReference: {fileID: 508065949}
+    - target: {fileID: 114353594762772346, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
+        type: 3}
+      propertyPath: WeaponPrefab
+      value: 
+      objectReference: {fileID: 5138150081030673610, guid: 1fe7008fb9361d14583089bee84d7b55,
+        type: 3}
     - target: {fileID: 114932965733959122, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
         type: 3}
       propertyPath: gameStateScript
       value: 
       objectReference: {fileID: 608564957}
-    - target: {fileID: 114932965733959122, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: Objects.Array.data[0].ObjectName
-      value: Weapon
-      objectReference: {fileID: 0}
-    - target: {fileID: 114932965733959122, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: Objects.Array.data[0].ObjectRotation.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 114932965733959122, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: Objects.Array.data[0].ObjectRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114932965733959122, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: Objects.Array.data[0].ObjectPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114932965733959122, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: Objects.Array.data[0].ObjectPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114932965733959122, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: Objects.Array.data[0].ObjectPosition.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114932965733959122, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: Objects.Array.data[0].ObjectRotation.x
-      value: 270
-      objectReference: {fileID: 0}
     - target: {fileID: 114803412988693926, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
         type: 3}
       propertyPath: controller
       value: 
       objectReference: {fileID: 608564958}
-    - target: {fileID: 114803412988693926, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: handTransform
-      value: 
-      objectReference: {fileID: 822292458}
     - target: {fileID: 114429901609277970, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
         type: 3}
       propertyPath: ObjectManager
@@ -30965,12 +30694,6 @@ PrefabInstance:
       propertyPath: clipSlider
       value: 
       objectReference: {fileID: 508065949}
-    - target: {fileID: 114429901609277970, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: WeaponPrefab
-      value: 
-      objectReference: {fileID: 7621316887912600775, guid: f3fe767a31cfdd84080f242b6335fd80,
-        type: 3}
     - target: {fileID: 114876275288679548, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
         type: 3}
       propertyPath: ObjectManager
@@ -30981,111 +30704,33 @@ PrefabInstance:
       propertyPath: gameStateScript
       value: 
       objectReference: {fileID: 608564957}
-    - target: {fileID: 5663880208371128053, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.23
-      objectReference: {fileID: 0}
-    - target: {fileID: 4529528095763814, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.282
-      objectReference: {fileID: 0}
-    - target: {fileID: 2874194282957114691, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 54494476854672462, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: m_Mass
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 54494476854672462, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: m_Drag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 54494476854672462, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: m_AngularDrag
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 136370791710629676, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: m_Center.z
-      value: -0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 136370791710629676, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: m_Radius
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4494523990668604, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4494523990668604, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4494523990668604, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4494523990668604, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4053608357587634, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4053608357587634, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4053608357587634, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4053608357587634, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4053608357587634, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4053608357587634, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4053608357587634, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90.00001
-      objectReference: {fileID: 0}
-    - target: {fileID: 1784487722506680, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
+    - target: {fileID: 1662694195937776, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1662694195937776, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 1310152214, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
+      propertyPath: GrabbableObjects.Array.size
+      value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 2874194282956820701, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 1310152214, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
+      propertyPath: GrabbableObjects.Array.data[2].Name
+      value: Grenade
       objectReference: {fileID: 0}
-    - target: {fileID: 114815299469001970, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: m_UITransform
-      value: 
-      objectReference: {fileID: 1917269335}
-    - target: {fileID: 114815299469001970, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-        type: 3}
-      propertyPath: positionOffset.y
-      value: 0
+    - target: {fileID: 1310152214, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
+      propertyPath: GrabbableObjects.Array.data[2].id
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 102877288, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
+      propertyPath: GrabbableObjects.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 102877288, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
+      propertyPath: GrabbableObjects.Array.data[2].Name
+      value: Grenade
+      objectReference: {fileID: 0}
+    - target: {fileID: 102877288, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
+      propertyPath: GrabbableObjects.Array.data[2].id
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dbcc05b2cb91864db59d3f4f2742acc, type: 3}
@@ -31136,12 +30781,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 1, g: 0, b: 0, a: 1}
---- !u!4 &1917269335 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2874194282957114673, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1915757139}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1918039769
 GameObject:
   m_ObjectHideFlags: 0
@@ -31189,12 +30828,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 1, g: 0, b: 0, a: 1}
---- !u!4 &1921985627 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2321876633684869222, guid: 9dbcc05b2cb91864db59d3f4f2742acc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1915757139}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1932994599
 GameObject:
   m_ObjectHideFlags: 0
@@ -31672,8 +31305,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: bbdd383c80c49474fa79e13b7c8bfd21, type: 3}
     m_FontSize: 15
@@ -31766,8 +31397,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: bbdd383c80c49474fa79e13b7c8bfd21, type: 3}
     m_FontSize: 15
@@ -31970,8 +31599,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: bd4a0dde163f50a49afad20b7a7070b6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -32364,10 +31991,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
@@ -32444,8 +32069,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: bbdd383c80c49474fa79e13b7c8bfd21, type: 3}
     m_FontSize: 15
@@ -32922,10 +32545,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
@@ -33001,10 +32622,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -33174,10 +32793,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -34197,3 +33814,97 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77321e4f36c06cd4394989a85bcb8564, type: 3}
+--- !u!1001 &6394872044400954307
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 781023025}
+    m_Modifications:
+    - target: {fileID: 5326761077353084099, guid: 65e8b53ddfa19034e89adafaf0b1cf0d,
+        type: 3}
+      propertyPath: m_Name
+      value: Gorambe
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122377621324167589, guid: 65e8b53ddfa19034e89adafaf0b1cf0d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.6900024
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122377621324167589, guid: 65e8b53ddfa19034e89adafaf0b1cf0d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.048
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122377621324167589, guid: 65e8b53ddfa19034e89adafaf0b1cf0d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.1500015
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122377621324167589, guid: 65e8b53ddfa19034e89adafaf0b1cf0d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122377621324167589, guid: 65e8b53ddfa19034e89adafaf0b1cf0d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.52020556
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122377621324167589, guid: 65e8b53ddfa19034e89adafaf0b1cf0d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122377621324167589, guid: 65e8b53ddfa19034e89adafaf0b1cf0d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8540411
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122377621324167589, guid: 65e8b53ddfa19034e89adafaf0b1cf0d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122377621324167589, guid: 65e8b53ddfa19034e89adafaf0b1cf0d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122377621324167589, guid: 65e8b53ddfa19034e89adafaf0b1cf0d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -62.692
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122377621324167589, guid: 65e8b53ddfa19034e89adafaf0b1cf0d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477698656856266904, guid: 65e8b53ddfa19034e89adafaf0b1cf0d,
+        type: 3}
+      propertyPath: patrolArea
+      value: 
+      objectReference: {fileID: 323436714}
+    - target: {fileID: 8905044232667689862, guid: 65e8b53ddfa19034e89adafaf0b1cf0d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8905044232667689862, guid: 65e8b53ddfa19034e89adafaf0b1cf0d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900245549582792776, guid: 65e8b53ddfa19034e89adafaf0b1cf0d,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900245549582792776, guid: 65e8b53ddfa19034e89adafaf0b1cf0d,
+        type: 3}
+      propertyPath: m_Height
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 65e8b53ddfa19034e89adafaf0b1cf0d, type: 3}

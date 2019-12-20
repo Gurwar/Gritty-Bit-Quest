@@ -27,7 +27,7 @@ public class g_AIHealthScript : MonoBehaviour {
     GameObject popUpScore;
     [SerializeField]
     GameObject popUpCombo;
-	g_AIBehaviourScript behaviourScript;
+	AIEnemyBehavior behaviourScript;
 	g_AIAnimationScript animationScript;
 	g_AIGunScript gunScript;
 	g_AISoundScript soundScript;
@@ -46,7 +46,7 @@ public class g_AIHealthScript : MonoBehaviour {
     Color meshColor;
 	void Start()
 	{
-		behaviourScript = GetComponent<g_AIBehaviourScript>();
+		behaviourScript = GetComponent<AIEnemyBehavior>();
 		animationScript = GetComponent<g_AIAnimationScript>();
 		gunScript = GetComponent<g_AIGunScript>();
 		soundScript = GetComponent<g_AISoundScript>();
@@ -101,7 +101,8 @@ public class g_AIHealthScript : MonoBehaviour {
     }
 
     public void Damage(float damage)
-	{	
+	{
+        Debug.Log(damage);
 		ReduceHealthAndShields(damage);
 
 		if(health <= 0)
@@ -110,9 +111,9 @@ public class g_AIHealthScript : MonoBehaviour {
 		}
 		else
 		{
-            if (animationScript)
-			animationScript.PlayGotShotAnimation();
-			soundScript.PlayPainSound();
+            //if (animationScript)
+			//animationScript.PlayGotShotAnimation();
+			//soundScript.PlayPainSound();
 		}
 	}
 
@@ -162,12 +163,10 @@ public class g_AIHealthScript : MonoBehaviour {
         if (dead)
             return;
         dead = true;
-        mesh.ChangeHologramColor(new Color(1, 0, 0)) ;
-        GameObject.Find("Lights").GetComponent<g_LightManager>().ChangeToKillColour();
-        float score = GetComponent<scoreWorth> ().points;
-		float timeToEnable = score / 2f;
-		if (timeToEnable > 4f)
-			timeToEnable = 4f;
+        //float score = GetComponent<scoreWorth> ().points;
+		//float timeToEnable = score / 2f;
+		//if (timeToEnable > 4f)
+		//	timeToEnable = 4f;
 		//needs to be a time limit
 
 		if (soundScript)
@@ -207,7 +206,7 @@ public class g_AIHealthScript : MonoBehaviour {
 			
         for (int i =0; i < colliders.Count; i++)
         {
-            Physics.IgnoreCollision(GameObject.Find("Player").GetComponent<Collider>(), colliders[i]);
+            //Physics.IgnoreCollision(GameObject.Find("Player").GetComponent<Collider>(), colliders[i]);
         }
         if (animator)
 			animator.enabled = false;				
@@ -220,10 +219,10 @@ public class g_AIHealthScript : MonoBehaviour {
 			Destroy(m_gun.gameObject, 2f);
 
 		}
-        popUpScore.SetActive(true);
-        popUpCombo.SetActive(true);
-		GameObject.Find("Player").GetComponent<scoreTracker>().AddKill(GetComponent<scoreWorth>().points);
-		GameObject.Find("Player").GetComponent<PlayerMoneyScript>().AddMoney(GetComponent<scoreWorth>().points);
+        //popUpScore.SetActive(true);
+        //popUpCombo.SetActive(true);
+		//GameObject.Find("Player").GetComponent<scoreTracker>().AddKill(GetComponent<scoreWorth>().points);
+		//GameObject.Find("Player").GetComponent<PlayerMoneyScript>().AddMoney(GetComponent<scoreWorth>().points);
         //if (behaviourScript.m_coverTarget != null)
         //{
         //    behaviourScript.m_coverTarget.GetComponent<g_CoverSpot>().taken = false;

@@ -20,6 +20,7 @@ public class FPSLightCurves : MonoBehaviour
     {
         startTime = Time.time;
         canUpdate = true;
+        lightSource.enabled = true;
     }
 
     private void Update()
@@ -29,7 +30,11 @@ public class FPSLightCurves : MonoBehaviour
             var eval = LightCurve.Evaluate(time / GraphTimeMultiplier) * GraphIntensityMultiplier;
             lightSource.intensity = eval;
         }
+
         if (time >= GraphTimeMultiplier)
+        {
             canUpdate = false;
+            lightSource.enabled = false;
+        }
     }
 }

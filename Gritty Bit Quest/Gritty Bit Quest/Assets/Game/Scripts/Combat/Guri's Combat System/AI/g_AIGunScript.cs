@@ -45,7 +45,6 @@ public class g_AIGunScript : MonoBehaviour {
            }
             GameObject projectile = (GameObject)Instantiate (ProjectilePrefab, FireTransform.position, FireTransform.rotation);
             //projectile.transform.parent = FireTransform;
-            projectile.GetComponent<g_ProjectileBullet>().bulletSpawnTransform = FireTransform;
             //Debug.Break();
 
 

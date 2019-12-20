@@ -1,235 +1,648 @@
 fileFormatVersion: 2
 guid: dfa9dd007e9fedc4b869bfd63bb3b284
-timeCreated: 1446059246
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: chest
-    100002: chestcontrol
-    100004: //RootNode
-    100006: footbase
-    100008: head
-    100010: headcontrol
-    100012: hipcontrol
-    100014: hips
-    100016: jaw
-    100018: Joint_3
-    100020: Joint_3_2
-    100022: Joint_3_2_2
-    100024: Joint_3_2_3
-    100026: Joint_3_3
-    100028: Joint_3_3_2
-    100030: Joint_3_4
-    100032: Joint_3_4_2
-    100034: Joint_3_5
-    100036: Joint_3_5_2
-    100038: L_ankle
-    100040: L_ankle_Goal
-    100042: L_arm
-    100044: L_arm_Goal
-    100046: L_arm_Pole
-    100048: L_elbow
-    100050: L_eye
-    100052: L_FOOT
-    100054: L_foot
-    100056: L_handconstrain
-    100058: L_knee
-    100060: L_leg
-    100062: L_leg_Pole
-    100064: L_middle1
-    100066: L_middle2
-    100068: L_middle3
-    100070: L_pink1
-    100072: L_pink2
-    100074: L_pink3
-    100076: L_point1
-    100078: L_point2
-    100080: L_point3
-    100082: L_ring1
-    100084: L_ring2
-    100086: L_ring3
-    100088: L_shoulder
-    100090: L_thumb1
-    100092: L_thumb2
-    100094: L_thumb3
-    100096: L_toes
-    100098: L_wrist
-    100100: L_wrist_Goal
-    100102: lip
-    100104: mesh_1
-    100106: neck
-    100108: neckcontrol
-    100110: R_ankle
-    100112: R_ankle_Goal
-    100114: R_arm
-    100116: R_arm_Goal
-    100118: R_arm_Pole
-    100120: R_elbow
-    100122: R_eye
-    100124: R_FOOT
-    100126: R_foot
-    100128: R_handconstrain
-    100130: R_knee
-    100132: R_leg
-    100134: R_leg_Pole
-    100136: R_middle1
-    100138: R_middle2
-    100140: R_middle3
-    100142: R_pink1
-    100144: R_pink2
-    100146: R_pink3
-    100148: R_point1
-    100150: R_point2
-    100152: R_point3
-    100154: R_ring1
-    100156: R_ring2
-    100158: R_ring3
-    100160: R_shoulder
-    100162: R_thumb1
-    100164: R_thumb2
-    100166: R_thumb3
-    100168: R_toes
-    100170: R_wrist
-    100172: R_wrist_Goal
-    100174: spine
-    100176: spinecontrol
-    100178: tip
-    400000: chest
-    400002: chestcontrol
-    400004: //RootNode
-    400006: footbase
-    400008: head
-    400010: headcontrol
-    400012: hipcontrol
-    400014: hips
-    400016: jaw
-    400018: Joint_3
-    400020: Joint_3_2
-    400022: Joint_3_2_2
-    400024: Joint_3_2_3
-    400026: Joint_3_3
-    400028: Joint_3_3_2
-    400030: Joint_3_4
-    400032: Joint_3_4_2
-    400034: Joint_3_5
-    400036: Joint_3_5_2
-    400038: L_ankle
-    400040: L_ankle_Goal
-    400042: L_arm
-    400044: L_arm_Goal
-    400046: L_arm_Pole
-    400048: L_elbow
-    400050: L_eye
-    400052: L_FOOT
-    400054: L_foot
-    400056: L_handconstrain
-    400058: L_knee
-    400060: L_leg
-    400062: L_leg_Pole
-    400064: L_middle1
-    400066: L_middle2
-    400068: L_middle3
-    400070: L_pink1
-    400072: L_pink2
-    400074: L_pink3
-    400076: L_point1
-    400078: L_point2
-    400080: L_point3
-    400082: L_ring1
-    400084: L_ring2
-    400086: L_ring3
-    400088: L_shoulder
-    400090: L_thumb1
-    400092: L_thumb2
-    400094: L_thumb3
-    400096: L_toes
-    400098: L_wrist
-    400100: L_wrist_Goal
-    400102: lip
-    400104: mesh_1
-    400106: neck
-    400108: neckcontrol
-    400110: R_ankle
-    400112: R_ankle_Goal
-    400114: R_arm
-    400116: R_arm_Goal
-    400118: R_arm_Pole
-    400120: R_elbow
-    400122: R_eye
-    400124: R_FOOT
-    400126: R_foot
-    400128: R_handconstrain
-    400130: R_knee
-    400132: R_leg
-    400134: R_leg_Pole
-    400136: R_middle1
-    400138: R_middle2
-    400140: R_middle3
-    400142: R_pink1
-    400144: R_pink2
-    400146: R_pink3
-    400148: R_point1
-    400150: R_point2
-    400152: R_point3
-    400154: R_ring1
-    400156: R_ring2
-    400158: R_ring3
-    400160: R_shoulder
-    400162: R_thumb1
-    400164: R_thumb2
-    400166: R_thumb3
-    400168: R_toes
-    400170: R_wrist
-    400172: R_wrist_Goal
-    400174: spine
-    400176: spinecontrol
-    400178: tip
-    4300000: mesh_1
-    7400000: creature1Idle
-    7400002: creature1walkforward
-    7400004: creature1walkright
-    7400006: creature1walkleft
-    7400008: creature1walkback
-    7400010: creature1run
-    7400012: creature1jump
-    7400014: creature1InAir
-    7400016: creature1Land
-    7400018: creature1roar
-    7400020: creature1Taunt
-    7400022: creature1Attack1
-    7400024: creature1Attack3
-    7400026: creature1Attack2
-    7400028: creature1GetHit
-    7400030: creature1Die
-    7400032: creature1Spawn
-    7400034: allAnimations
-    9500000: //RootNode
-    13700000: mesh_1
+  serializedVersion: 26
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: chest
+  - first:
+      1: 100002
+    second: chestcontrol
+  - first:
+      1: 100004
+    second: //RootNode
+  - first:
+      1: 100006
+    second: footbase
+  - first:
+      1: 100008
+    second: head
+  - first:
+      1: 100010
+    second: headcontrol
+  - first:
+      1: 100012
+    second: hipcontrol
+  - first:
+      1: 100014
+    second: hips
+  - first:
+      1: 100016
+    second: jaw
+  - first:
+      1: 100018
+    second: Joint_3
+  - first:
+      1: 100020
+    second: Joint_3_2
+  - first:
+      1: 100022
+    second: Joint_3_2_2
+  - first:
+      1: 100024
+    second: Joint_3_2_3
+  - first:
+      1: 100026
+    second: Joint_3_3
+  - first:
+      1: 100028
+    second: Joint_3_3_2
+  - first:
+      1: 100030
+    second: Joint_3_4
+  - first:
+      1: 100032
+    second: Joint_3_4_2
+  - first:
+      1: 100034
+    second: Joint_3_5
+  - first:
+      1: 100036
+    second: Joint_3_5_2
+  - first:
+      1: 100038
+    second: L_ankle
+  - first:
+      1: 100040
+    second: L_ankle_Goal
+  - first:
+      1: 100042
+    second: L_arm
+  - first:
+      1: 100044
+    second: L_arm_Goal
+  - first:
+      1: 100046
+    second: L_arm_Pole
+  - first:
+      1: 100048
+    second: L_elbow
+  - first:
+      1: 100050
+    second: L_eye
+  - first:
+      1: 100052
+    second: L_FOOT
+  - first:
+      1: 100054
+    second: L_foot
+  - first:
+      1: 100056
+    second: L_handconstrain
+  - first:
+      1: 100058
+    second: L_knee
+  - first:
+      1: 100060
+    second: L_leg
+  - first:
+      1: 100062
+    second: L_leg_Pole
+  - first:
+      1: 100064
+    second: L_middle1
+  - first:
+      1: 100066
+    second: L_middle2
+  - first:
+      1: 100068
+    second: L_middle3
+  - first:
+      1: 100070
+    second: L_pink1
+  - first:
+      1: 100072
+    second: L_pink2
+  - first:
+      1: 100074
+    second: L_pink3
+  - first:
+      1: 100076
+    second: L_point1
+  - first:
+      1: 100078
+    second: L_point2
+  - first:
+      1: 100080
+    second: L_point3
+  - first:
+      1: 100082
+    second: L_ring1
+  - first:
+      1: 100084
+    second: L_ring2
+  - first:
+      1: 100086
+    second: L_ring3
+  - first:
+      1: 100088
+    second: L_shoulder
+  - first:
+      1: 100090
+    second: L_thumb1
+  - first:
+      1: 100092
+    second: L_thumb2
+  - first:
+      1: 100094
+    second: L_thumb3
+  - first:
+      1: 100096
+    second: L_toes
+  - first:
+      1: 100098
+    second: L_wrist
+  - first:
+      1: 100100
+    second: L_wrist_Goal
+  - first:
+      1: 100102
+    second: lip
+  - first:
+      1: 100104
+    second: mesh_1
+  - first:
+      1: 100106
+    second: neck
+  - first:
+      1: 100108
+    second: neckcontrol
+  - first:
+      1: 100110
+    second: R_ankle
+  - first:
+      1: 100112
+    second: R_ankle_Goal
+  - first:
+      1: 100114
+    second: R_arm
+  - first:
+      1: 100116
+    second: R_arm_Goal
+  - first:
+      1: 100118
+    second: R_arm_Pole
+  - first:
+      1: 100120
+    second: R_elbow
+  - first:
+      1: 100122
+    second: R_eye
+  - first:
+      1: 100124
+    second: R_FOOT
+  - first:
+      1: 100126
+    second: R_foot
+  - first:
+      1: 100128
+    second: R_handconstrain
+  - first:
+      1: 100130
+    second: R_knee
+  - first:
+      1: 100132
+    second: R_leg
+  - first:
+      1: 100134
+    second: R_leg_Pole
+  - first:
+      1: 100136
+    second: R_middle1
+  - first:
+      1: 100138
+    second: R_middle2
+  - first:
+      1: 100140
+    second: R_middle3
+  - first:
+      1: 100142
+    second: R_pink1
+  - first:
+      1: 100144
+    second: R_pink2
+  - first:
+      1: 100146
+    second: R_pink3
+  - first:
+      1: 100148
+    second: R_point1
+  - first:
+      1: 100150
+    second: R_point2
+  - first:
+      1: 100152
+    second: R_point3
+  - first:
+      1: 100154
+    second: R_ring1
+  - first:
+      1: 100156
+    second: R_ring2
+  - first:
+      1: 100158
+    second: R_ring3
+  - first:
+      1: 100160
+    second: R_shoulder
+  - first:
+      1: 100162
+    second: R_thumb1
+  - first:
+      1: 100164
+    second: R_thumb2
+  - first:
+      1: 100166
+    second: R_thumb3
+  - first:
+      1: 100168
+    second: R_toes
+  - first:
+      1: 100170
+    second: R_wrist
+  - first:
+      1: 100172
+    second: R_wrist_Goal
+  - first:
+      1: 100174
+    second: spine
+  - first:
+      1: 100176
+    second: spinecontrol
+  - first:
+      1: 100178
+    second: tip
+  - first:
+      4: 400000
+    second: chest
+  - first:
+      4: 400002
+    second: chestcontrol
+  - first:
+      4: 400004
+    second: //RootNode
+  - first:
+      4: 400006
+    second: footbase
+  - first:
+      4: 400008
+    second: head
+  - first:
+      4: 400010
+    second: headcontrol
+  - first:
+      4: 400012
+    second: hipcontrol
+  - first:
+      4: 400014
+    second: hips
+  - first:
+      4: 400016
+    second: jaw
+  - first:
+      4: 400018
+    second: Joint_3
+  - first:
+      4: 400020
+    second: Joint_3_2
+  - first:
+      4: 400022
+    second: Joint_3_2_2
+  - first:
+      4: 400024
+    second: Joint_3_2_3
+  - first:
+      4: 400026
+    second: Joint_3_3
+  - first:
+      4: 400028
+    second: Joint_3_3_2
+  - first:
+      4: 400030
+    second: Joint_3_4
+  - first:
+      4: 400032
+    second: Joint_3_4_2
+  - first:
+      4: 400034
+    second: Joint_3_5
+  - first:
+      4: 400036
+    second: Joint_3_5_2
+  - first:
+      4: 400038
+    second: L_ankle
+  - first:
+      4: 400040
+    second: L_ankle_Goal
+  - first:
+      4: 400042
+    second: L_arm
+  - first:
+      4: 400044
+    second: L_arm_Goal
+  - first:
+      4: 400046
+    second: L_arm_Pole
+  - first:
+      4: 400048
+    second: L_elbow
+  - first:
+      4: 400050
+    second: L_eye
+  - first:
+      4: 400052
+    second: L_FOOT
+  - first:
+      4: 400054
+    second: L_foot
+  - first:
+      4: 400056
+    second: L_handconstrain
+  - first:
+      4: 400058
+    second: L_knee
+  - first:
+      4: 400060
+    second: L_leg
+  - first:
+      4: 400062
+    second: L_leg_Pole
+  - first:
+      4: 400064
+    second: L_middle1
+  - first:
+      4: 400066
+    second: L_middle2
+  - first:
+      4: 400068
+    second: L_middle3
+  - first:
+      4: 400070
+    second: L_pink1
+  - first:
+      4: 400072
+    second: L_pink2
+  - first:
+      4: 400074
+    second: L_pink3
+  - first:
+      4: 400076
+    second: L_point1
+  - first:
+      4: 400078
+    second: L_point2
+  - first:
+      4: 400080
+    second: L_point3
+  - first:
+      4: 400082
+    second: L_ring1
+  - first:
+      4: 400084
+    second: L_ring2
+  - first:
+      4: 400086
+    second: L_ring3
+  - first:
+      4: 400088
+    second: L_shoulder
+  - first:
+      4: 400090
+    second: L_thumb1
+  - first:
+      4: 400092
+    second: L_thumb2
+  - first:
+      4: 400094
+    second: L_thumb3
+  - first:
+      4: 400096
+    second: L_toes
+  - first:
+      4: 400098
+    second: L_wrist
+  - first:
+      4: 400100
+    second: L_wrist_Goal
+  - first:
+      4: 400102
+    second: lip
+  - first:
+      4: 400104
+    second: mesh_1
+  - first:
+      4: 400106
+    second: neck
+  - first:
+      4: 400108
+    second: neckcontrol
+  - first:
+      4: 400110
+    second: R_ankle
+  - first:
+      4: 400112
+    second: R_ankle_Goal
+  - first:
+      4: 400114
+    second: R_arm
+  - first:
+      4: 400116
+    second: R_arm_Goal
+  - first:
+      4: 400118
+    second: R_arm_Pole
+  - first:
+      4: 400120
+    second: R_elbow
+  - first:
+      4: 400122
+    second: R_eye
+  - first:
+      4: 400124
+    second: R_FOOT
+  - first:
+      4: 400126
+    second: R_foot
+  - first:
+      4: 400128
+    second: R_handconstrain
+  - first:
+      4: 400130
+    second: R_knee
+  - first:
+      4: 400132
+    second: R_leg
+  - first:
+      4: 400134
+    second: R_leg_Pole
+  - first:
+      4: 400136
+    second: R_middle1
+  - first:
+      4: 400138
+    second: R_middle2
+  - first:
+      4: 400140
+    second: R_middle3
+  - first:
+      4: 400142
+    second: R_pink1
+  - first:
+      4: 400144
+    second: R_pink2
+  - first:
+      4: 400146
+    second: R_pink3
+  - first:
+      4: 400148
+    second: R_point1
+  - first:
+      4: 400150
+    second: R_point2
+  - first:
+      4: 400152
+    second: R_point3
+  - first:
+      4: 400154
+    second: R_ring1
+  - first:
+      4: 400156
+    second: R_ring2
+  - first:
+      4: 400158
+    second: R_ring3
+  - first:
+      4: 400160
+    second: R_shoulder
+  - first:
+      4: 400162
+    second: R_thumb1
+  - first:
+      4: 400164
+    second: R_thumb2
+  - first:
+      4: 400166
+    second: R_thumb3
+  - first:
+      4: 400168
+    second: R_toes
+  - first:
+      4: 400170
+    second: R_wrist
+  - first:
+      4: 400172
+    second: R_wrist_Goal
+  - first:
+      4: 400174
+    second: spine
+  - first:
+      4: 400176
+    second: spinecontrol
+  - first:
+      4: 400178
+    second: tip
+  - first:
+      43: 4300000
+    second: mesh_1
+  - first:
+      74: 7400000
+    second: creature1Idle
+  - first:
+      74: 7400002
+    second: creature1walkforward
+  - first:
+      74: 7400004
+    second: creature1walkright
+  - first:
+      74: 7400006
+    second: creature1walkleft
+  - first:
+      74: 7400008
+    second: creature1walkback
+  - first:
+      74: 7400010
+    second: creature1run
+  - first:
+      74: 7400012
+    second: creature1jump
+  - first:
+      74: 7400014
+    second: creature1InAir
+  - first:
+      74: 7400016
+    second: creature1Land
+  - first:
+      74: 7400018
+    second: creature1roar
+  - first:
+      74: 7400020
+    second: creature1Taunt
+  - first:
+      74: 7400022
+    second: creature1Attack1
+  - first:
+      74: 7400024
+    second: creature1Attack3
+  - first:
+      74: 7400026
+    second: creature1Attack2
+  - first:
+      74: 7400028
+    second: creature1GetHit
+  - first:
+      74: 7400030
+    second: creature1Die
+  - first:
+      74: 7400032
+    second: creature1Spawn
+  - first:
+      74: 7400034
+    second: allAnimations
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: mesh_1
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat
+    second: {fileID: 2100000, guid: 018ae001684c7a048b29b33d0c89a449, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: creature1Idle
       takeName: Main
+      internalID: 7400000
       firstFrame: 0
       lastFrame: 58
       wrapMode: 0
@@ -438,6 +851,7 @@ ModelImporter:
     - serializedVersion: 16
       name: creature1walkforward
       takeName: Main
+      internalID: 7400002
       firstFrame: 61
       lastFrame: 89
       wrapMode: 0
@@ -646,6 +1060,7 @@ ModelImporter:
     - serializedVersion: 16
       name: creature1walkright
       takeName: Main
+      internalID: 7400004
       firstFrame: 92
       lastFrame: 120
       wrapMode: 0
@@ -854,6 +1269,7 @@ ModelImporter:
     - serializedVersion: 16
       name: creature1walkleft
       takeName: Main
+      internalID: 7400006
       firstFrame: 123
       lastFrame: 151
       wrapMode: 0
@@ -1062,6 +1478,7 @@ ModelImporter:
     - serializedVersion: 16
       name: creature1walkback
       takeName: Main
+      internalID: 7400008
       firstFrame: 154
       lastFrame: 182
       wrapMode: 0
@@ -1270,6 +1687,7 @@ ModelImporter:
     - serializedVersion: 16
       name: creature1run
       takeName: Main
+      internalID: 7400010
       firstFrame: 185
       lastFrame: 213
       wrapMode: 0
@@ -1478,6 +1896,7 @@ ModelImporter:
     - serializedVersion: 16
       name: creature1jump
       takeName: Main
+      internalID: 7400012
       firstFrame: 215
       lastFrame: 221
       wrapMode: 0
@@ -1686,6 +2105,7 @@ ModelImporter:
     - serializedVersion: 16
       name: creature1InAir
       takeName: Main
+      internalID: 7400014
       firstFrame: 221
       lastFrame: 238
       wrapMode: 0
@@ -1894,6 +2314,7 @@ ModelImporter:
     - serializedVersion: 16
       name: creature1Land
       takeName: Main
+      internalID: 7400016
       firstFrame: 239
       lastFrame: 249
       wrapMode: 0
@@ -2102,6 +2523,7 @@ ModelImporter:
     - serializedVersion: 16
       name: creature1roar
       takeName: Main
+      internalID: 7400018
       firstFrame: 250
       lastFrame: 297
       wrapMode: 0
@@ -2310,6 +2732,7 @@ ModelImporter:
     - serializedVersion: 16
       name: creature1Taunt
       takeName: Main
+      internalID: 7400020
       firstFrame: 297
       lastFrame: 330
       wrapMode: 0
@@ -2518,6 +2941,7 @@ ModelImporter:
     - serializedVersion: 16
       name: creature1Attack1
       takeName: Main
+      internalID: 7400022
       firstFrame: 330
       lastFrame: 355
       wrapMode: 0
@@ -2526,8 +2950,8 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -2726,6 +3150,7 @@ ModelImporter:
     - serializedVersion: 16
       name: creature1Attack2
       takeName: Main
+      internalID: 7400026
       firstFrame: 355
       lastFrame: 396
       wrapMode: 0
@@ -2934,6 +3359,7 @@ ModelImporter:
     - serializedVersion: 16
       name: creature1Attack3
       takeName: Main
+      internalID: 7400024
       firstFrame: 396
       lastFrame: 420
       wrapMode: 0
@@ -3142,6 +3568,7 @@ ModelImporter:
     - serializedVersion: 16
       name: creature1GetHit
       takeName: Main
+      internalID: 7400028
       firstFrame: 420
       lastFrame: 437
       wrapMode: 0
@@ -3350,6 +3777,7 @@ ModelImporter:
     - serializedVersion: 16
       name: creature1Die
       takeName: Main
+      internalID: 7400030
       firstFrame: 437
       lastFrame: 464
       wrapMode: 0
@@ -3558,6 +3986,7 @@ ModelImporter:
     - serializedVersion: 16
       name: creature1Spawn
       takeName: Main
+      internalID: 7400032
       firstFrame: 468
       lastFrame: 520
       wrapMode: 0
@@ -3769,13 +4198,23 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -3785,10 +4224,15 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -3798,8 +4242,8 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 0

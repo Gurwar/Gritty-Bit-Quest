@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour {
     float rotateSpeed;
     Vector3 targetRotation;
     float yOffset;
+    [SerializeField]
+    Transform directionTransform;
     Vector3 direction;
     float distanceToGround;
     bool spinning;
@@ -50,7 +52,8 @@ public class PlayerMovement : MonoBehaviour {
     void Update()
     {
         spinning = true;
-        direction = transform.TransformDirection(direction).normalized;
+        direction = directionTransform.TransformDirection(direction).normalized;
+        direction.y = 0;
         transform.position += speedMultiplier * Time.deltaTime * direction;
         direction = Vector3.zero;
         transform.eulerAngles = Vector3.RotateTowards(transform.eulerAngles, targetRotation, Time.deltaTime * rotateSpeed, rotateSpeed * Time.deltaTime);

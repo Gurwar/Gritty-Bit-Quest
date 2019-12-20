@@ -45,8 +45,6 @@ public class g_HolsterScript : MonoBehaviour {
         gun.transform.localEulerAngles = spawnRotation;
         gun.transform.localPosition = spawnPosition;
         gun.GetComponent<Rigidbody>().isKinematic = true;
-        gun.GetComponent<ObjectState>().currentState = ObjectState.ObjectStates.Holstered;
-        gun.GetComponent<ObjectState>().SetIgnoreCollisions(true);
 
         if (gun.GetComponent<gunShooter>()!= null)
             gun.GetComponent<gunShooter>().laser.enabled = false;

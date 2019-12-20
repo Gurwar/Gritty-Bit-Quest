@@ -5,27 +5,26 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "AIBehavior", menuName = "ScriptableObjects/AIBehavior", order = 1)]
 public class AIBehavior : ScriptableObject
 {
-    public AIAction.ActionState firstAction;
+
+    public string firstState;
     [HideInInspector]
-<<<<<<< HEAD
-<<<<<<< HEAD
     public Dictionary<string, AIState> StatesDict = new Dictionary<string, AIState>();
     public List<AIState> StatesList = new List<AIState>();
 
-    public List<AIState> GetAIStates()
-=======
-    public Dictionary<AIAction.ActionState, AIAction> ActionsDict = new Dictionary<AIAction.ActionState, AIAction>();
-    public List<AIAction> ActionsList = new List<AIAction>();
-
-    public List<AIAction> GetAIActions()
->>>>>>> parent of d0d11103... Gritty Bit Vehicle
-=======
-    public Dictionary<AIAction.ActionState, AIAction> ActionsDict = new Dictionary<AIAction.ActionState, AIAction>();
-    public List<AIAction> ActionsList = new List<AIAction>();
-
-    public List<AIAction> GetAIActions()
->>>>>>> parent of d0d11103... Gritty Bit Vehicle
+    public void Initialize()
     {
-        return ActionsList;
+        for (int i = 0; i < GetAIStates().Count; i++)
+        {
+            if (!StatesDict.ContainsKey(GetAIStates()[i].Name))
+            {
+                StatesDict.Add(GetAIStates()[i].Name, GetAIStates()[i]);
+                StatesList[i].Initialize(this);
+            }
+        }
+    }
+
+    public List<AIState> GetAIStates()
+    {
+        return StatesList;
     }
 }

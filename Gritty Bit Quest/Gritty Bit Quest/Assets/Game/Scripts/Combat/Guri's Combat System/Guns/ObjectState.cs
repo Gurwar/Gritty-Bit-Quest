@@ -42,7 +42,7 @@ public class ObjectState : MonoBehaviour
 
     public void SetIgnoreCollisions(bool i)
     {
-        Physics.IgnoreCollision(GameObject.Find("Player").GetComponent<CapsuleCollider>(), collider);
+        //Physics.IgnoreCollision(GameObject.Find("Player").GetComponent<CapsuleCollider>(), collider);
     }
     
     public handScript GetHandScript()
@@ -89,16 +89,6 @@ public class ObjectState : MonoBehaviour
             }
             Destroy(this);
         }
-    }
-
-    public void PickupObject(handScript hand)
-    {
-        if (ignoreCollisionWithPlayer)
-            SetIgnoreCollisions(true);
-        handScript = hand;
-        currentState = ObjectStates.Held;
-        if (GetComponent<AudioSource>())
-            GetComponent<AudioSource>().enabled = true;
     }
 
     public GunUIScript GetUIScript()

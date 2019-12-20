@@ -8,23 +8,11 @@ public class g_PlayerHealthScript : MonoBehaviour {
     public float CurrentHealth;
     public float MaxHealth;
     [SerializeField]
-    float upgradeHealthMultiplier;
-    [SerializeField]
     GameObject LeftHand;
     [SerializeField]
     GameObject RightHand;
-    //[SerializeField]
-    //PPEManager LeftEyePPE;
-    //[SerializeField]
-    //PPEManager RightEyePPE;
-    [SerializeField]
-    gameState gameStateScript;
-    //[SerializeField]
-    //HoloController floor;
     [SerializeField]
     bool die;
-    [SerializeField]
-    g_UpgradeScreenManager upgrades;
 	// Use this for initialization
 	void Start ()
     {
@@ -42,8 +30,6 @@ public class g_PlayerHealthScript : MonoBehaviour {
             Damage(CurrentHealth);
             die = false;
         }
-        float red = 255 - 255 * CurrentHealth/MaxHealth;
-        float blue = 255* CurrentHealth/MaxHealth;
     }
 
     public void IncreaseHealth(float amount)

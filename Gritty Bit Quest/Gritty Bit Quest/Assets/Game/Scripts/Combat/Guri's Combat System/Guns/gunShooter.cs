@@ -57,8 +57,10 @@ public class gunShooter : MonoBehaviour {
 		{
             if (GetComponent<GunAmmo>().currentAmmo > 0)
             {
+                GameObject m = null;
                 GameObject p = null;
-                p = (GameObject)Instantiate(ProjectilePrefab, FireTransform.position, FireTransform.rotation);
+                m = (GameObject)Instantiate(MuzzleFlashPrefab, MuzzleFlashTransform.position, MuzzleFlashTransform.rotation);
+                p = (GameObject)Instantiate(ProjectilePrefab, TransformDeepChildExtension.FindDeepChild(transform, "FirePosition").position, TransformDeepChildExtension.FindDeepChild(transform, "FirePosition").rotation);
                 if (TransformDeepChildExtension.FindDeepChild(transform, "FirePosition") != null)
                 {
                     //for the shotgun the bulletspawn rotation should change for each bullet based on spread
@@ -80,8 +82,9 @@ public class gunShooter : MonoBehaviour {
                 return false;
             }
 		}
-        if (GetComponentInParent<handScript>().currentWeapon.MuzzleFlashPrefab != null)
-            ShowMuzzleFlash();
+
+        if (GetComponent<GunAmmo>().currentAmmo <= 0)
+            GetComponent<GunReloader>().Reload();
         canShootAgain = false;
 		return true;
 
@@ -132,9 +135,9 @@ public class gunShooter : MonoBehaviour {
 
     void ShowMuzzleFlash()
 	{
-
-		//MuzzleFlash = (GameObject)Instantiate(GetComponentInParent<handScript>().currentWeapon.MuzzleFlashPrefab, MuzzleFlashTransform.position, MuzzleFlashTransform.rotation);
-		//MuzzleFlash.transform.parent = MuzzleFlashTransform;
+        GameObject MuzzleFlash = null;
+		MuzzleFlash = (GameObject)Instantiate(GetComponentInParent<handScript>().currentWeapon.MuzzleFlashPrefab, MuzzleFlashTransform.position, MuzzleFlashTransform.rotation);
+		MuzzleFlash.transform.parent = MuzzleFlashTransform;
 	}
 
     

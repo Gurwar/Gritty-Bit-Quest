@@ -3,7 +3,7 @@ using System.Collections;
 
 public class g_AIRotateToTarget : MonoBehaviour {
 
-	Transform targetTransform;
+	Vector3 targetTransform;
 	[SerializeField]
 	Transform FirePosition;
 	Quaternion targetRotBody;
@@ -25,11 +25,10 @@ public class g_AIRotateToTarget : MonoBehaviour {
 
 	void LateUpdate()
     {
-
-		if (targetTransform) 
+		if (targetTransform != Vector3.zero) 
 		{
              //Rotate the spine bone so the gun (roughly) aims at the target
-             transform.rotation = Quaternion.FromToRotation(FirePosition.forward, targetTransform.position - FirePosition.position) * transform.rotation;
+             transform.rotation = Quaternion.FromToRotation(FirePosition.forward, targetTransform - FirePosition.position) * transform.rotation;
 
             if (clampBodyRotation)
             {
@@ -49,7 +48,7 @@ public class g_AIRotateToTarget : MonoBehaviour {
              lastFrameBody = transform.rotation;
 
              //Rotate the spine bone so the gun (roughly) aims at the target
-             spineBone.rotation = Quaternion.FromToRotation(FirePosition.forward, targetTransform.position - FirePosition.position) * spineBone.rotation;
+             spineBone.rotation = Quaternion.FromToRotation(FirePosition.forward, targetTransform - FirePosition.position) * spineBone.rotation;
              tempSpineLocalEulerAngles = spineBone.localEulerAngles;
 
              //Stop our agent from breaking their back by rotating too far
@@ -66,7 +65,7 @@ public class g_AIRotateToTarget : MonoBehaviour {
 		}
 	}
 
-	public void SetTargetTransform(Transform x)
+	public void SetTargetTransform(Vector3 x)
 	{ 
 		targetTransform = x; 
 	}

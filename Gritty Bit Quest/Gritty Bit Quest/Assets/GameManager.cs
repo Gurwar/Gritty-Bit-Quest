@@ -86,6 +86,15 @@ public class GameManager : MonoBehaviour
         return false;
     }
 
+    public static bool ContainsParam(Animator _Anim, string _ParamName)
+    {
+        foreach (AnimatorControllerParameter param in _Anim.parameters)
+        {
+            if (param.name == _ParamName) return true;
+        }
+        return false;
+    }
+
     public static void AddToListOnce<T>(ref List<T> list, T objectToAdd) where T : class
     {
         for (int i = 0; i < list.Count; i++)
