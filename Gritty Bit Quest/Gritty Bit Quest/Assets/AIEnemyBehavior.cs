@@ -315,7 +315,7 @@ public class AIEnemyBehavior : MonoBehaviour
 
     void WalkForward()
     {
-        //Debug.Log("1");
+        Debug.Log("Walk forward");
         animationScript.PlayWalkAnimation();
         agent.speed = currentState.ActionsDict[AIAction.ActionState.WalkForward].MoveSpeed;
         SetMoveTarget(MovementTarget.Player);
@@ -389,6 +389,7 @@ public class AIEnemyBehavior : MonoBehaviour
 
     void Melee()
     {
+        Debug.LogError("Melee");
         agent.speed = 0;
         GetComponent<g_AIAnimationScript>().PlayAttackAnimation();
         agent.SetDestination(transform.position);

@@ -10,6 +10,8 @@ public class G_AIMeleeScript : MonoBehaviour
 	float meleeRange;
     [SerializeField]
     List<Transform> raycastPoints = new List<Transform>();
+    [SerializeField]
+    List<MeleeLimb> meleeLimbs = new List<MeleeLimb>();
     // Update is called once per frame
     void Update () 
 	{
@@ -20,7 +22,16 @@ public class G_AIMeleeScript : MonoBehaviour
 
     public void SolveForMeleeAttack(float damage)
 	{
-        GameObject target = CheckRange();
+        GameObject target = null;// = CheckRange();
+
+        for (int i =0; i < meleeLimbs.Count; i++)
+        {
+            if (meleeLimbs[i].GetHitObject())
+            {
+                target = meleeLimbs[i].GetHitObject();
+            }
+        }
+
         if (target)
         {
             //Debug.Log(GameManager.Player.name);
