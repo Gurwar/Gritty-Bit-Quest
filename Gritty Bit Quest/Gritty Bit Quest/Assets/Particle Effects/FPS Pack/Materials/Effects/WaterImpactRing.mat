@@ -28,13 +28,13 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 86b27b7a41293494fafb19f716128c5c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 29748b261d55e0c40acdbc7ad80e6b93, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _BumpAmt: 150
+    - _BumpAmt: -5
     - _ColorStrength: 1
     - _InvFade: 1.6071428
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _TintColor: {r: 0.8897059, g: 0.9289951, b: 1, a: 1}
+    - _TintColor: {r: 3.0147057, g: 3.7219117, b: 5, a: 1}
