@@ -26,8 +26,9 @@ public class collisionDoubleCheck : MonoBehaviour {
 
     void Start()
     {
+        myRigidbody = GetComponent<Rigidbody>();
         myCollider = GetComponent<Collider>();
-        previousPosition = transform.position;
+        previousPosition = myRigidbody.position;
         minimumExtent = Mathf.Min(Mathf.Min(myCollider.bounds.extents.x, myCollider.bounds.extents.y), myCollider.bounds.extents.z);
         partialExtent = minimumExtent * (1.0f - skinWidth);
         sqrMinimumExtent = minimumExtent * minimumExtent;
@@ -50,7 +51,7 @@ public class collisionDoubleCheck : MonoBehaviour {
         for (int i = 0; i < m_raycastPoints.Count; i++)
         { 
             //have we moved more than our minimum extent?
-            Vector3 movementThisStep = transform.position - previousPosition;
+            Vector3 movementThisStep = myRigidbody.position - previousPosition;
              float movementSqrMagnitude = movementThisStep.sqrMagnitude;
 
             if (movementSqrMagnitude > sqrMinimumExtent)
@@ -59,18 +60,20 @@ public class collisionDoubleCheck : MonoBehaviour {
                 RaycastHit hitInfo;
 
                 //check for obstructions we might have missed
-                if (Physics.Raycast(previousPosition, movementThisStep, out hitInfo, movementMagnitude, layerMask.value))
+                if (Physics.Raycast(previousPosition, movementThisStep.normalized, out hitInfo, movementMagnitude, layerMask.value))
                 {
-                    if (!hitInfo.collider)
+                    if (!hitInfo.collider || hitInfo.collider.gameObject == gameObject)
                         return;
-
+                    Debug.Log(hitInfo.collider.name);
+                    //Debug.Break();
+                    myRigidbody.position = hitInfo.point - (movementThisStep / movementMagnitude) * partialExtent;
                     m_hitObject = hitInfo.collider.gameObject;
                     m_hitSomething = true;
 
                 }
             }
         }
-        previousPosition = transform.position;
+        previousPosition = myRigidbody.position;
 
 
     }

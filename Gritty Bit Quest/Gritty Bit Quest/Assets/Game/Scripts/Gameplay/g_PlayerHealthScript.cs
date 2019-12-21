@@ -39,6 +39,7 @@ public class g_PlayerHealthScript : MonoBehaviour {
 
     public void Damage(float damage)
     {
+        //Debug.Log("damage");
         //subtract damage from health
         CurrentHealth = Mathf.Min(CurrentHealth - damage, MaxHealth);
         //Post processing effects on hit

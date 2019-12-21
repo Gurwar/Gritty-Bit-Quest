@@ -24,6 +24,7 @@ public class Switch
 [System.Serializable]
 public class AIState
 {
+    public int Index;
     public string Name;
     public float Chance;
     public bool MovementThisState;

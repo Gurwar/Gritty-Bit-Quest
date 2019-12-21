@@ -40,8 +40,11 @@ public class AIBehaviorEditorScript : Editor
 
         for (int i = 0; i < AIBehavior.StatesList.Count; i++)
         {
+            AIBehavior.StatesList[i].Index = i;
+
             for (int j = 0; j < AIBehavior.StatesList[i].Actions.Count; j++)
             {
+
                 AIBehavior.StatesList[i].Actions[j].ActionSettings.StartTime = 0;
                 AIBehavior.StatesList[i].Actions[j].ActionSettings.EndTime = Mathf.Infinity;
             }
@@ -616,6 +619,7 @@ public class AIBehaviorEditorScript : Editor
             AIState tempState = new AIState();
             tempState.Switches.Add(new Switch());
             tempState.Name = "NULL";
+
             for (int i = 0; i < tempState.Actions.Count; i++)
             {
                 if (i == tempState.Actions.Count - 1)
@@ -625,6 +629,9 @@ public class AIBehaviorEditorScript : Editor
                 }
             }
             AIBehavior.StatesList.Add(tempState);
+            tempState.Index = AIBehavior.StatesList.Count - 1;
+            if (tempState.Index < 0)
+                tempState.Index = 0;
         }
         if (GUILayout.Button("Remove AI State"))
         {
@@ -634,6 +641,17 @@ public class AIBehaviorEditorScript : Editor
         {
             AIBehavior.Initialize();
         }
+        if (GUILayout.Button("Reorder List"))
+        {
+            for (int i = 0; i < AIBehavior.StatesList.Count; i++)
+            {
+                if (i != AIBehavior.StatesList[i].Index)
+                {
+                    SwitchItemInList(AIBehavior, i, AIBehavior.StatesList[i].Index);
+                    //break;
+                }
+             }
+        }
 
         serializedObject.ApplyModifiedProperties();
         serializedObject.Update();
@@ -641,5 +659,14 @@ public class AIBehaviorEditorScript : Editor
 
 
         Repaint();
+    }
+
+
+    void SwitchItemInList(AIBehavior ai, int a, int b)
+    {
+        AIState temp = ai.StatesList[a];
+        ai.StatesList[a] = ai.StatesList[b];
+        ai.StatesList[b] = temp;
+
     }
 }

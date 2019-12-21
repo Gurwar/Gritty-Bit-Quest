@@ -14,7 +14,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstState: Spawn
   StatesList:
-  - Name: Patrol
+  - Index: 0
+    Name: Roar
+    Chance: 1
+    MovementThisState: 0
+    Actions:
+    - Action: 7
+      ActionSettings:
+        StartTime: 0
+        EndTime: Infinity
+      AnimationFunction: 
+      MoveSpeed: 0
+      VectorToMoveTo: {x: 0, y: 0, z: 0}
+      MoveTransformName: 
+      MoveMagnitude: 0
+      RotateSpeed: 0
+      TargetRotation: {x: 0, y: 0, z: 0}
+    Switches:
+    - SwitchCondition: 1
+      Name: RoarTime
+      MinDistanceToTarget: 0
+      MaxDistanceToTarget: 0
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 1, y: 1}
+      ActionTime: 1
+      PossibleNextStates:
+      - Idle
+    behaviour: {fileID: 11400000}
+  - Index: 1
+    Name: Patrol
     Chance: 1
     MovementThisState: 1
     Actions:
@@ -53,7 +83,37 @@ MonoBehaviour:
       PossibleNextStates:
       - Run Forward
     behaviour: {fileID: 11400000}
-  - Name: Run Forward
+  - Index: 2
+    Name: Idle After Taunt
+    Chance: 1
+    MovementThisState: 0
+    Actions:
+    - Action: 1
+      ActionSettings:
+        StartTime: 0
+        EndTime: Infinity
+      AnimationFunction: 
+      MoveSpeed: 0
+      VectorToMoveTo: {x: 0, y: 0, z: 0}
+      MoveTransformName: 
+      MoveMagnitude: 0
+      RotateSpeed: 0
+      TargetRotation: {x: 0, y: 0, z: 0}
+    Switches:
+    - SwitchCondition: 1
+      Name: Idle Time
+      MinDistanceToTarget: 0
+      MaxDistanceToTarget: 0
+      AnimationLength: 0
+      EnemyTypeToSpawn: 0
+      EnemyAmount: 0
+      ActionTimeRange: {x: 0.5, y: 2}
+      ActionTime: 0.93626547
+      PossibleNextStates:
+      - Idle
+    behaviour: {fileID: 11400000}
+  - Index: 3
+    Name: Run Forward
     Chance: 1
     MovementThisState: 1
     Actions:
@@ -84,7 +144,7 @@ MonoBehaviour:
       - Walk Forward
     - SwitchCondition: 5
       Name: Close Enough To Melee
-      MinDistanceToTarget: 1
+      MinDistanceToTarget: 1.25
       MaxDistanceToTarget: Infinity
       AnimationLength: 0
       EnemyTypeToSpawn: 0
@@ -94,7 +154,8 @@ MonoBehaviour:
       PossibleNextStates:
       - Melee
     behaviour: {fileID: 11400000}
-  - Name: Spawn
+  - Index: 0
+    Name: Spawn
     Chance: 1
     MovementThisState: 0
     Actions:
@@ -122,7 +183,8 @@ MonoBehaviour:
       PossibleNextStates:
       - Patrol
     behaviour: {fileID: 11400000}
-  - Name: Walk Left
+  - Index: 5
+    Name: Walk Left
     Chance: 3
     MovementThisState: 1
     Actions:
@@ -146,7 +208,7 @@ MonoBehaviour:
       EnemyTypeToSpawn: 0
       EnemyAmount: 0
       ActionTimeRange: {x: 0.5, y: 4}
-      ActionTime: 2.0762868
+      ActionTime: 3.496219
       PossibleNextStates:
       - Walk Right
       - Walk Left
@@ -154,13 +216,13 @@ MonoBehaviour:
       - Taunt
     - SwitchCondition: 5
       Name: Close Enough To Melee
-      MinDistanceToTarget: 1
+      MinDistanceToTarget: 1.75
       MaxDistanceToTarget: Infinity
       AnimationLength: 0
       EnemyTypeToSpawn: 0
       EnemyAmount: 0
       ActionTimeRange: {x: 0.5, y: 4}
-      ActionTime: 3.4398792
+      ActionTime: 3.0353835
       PossibleNextStates:
       - Melee
     - SwitchCondition: 5
@@ -171,13 +233,14 @@ MonoBehaviour:
       EnemyTypeToSpawn: 0
       EnemyAmount: 0
       ActionTimeRange: {x: 0.5, y: 4}
-      ActionTime: 2.628776
+      ActionTime: 1.9205855
       PossibleNextStates:
       - Run Forward
       - Walk Forward
       - Taunt
     behaviour: {fileID: 11400000}
-  - Name: Walk Right
+  - Index: 6
+    Name: Walk Right
     Chance: 3
     MovementThisState: 1
     Actions:
@@ -201,7 +264,7 @@ MonoBehaviour:
       EnemyTypeToSpawn: 0
       EnemyAmount: 0
       ActionTimeRange: {x: 0.5, y: 4}
-      ActionTime: 3.1235864
+      ActionTime: 2.0481544
       PossibleNextStates:
       - Walk Left
       - Walk Right
@@ -209,13 +272,13 @@ MonoBehaviour:
       - Taunt
     - SwitchCondition: 5
       Name: Close Enough To Melee
-      MinDistanceToTarget: 1
+      MinDistanceToTarget: 1.75
       MaxDistanceToTarget: Infinity
       AnimationLength: 0
       EnemyTypeToSpawn: 0
       EnemyAmount: 0
       ActionTimeRange: {x: 0.5, y: 4}
-      ActionTime: 0.603525
+      ActionTime: 3.111618
       PossibleNextStates:
       - Melee
     - SwitchCondition: 5
@@ -226,13 +289,14 @@ MonoBehaviour:
       EnemyTypeToSpawn: 0
       EnemyAmount: 0
       ActionTimeRange: {x: 0.5, y: 4}
-      ActionTime: 0.7690703
+      ActionTime: 0.8697886
       PossibleNextStates:
       - Run Forward
       - Walk Forward
       - Taunt
     behaviour: {fileID: 11400000}
-  - Name: Walk Forward
+  - Index: 7
+    Name: Walk Forward
     Chance: 10
     MovementThisState: 1
     Actions:
@@ -256,7 +320,7 @@ MonoBehaviour:
       EnemyTypeToSpawn: 0
       EnemyAmount: 0
       ActionTimeRange: {x: 1, y: 2}
-      ActionTime: 1.1924568
+      ActionTime: 1.9934211
       PossibleNextStates:
       - Walk Left
       - Walk Right
@@ -264,13 +328,13 @@ MonoBehaviour:
       - Taunt
     - SwitchCondition: 5
       Name: Close Enough To Melee
-      MinDistanceToTarget: 1
+      MinDistanceToTarget: 1.75
       MaxDistanceToTarget: Infinity
       AnimationLength: 0
       EnemyTypeToSpawn: 0
       EnemyAmount: 0
       ActionTimeRange: {x: 0.5, y: 4}
-      ActionTime: 1.0053508
+      ActionTime: 2.4263616
       PossibleNextStates:
       - Melee
     - SwitchCondition: 5
@@ -281,13 +345,14 @@ MonoBehaviour:
       EnemyTypeToSpawn: 0
       EnemyAmount: 0
       ActionTimeRange: {x: 0.5, y: 4}
-      ActionTime: 3.4024506
+      ActionTime: 2.7080922
       PossibleNextStates:
       - Run Forward
       - Walk Forward
       - Taunt
     behaviour: {fileID: 11400000}
-  - Name: Melee
+  - Index: 8
+    Name: Melee
     Chance: 1
     MovementThisState: 0
     Actions:
@@ -318,7 +383,7 @@ MonoBehaviour:
     - SwitchCondition: 5
       Name: Too Far To Melee
       MinDistanceToTarget: 0
-      MaxDistanceToTarget: 1
+      MaxDistanceToTarget: 2
       AnimationLength: 0
       EnemyTypeToSpawn: 0
       EnemyAmount: 0
@@ -329,7 +394,8 @@ MonoBehaviour:
       - Walk Right
       - Walk Forward
     behaviour: {fileID: 11400000}
-  - Name: Taunt
+  - Index: 9
+    Name: Taunt
     Chance: 0.001
     MovementThisState: 0
     Actions:
@@ -357,63 +423,8 @@ MonoBehaviour:
       PossibleNextStates:
       - Idle After Taunt
     behaviour: {fileID: 11400000}
-  - Name: Idle After Taunt
-    Chance: 1
-    MovementThisState: 0
-    Actions:
-    - Action: 1
-      ActionSettings:
-        StartTime: 0
-        EndTime: Infinity
-      AnimationFunction: 
-      MoveSpeed: 0
-      VectorToMoveTo: {x: 0, y: 0, z: 0}
-      MoveTransformName: 
-      MoveMagnitude: 0
-      RotateSpeed: 0
-      TargetRotation: {x: 0, y: 0, z: 0}
-    Switches:
-    - SwitchCondition: 1
-      Name: Idle Time
-      MinDistanceToTarget: 0
-      MaxDistanceToTarget: 0
-      AnimationLength: 0
-      EnemyTypeToSpawn: 0
-      EnemyAmount: 0
-      ActionTimeRange: {x: 0.5, y: 2}
-      ActionTime: 0.93626547
-      PossibleNextStates:
-      - Idle
-    behaviour: {fileID: 11400000}
-  - Name: Roar
-    Chance: 1
-    MovementThisState: 0
-    Actions:
-    - Action: 7
-      ActionSettings:
-        StartTime: 0
-        EndTime: Infinity
-      AnimationFunction: 
-      MoveSpeed: 0
-      VectorToMoveTo: {x: 0, y: 0, z: 0}
-      MoveTransformName: 
-      MoveMagnitude: 0
-      RotateSpeed: 0
-      TargetRotation: {x: 0, y: 0, z: 0}
-    Switches:
-    - SwitchCondition: 1
-      Name: RoarTime
-      MinDistanceToTarget: 0
-      MaxDistanceToTarget: 0
-      AnimationLength: 0
-      EnemyTypeToSpawn: 0
-      EnemyAmount: 0
-      ActionTimeRange: {x: 1, y: 1}
-      ActionTime: 1
-      PossibleNextStates:
-      - Idle
-    behaviour: {fileID: 11400000}
-  - Name: Idle
+  - Index: 10
+    Name: Idle
     Chance: 1
     MovementThisState: 0
     Actions:
@@ -442,7 +453,7 @@ MonoBehaviour:
       - Run Forward
     - SwitchCondition: 5
       Name: Close Enough To Melee
-      MinDistanceToTarget: 1
+      MinDistanceToTarget: 1.25
       MaxDistanceToTarget: Infinity
       AnimationLength: 0
       EnemyTypeToSpawn: 0
@@ -453,7 +464,7 @@ MonoBehaviour:
       - Melee
     - SwitchCondition: 5
       Name: Mid Distance
-      MinDistanceToTarget: 1
+      MinDistanceToTarget: 1.75
       MaxDistanceToTarget: 7.5
       AnimationLength: 0
       EnemyTypeToSpawn: 0
